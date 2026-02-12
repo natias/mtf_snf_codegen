@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="ISO-8859-8"?>
+<matachtakbulim.xml>
+
+  <!-- ************** SERVER **************** -->
+  <!-- START OF CONTEXT -->
+  <context id="MTCS_MatachTakbulim" type="op">
+    <refKColl refId="MTDS_MatachTakbulim" />
+  </context>
+
+  <context id="MTCS_MatachTakbulimHitmakdut" type="op">
+    <refKColl refId="MTDS_MatachTakbulimHitmakdut" />
+  </context>
+  <!-- END OF CONTEXT -->
+
+  <!-- data for itrot -->
+  <iColl id="MCSG_IFYUNIM_LIST1">
+    <refData refId="MCSG_IFYUNIM" />
+  </iColl>
+  <iColl id="MCSG_IFYUNIM_LIST2">
+    <refData refId="MCSG_IFYUNIM" />
+  </iColl>
+
+  <kColl id="MCSG_IFYUNIM">
+    <field id="MC_IFYUNIM" />
+    <field id="MC_KOD_TIPUL" />
+  </kColl>
+
+  <kColl id="MCDK_MatachMain">
+    <refData refId="MCSG_IFYUNIM_LIST1" />
+    <refData refId="MCSG_IFYUNIM_LIST2" />
+    <field id="MC_MONE_IFYUN1" />
+    <field id="MC_MONE_IFYUN2" />
+    <field id="MC_BANK_NEGDI" />
+    <field id="MC_SNIF_NEGDI" />
+    <field id="MC_MATBEA_NEGDI" />
+    <field id="MC_SCH_NEGDI" />
+    <field id="MC_CH_NEGDI" />
+    <field id="MC_CHOVA_ZCHUT" />
+    <field id="MC_SUG_PEULA_MATACHA" />
+    <field id="MC_FROM_MISCHAR" />
+    <field id="MC_GVIAT_AMLA" />
+    <field id="MC_SW_SHEDER_ONLY_IFYUN" />
+    <field id="MC_KOD_SHDIA-2" />
+    <field id="MC_MISPAR-SHGIA-2" />
+    <field id="MC_SHEM_LAKOACH" />
+    <field id="MC_SHEM_LAKOACH_ENG_1" />
+    <field id="MC_SHEM_LAKOACH_ENG_NEXT" />
+    <field id="MC_KTOVET_LAKOACH_ENG_1" />
+    <field id="MC_KTOVET_LAKOACH_ENG_NEXT" />
+    <field id="MC_MAMAD_LAKOACH" />
+    <field id="MC_SUG_LAKOACH" />
+    <field id="MC_HERCEB_HATIMA1" />
+    <field id="MC_YITRA_KLALIT1" />
+    <field id="MC_YITRA_MEZUMAN1" />
+    <field id="MC_YITRA_ADKANIT1" />
+    <field id="MC_YITRA_MESHICHA1" />
+    <field id="MC_YITRA_TIKSH_325_1" />
+    <field id="MC_HERCEB_HATIMA2" />
+    <field id="MC_YITRA_KLALIT2" />
+    <field id="MC_YITRA_MEZUMAN2" />
+    <field id="MC_YITRA_ADKANIT2" />
+    <field id="MC_YITRA_MESHICHA2" />
+    <field id="MC_YITRA_TIKSH_325_2" />
+    <field id="MC_YITRA" />
+    <field id="MC_KOD_HODAA_MCH" />
+    <field id="MC_MAKBILIM" />
+    <field id="MC_MAHUT" />
+    <field id="MC_TAT_MAHUT" />
+    <field id="MC_KOD_TOSHAV_1" />
+    <field id="MC_MISPAR_ZIHUY1" />
+    <field id="MC_FILLER1" />
+    <field id="MC_IFYUNIM1" />
+    <field id="MC_SHEM_LAKOACH2" />
+    <field id="MC_MAMAD_LAKOACH2" />
+    <field id="MC_SUG_LAKOACH2" />
+    <field id="MC_YITRA2" />
+    <field id="MC_KOD_HODAA_MCH2" />
+    <field id="MC_KOD_TOSHAV_2" />
+    <field id="MC_FILLER2" />
+    <field id="MC_IFYUNIM2" />
+    <field id="MC_KOD_MAS_HACHNASA" />
+    <field id="MC_FILLER3" />
+    <field id="MC_ACHUZ_MAS" />
+    <field id="MC_ACHUZ_AMLA" />
+    <field id="MC_EXT_KEY" />
+    <field id="MC_MISPAR_ISKA" />
+    <field id="MC_ACHUZ_HATAVA" />
+    <field id="MC_ACHUZ_HATAVA_RIBIT_PH1" />
+    <field id="MC_AMLAT_HAAVARA" />
+    <field id="MC_AMLAT_HAAVARA_MIN" />
+    <field id="MC_AMLAT_HAAVARA_MAX" />
+    <field id="MC_AMLAT_HAAVARA_KVUA" />
+    <field id="MC_AMLAT_HAAVARA_DOAR_LESHEDER" />
+    <field id="MC_ACHUZ_HIYUV_HEFRESH_SHAAR" />
+    <field id="MC_ACHUZ_HIYUV_AMLA_Y_ERECH" />
+    <field id="MC_FILLER" />
+    <field id="MC_SHAAR_DO_KNIA" />
+    <field id="MC_SHAAR_DO_MECHIRA" />
+    <field id="MC_MATBEA_YECHIDA" />
+    <field id="MC_SHAAR_DO_STATUS" />
+    <field id="MC_Z_STIA_EMTZA_DO" />
+    <field id="MC_KLOT_TIMEOUT" />
+    <field id="MC_YACHAS_LE_YURO" />
+    <field id="MC_PK_HL_PANUY" />
+    <field id="MC_NO_OF_PK_HL" />
+    <field id="MC_PK_HL_OFFLINE" />
+    <field id="MC_SW_RASHI_ONLY" />	
+    <field id="MC_SCH_PAIL_RASHI" />
+    <field id="MC_SCH_PAIL_MISHNI" /> 
+    <!-- for sheder amalot  -->
+    <field id="MN_SUG_BAKASH_AMLA" />
+    <field id="MN_SUG_AMLA" />
+    <field id="MN_KIDOMET_DIVUACH1" />
+    <field id="MN_DIVUACH1" />
+    <field id="MN_KIDOMET_DIVUACH2" />
+    <field id="MN_DIVUACH2" />
+    <field id="MC_SCHUM" />
+    <field id="MC_Z_AMLA" />
+    <field id="MC_Z_AMLA_ORIGINAL" />
+    <field id="MC_AMLA_CONST_MAT" />
+    <field id="MC_AMLA_CONST" />
+    <field id="MC_AMLA_CONST_ORIG" />
+    <field id="MC_FLAG_SWIFT_IN_OUT" />
+    <field id="MC_AMLA_MULTI" />
+    <field id="MC_SUG_AMLA_DOAR" />
+    <field id="MC_MISLAKA" />
+    <field id="MC_HAVER_MISLAKA" />
+    <field id="MC_SUG_HAVARA" />
+    <field id="MC_SUG_NIMAN" />
+    <field id="MC_SHAAR_ISKA" />
+    <field id="MC_GVIAT_HOTZAOT" />
+    <field id="MC_TR_ERECH" />
+    <field id="MC_MAT_AMLA_DOAR" />
+    <field id="MC_ACHUZ_AMLA_MTI" />
+    <field id="MC_ACHUZ_AMLA_MAKOR" />
+    <field id="MC_ACHUZ_AMLA" />
+    <field id="MC_ACHUZ_AMLA_MTC" />
+    <field id="MC_SIBAT_HACHCZARA1" />
+    <field id="MC_SIBAT_HACHCZARA2" />
+    <field id="MC_SIBAT_HACHCZARA3" />
+    <field id="MC_MISPAR_HAMCHAOT" />
+    <field id="MC_AMLA_DOLAR" />
+    <field id="MC_AMLA_BMATBEA" />
+    <field id="MC_KOD_AMLA" />
+    <field id="MC_AMLA_PTOR" />
+    <field id="MC_AMLA_TAARIF_DOAR" />
+    <field id="MC_AMLA_MIN_MAX" />
+    <field id="MC_HASIMA_AMLA_CONST" />
+    <field id="MC_GVIAT_HOTZAOT" />
+    <field id="MC_FLAG_OPEN_MAT" />
+    <field id="MC_STATUS_LAKOACH1" />
+    <field id="MC_SUG_BAKASH_AMLA" />
+    <field id="MC_SUG_AMLA" />
+    <field id="MC_KIDOMET_DIVUACH1" />
+    <field id="MC_DIVUACH1" />
+    <field id="MC_KIDOMET_DIVUACH2" />
+    <field id="MC_DIVUACH2" />
+    <!-- end for sheder amalot  -->
+    <!--         <refData refId="MCDI_M111PikadonHalvah" />    -->
+
+	<!-- EliezerV begin -->
+	<field id="SEMEL_DIVUACH1_CHOVA"/>
+	<field id="SEMEL_DIVUACH2_CHOVA"/>
+	<field id="SEMEL_DIVUACH3_CHOVA"/>
+	<!-- EliezerV end -->
+  </kColl>
+
+  <!-- START OF DATA -->
+  <kColl id="MTDS_MatachTakbulim">
+    <refData refId="MTDK_PirteyTakbul" />
+    <refData refId="MTDK_MatachTakbulimReshima" />
+    <refData refId="MCDK_MatachMain" />
+    <field id="MT_SUG_BAKASHA" />
+    <field id="TRX_ID" />
+    <field id="SUBJECT_CHAR" />
+    <field id="debugMode" />
+    <refData refId="GKSI_HdrBtt" />
+    <refData refId="GKSR_HdrBtt" />
+    <refData refId="GLDK_HdrHodaot" />
+    <refData refId="BusinessMessagesList" />
+    <refData refId="isCicsContinueButtonClicked" />
+    <field id="MT_FILLER" />
+  </kColl>
+
+  <kColl id="MTDK_PirteyTakbul">
+    <field id="MT_FILLER" />
+    <field id="MT_CH" />
+    <field id="MT_MATBEA" />
+    <field id="MT_ASMACHTA" />
+    <field id="MT_ST_TIPUL" />
+    <field id="MT_ST_TIPUL_TEUR" />
+    <field id="MT_KOD_YAAD" />
+    <field id="MT_KOD_YAAD_TEUR" />
+    <field id="MT_TZEVET" />
+    <field id="MT_REFERANT" />
+    <field id="MT_SHITAT_HAAVARA" />
+    <field id="MT_SHITAT_HAAVARA_TEUR" />
+    <field id="MT_TR_ME" />
+    <field id="MT_TR_AD" />
+    <refData refId="MTDK_TotTakbulim" />
+  </kColl>
+
+  <kColl id="MTDK_MatachTakbulimReshima">
+    <refData refId="MTDI_ReshimatTakbulim" />
+    <refData refId="MTDI_HemshechReshimatTakbulim" />
+    <refData refId="MTDI_ReshimatTakbulim_MetaData" />
+    <field id="MT_SW_TOTALS" />
+    <refData refId="MTDK_TotTakbulim" />
+  </kColl>
+
+  <matafIColl id="MTDI_ReshimatTakbulim" >
+    <refData refId="MTDL_ReshimatTakbulim" />
+  </matafIColl>
+
+  <matafIColl id="MTDI_HemshechReshimatTakbulim" size="0">
+    <refData refId="MTDL_ReshimatTakbulim" />
+  </matafIColl>
+
+  <kColl id="MTDI_ReshimatTakbulim_MetaData">
+    <field id="selectedRowIndex" />
+    <refData refId="MTDL_ReshimatTakbulim" />
+  </kColl>
+
+  <kColl id="MTDK_TotTakbulim">
+    <field id="MT_TOT_APPR_EXPORT" />
+    <field id="MT_TOT_APPR_ACHER" />
+    <field id="MT_SUM_DOLAR_EXPORT" />
+    <field id="MT_SUM_DOLAR_ACHER" />
+    <field id="MT_SUM_AMLA_EXPORT" />
+    <field id="MT_SUM_AMLA_ACHER" />
+  </kColl>
+
+  <kColl id="MTDL_ReshimatTakbulim">
+    <refData refId="GLDL_HdrReshima" />
+    <field id="MT_FILLER" />
+    <field id="MT_SNIF" />
+    <field id="MT_TR" />
+    <field id="MT_TZEVET" />
+    <field id="MT_REFERANT" />
+    <field id="MT_ASMACHTA_SIDURI" />
+    <field id="MT_ASMACHTA" />
+    <field id="MT_CH" />
+    <field id="MT_SCH" />
+    <field id="MT_MATBEA" />
+    <field id="MT_SCHUM" />
+    <field id="MT_ST_TIPUL" />
+    <field id="MT_ST_TIPUL_TEUR" />
+    <field id="MT_MEYDA1" />
+    <field id="MT_MEYDA2" />
+    <field id="MT_MID" />
+    <field id="MT_KOD_YAAD" />
+    <field id="MT_SHEM_LAKOACH" />
+    <field id="MT_SUG_TAKBUL" />
+    <field id="MT_SW_TIKUN_CH" />
+    <field id="MT_TIKUN_CH_TEUR" />
+    <field id="MT_SW_HORAA_TEL_SIDURI" />
+    <field id="MT_HORAA_TELEPFONIT_TEUR" />
+  </kColl>
+
+  <kColl id="MTDS_MatachTakbulimHitmakdut">
+    <!-- This field is needed when the sheder is a continuation (the user) can press Hamshech-->
+    <refData refId="isCicsContinueButtonClicked" />
+    <field id="TRX_ID" />
+    <field id="SUBJECT_CHAR" />
+    <field id="debugMode" />
+    <!-- Inquire hdr data -->
+    <refData refId="GKSI_HdrBtt" />
+    <!-- Reply fdr data -->
+    <refData refId="GKSR_HdrBtt" />
+    <refData refId="GLDK_HdrHodaot" />
+    <refData refId="BusinessMessagesList" />
+    <!--	          User Structures -->
+    <refData refId="MTDK_PirteyTakbulHitmakdut" />
+    <refData refId="MTDI_TakbulDetailsOneColumn" />
+    <refData refId="MCDK_MatachMain" />
+    <refData refId="MCDK_COMMON" />
+    <field id="MT_SRIKA_KEY" />
+    <field id="MT_FILLER" />
+    <!--	    <field id="MT_TRY"/>	    -->
+  </kColl>
+  <!--  only for  -->
+  <kColl id="MCDK_COMMON">
+    <field id="MC_TABLE_DIVUACH1_SW" />
+    <field id="MC_TABLE_DIVUACH2_SW" />
+    <field id="MC_DIVUACH1" />
+    <field id="MC_DIVUACH1_TYPE" />
+    <field id="MC_DIVUACH1_TEUR" />
+    <field id="MC_DIVUACH2" />
+    <field id="MC_DIVUACH2_TYPE" />
+    <field id="MC_DIVUACH2_TEUR" />
+    <field id="MC_KIDOMET_DIVUACH1" />
+    <field id="MC_KIDOMET_DIVUACH1_TEUR" />
+    <field id="MC_KIDOMET_DIVUACH2" />
+    <field id="MC_KIDOMET_DIVUACH2_TEUR" />
+
+    <field id="MC_MAHUT" />
+    <field id="MC_MAHUT_TEUR" />
+    <field id="MC_TAT_MAHUT" />
+    <field id="MC_TAT_MAHUT_TEUR" />
+    <field id="MC_MAHUT_NICHNAS" />
+    <field id="MC_MAHUT_TEUR_NICHNAS" />
+    <field id="MC_TAT_MAHUT_NICHNAS" />
+    <field id="MC_TAT_MAHUT_TEUR_NICHNAS" />
+    <field id="MC_CHATACH_DIV" />
+  </kColl>
+
+  <kColl id="MTDK_PirteyTakbulHitmakdut">
+ 
+    <field id="MT_STATUS_KLOT" />
+    <field id="MT_MENAHEL_COMENT" />
+    <field id="MT_MAT_AMLA_KVUA_MENAHEL" />
+    <field id="MT_COMENT_PAKID_FOR_MENAHEL" />
+    <field id="MT_FILLER" />
+    <field id="MT_KOD_YAAD" />
+    <field id="MT_ST_TIPUL" />
+    <field id="MT_BANK" />
+    <field id="MT_SNIF" />
+    <field id="MT_MATBEA" />
+    <field id="MT_SCH" />
+    <field id="MT_CH" />
+    <field id="MT_TR_HODAA" />
+    <field id="MT_SHAA_HODAA" />
+    <field id="MT_ASMACHTA" />
+    <field id="MT_SHEM_LAKOACH" />
+    <field id="MT_SUG_PEULA" />
+    <field id="MT_SCHUM" />
+    <field id="MT_TR_ERECH" />
+    <field id="MT_ASMCHTA_TAKBUL" />
+    <field id="MT_HORAA_GVIAT_AMLA" />
+    <field id="MT_MATBEA_AMLA" />
+    <field id="MT_SCH_AMLA" />
+    <field id="MT_AMLA_ACHUZ" />
+    <field id="MT_AMLA_MIN" />
+    <field id="MT_AMLA_MAX" />
+    <field id="MT_AMLA_CONST" />
+    <field id="MT_AMLA_HAAVARA" />
+    <field id="MT_SCHUM_REZERVA" />
+    <field id="MT_KIDOMET_DIVUACH_1" />
+    <field id="MT_DIVUACH_1" />
+    <field id="MT_KIDOMET_DIVUACH_2" />
+    <field id="MT_DIVUACH_2" />
+    <field id="MT_TR_ISHUR" />
+    <field id="MT_SHAA_ISHUR" />
+    <field id="MT_PU" />
+    <field id="MT_MAKOR_TAHANA" />
+    <field id="MT_ZIHUY_PAKID" />
+    <field id="MT_ZIHUY_MEASHER" />
+    <field id="MT_MAHUT_TAKBUL" />
+    <field id="MT_TAT_MAHUT" />
+    <field id="MT_SNIF_AMLA" />
+    <field id="MT_CH_AMLA" />
+    <field id="MT_STATUS_LAKOACH_1" />
+    <field id="MT_SUG_LAKOACH_1" />
+    <field id="MT_STATUS_LAKOACH_2" />
+    <field id="MT_SUG_LAKOACH_2" />
+    <field id="MT_KOD_AMLA_AHAVARA" />
+    <field id="MT_SHITAT_HAAVARA" />
+    <field id="MT_TZEVET" />
+    <field id="MT_REFERANT" />
+    <field id="MT_ASMACHTA_SIDURI" />
+    <field id="MT_TR" />
+    <field id="MT_SUG_TAKBUL" />
+    <field id="MT_SW_TIKUN_CH" />
+    <field id="MT_SW_HORAA_TEL_SIDURI" />
+    <field id="MT_HAMARA_HAFKADA" />
+    <field id="MT_BANK_AMLA" />
+    <field id="MT_SCH_LAKOACH" />
+    <field id="MT_SIBA" />
+    <field id="MT_MELL_MEIDA_NOSAF1" />
+    <field id="MT_MELL_MEIDA_NOSAF2" />
+    <field id="MT_MID" />
+  </kColl>
+
+  <matafIColl id="MTDI_TakbulDetailsOneColumn" size="0">
+    <refData refId="GLDL_OneColumn" />
+  </matafIColl>
+  <!-- END OF DATA -->
+
+  <!-- START OF FORMATS -->
+  <fmtDef id="MTFC_Srika">
+    <fCSRecord>
+      <refFmt refId="GLFC_HdrBtt" />
+      <fCSString dataName="MT_SUG_BAKASHA" />
+      <fCSRecord dataName="MTDK_PirteyTakbul">
+        <fCSString dataName="MT_SHITAT_HAAVARA" />
+        <fCSString dataName="MT_CH" />
+        <fCSString dataName="MT_MATBEA" />
+        <fCSString dataName="MT_ASMACHTA" />
+        <fCSString dataName="MT_ST_TIPUL" />
+        <fCSString dataName="MT_KOD_YAAD" />
+        <fCSString dataName="MT_TZEVET" />
+        <fCSString dataName="MT_REFERANT" />
+        <fCSString dataName="MT_TR_ME" />
+        <fCSString dataName="MT_TR_AD" />
+        <fCSRecord dataName="MTDK_TotTakbulim">
+          <fCSString dataName="MT_TOT_APPR_EXPORT" />
+          <fCSString dataName="MT_TOT_APPR_ACHER" />
+          <fCSString dataName="MT_SUM_DOLAR_EXPORT" />
+          <fCSString dataName="MT_SUM_DOLAR_ACHER" />
+          <fCSString dataName="MT_SUM_AMLA_EXPORT" />
+          <fCSString dataName="MT_SUM_AMLA_ACHER" />
+        </fCSRecord>
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <fmtDef id="MTFI_Srika">
+    <record>
+      <refFmt refId="GLFI_HdrBttNew" />
+      <fHostString dataName="MT_SUG_BAKASHA" /><numHostDecor length="3" padChar="0" />
+      <record dataName="MTDK_PirteyTakbul">
+        <fHostString dataName="MT_SHITAT_HAAVARA" /><numHostDecor length="1" />
+        <fHostString dataName="MT_CH" /><numHostDecor length="6" />
+        <fHostString dataName="MT_MATBEA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_ASMACHTA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_FILLER" /><numHostDecor length="1" />
+        <fHostString dataName="MT_KOD_YAAD" /><numHostDecor length="3" padChar="0" />
+        <fHostString dataName="MT_TZEVET" /><numHostDecor length="2" />
+        <fHostString dataName="MT_REFERANT" /><numHostDecor length="2" />
+        <fHostString dataName="MT_TR_ME" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_TR_AD" /><dateHostDecor length="8" />
+        <record dataName="MTDK_TotTakbulim">
+          <fHostString dataName="MT_TOT_APPR_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_TOT_APPR_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_DOLAR_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_DOLAR_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_AMLA_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_AMLA_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+        </record>
+      </record>
+      <fHostString dataName="MTDK_PirteyTakbul.MT_ST_TIPUL" /><numHostDecor length="2" addZerosOnEmpty="2" addZerosAsPrefix="2"/>
+      <fHostString dataName="MT_FILLER" /><abcHostDecor length="78" />
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MTFR_Srika">
+    <record>
+      <refFmt refId="GLFR_HdrBtt" />
+      <refFmt refId="GLFR_HdrHodaot10New" />
+      <record dataName="MTDK_MatachTakbulimReshima">
+        <iCollF dataName="MTDI_ReshimatTakbulim" times="50">
+          <record dataName="MTDL_ReshimatTakbulim">
+            <refFmt refId="GLFR_HdrReshima" />
+            <fHostString dataName="MT_SHEM_LAKOACH" /><hebHostDecor length="12" />
+            <fHostString dataName="MT_TZEVET" /><numHostDecor length="2" />
+            <fHostString dataName="MT_REFERANT" /><numHostDecor addZerosAsPrefix="2" length="2" />
+            <fHostString dataName="MT_ASMACHTA" /><numHostDecor length="6" />
+            <fHostString dataName="MT_ASMACHTA_SIDURI" /><numHostDecor length="2" />
+            <fHostString dataName="MT_TR" /><dateHostDecor length="8" />
+            <fHostString dataName="MT_SCHUM" /><decimalHostDecor length="16" />
+            <fHostString dataName="MT_FILLER" /><numHostDecor length="1" />
+            <fHostString dataName="MT_KOD_YAAD" /><numHostDecor length="3" />
+            <fHostString dataName="MT_SUG_TAKBUL" /><numHostDecor length="1" />
+            <fHostString dataName="MT_SW_TIKUN_CH" /><abcHostDecor length="1" />
+            <fHostString dataName="MT_SW_HORAA_TEL_SIDURI" /><abcHostDecor length="1" />
+            <fHostString dataName="MT_MEYDA1" /><hebHostDecor length="20" />
+            <fHostString dataName="MT_MID" /><abcHostDecor length="16" />
+            <fHostString dataName="MT_ST_TIPUL" /><numHostDecor length="2" />
+            <fHostString dataName="MT_MEYDA2" /><abcHostDecor length="2" />
+          </record>
+        </iCollF>
+        <fHostString dataName="MT_SW_TOTALS" />
+        <numHostDecor length="1" />
+        <record dataName="MTDK_TotTakbulim">
+          <fHostString dataName="MT_TOT_APPR_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_TOT_APPR_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_DOLAR_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_DOLAR_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_AMLA_EXPORT" /><decimalHostDecor length="16" showZero="yes" />
+          <fHostString dataName="MT_SUM_AMLA_ACHER" /><decimalHostDecor length="16" showZero="yes" />
+        </record>
+      </record>
+      
+      <fHostString dataName="MT_FILLER" /><abcHostDecor length="80" />
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MTFS_Srika">
+    <fCSRecord>
+      <refFmt refId="GLFS_HdrBtt" />
+      <fCSString dataName="GKSR_HdrBtt.GL_TR_NOCHECHI" />
+      <fCSString dataName="GKSR_HdrBtt.GL_SHAA" />
+      <fCSRecord dataName="MTDK_MatachTakbulimReshima">
+        <fCSList dataName="MTDI_ReshimatTakbulim" times="50">
+          <fCSRecord dataName="MTDL_ReshimatTakbulim">
+            <refFmt refId="GLFS_HdrReshima" />
+            <fCSString dataName="GLDL_HdrReshima.GL_SNIF" />
+            <fCSString dataName="GLDL_HdrReshima.GL_SCH" />
+            <fCSString dataName="GLDL_HdrReshima.GL_CH" />
+            <fCSString dataName="GLDL_HdrReshima.GL_MATBEA" />
+            <fCSString dataName="MT_SHEM_LAKOACH" />
+            <fCSString dataName="MT_TZEVET" />
+            <fCSString dataName="MT_REFERANT" />
+            <fCSString dataName="MT_ASMACHTA" />
+            <fCSString dataName="MT_ASMACHTA_SIDURI" />
+            <fCSString dataName="MT_TR" />
+            <fCSString dataName="MT_SCHUM" />
+            <fCSString dataName="MT_ST_TIPUL" />
+            <fCSString dataName="MT_KOD_YAAD" />
+            <fCSString dataName="MT_SUG_TAKBUL" />
+            <fCSString dataName="MT_SW_TIKUN_CH" />
+            <fCSString dataName="MT_SW_HORAA_TEL_SIDURI" />
+            <fCSString dataName="MT_MEYDA1" />
+            <fCSString dataName="MT_MID" />
+          </fCSRecord>
+        </fCSList>
+        <fCSString dataName="MT_SW_TOTALS" />
+        <fCSRecord dataName="MTDK_TotTakbulim">
+          <fCSString dataName="MT_TOT_APPR_EXPORT" />
+          <fCSString dataName="MT_TOT_APPR_ACHER" />
+          <fCSString dataName="MT_SUM_DOLAR_EXPORT" />
+          <fCSString dataName="MT_SUM_DOLAR_ACHER" />
+          <fCSString dataName="MT_SUM_AMLA_EXPORT" />
+          <fCSString dataName="MT_SUM_AMLA_ACHER" />
+        </fCSRecord>
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <!-- Format for Hitmakdut client to server -->
+  <fmtDef id="MTFC_Hitmakdut">
+    <fCSRecord>
+      <refFmt refId="GLFC_HdrBtt" />
+      <fCSString dataName="MT_SRIKA_KEY" />
+    </fCSRecord>
+  </fmtDef>
+
+  <fmtDef id="MTFI_Hitmakdut">
+    <record>
+      <refFmt refId="GLFI_HdrBttNew" />
+      <fHostString dataName="MT_SRIKA_KEY" /><binHostDecor length="50" />
+      <fHostString dataName="MT_FILLER" /><abcHostDecor length="80" />
+    </record>
+  </fmtDef>
+
+  <!-- Format for Hitmakdut host to server -->
+  <fmtDef id="MTFR_Hitmakdut">
+    <record>
+      <refFmt refId="GLFR_HdrBtt" />
+      <refFmt refId="GLFR_HdrHodaot10New" />
+      <record dataName="MTDK_PirteyTakbulHitmakdut">
+        <fHostString dataName="MT_KOD_YAAD" /><numHostDecor length="3" />
+        <fHostString dataName="MT_FILLER" /><abcHostDecor length="1" />
+        <fHostString dataName="MT_BANK" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SNIF" /><numHostDecor addZerosAsPrefix="3" length="3" />
+        <fHostString dataName="MT_MATBEA" /><numHostDecor addZerosAsPrefix="2" length="2" />
+        <fHostString dataName="MT_SCH" /><numHostDecor addZerosAsPrefix="3" length="3" />
+        <fHostString dataName="MT_CH" /><numHostDecor addZerosAsPrefix="6" length="6" />
+        <fHostString dataName="MT_TR_HODAA" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_SHAA_HODAA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_ASMACHTA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_SHEM_LAKOACH" /><hebHostDecor length="12" />
+        <fHostString dataName="MT_SUG_PEULA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_SCHUM" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_TR_ERECH" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_ASMCHTA_TAKBUL" /><numHostDecor length="9" />
+        <fHostString dataName="MT_HORAA_GVIAT_AMLA" /><numHostDecor length="1" />
+        <fHostString dataName="MT_MATBEA_AMLA" /><numHostDecor addZerosAsPrefix="2" length="2" />
+        <fHostString dataName="MT_SCH_AMLA" /><numHostDecor addZerosAsPrefix="3" length="3" />
+        <fHostString dataName="MT_AMLA_ACHUZ" /><decimalHostDecor length="7" digitsAfterDecimal="4" />
+        <fHostString dataName="MT_AMLA_MIN" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_MAX" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_CONST" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_HAAVARA" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_SCHUM_REZERVA" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_KIDOMET_DIVUACH_1" /><numHostDecor length="1" showZero="yes" />
+        <fHostString dataName="MT_DIVUACH_1" /><numHostDecor length="3" />
+        <fHostString dataName="MT_KIDOMET_DIVUACH_2" /><numHostDecor length="1" showZero="yes" />
+        <fHostString dataName="MT_DIVUACH_2" /><numHostDecor length="3" />
+        <fHostString dataName="MT_TR_ISHUR" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_SHAA_ISHUR" /><abcHostDecor length="6" />
+        <fHostString dataName="MT_PU" /><abcHostDecor length="2" />
+        <fHostString dataName="MT_MAKOR_TAHANA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_ZIHUY_PAKID" /><numHostDecor length="6" />
+        <fHostString dataName="MT_ZIHUY_MEASHER" /><numHostDecor length="6" />
+        <fHostString dataName="MT_MAHUT_TAKBUL" /><numHostDecor length="2" />
+        <fHostString dataName="MT_TAT_MAHUT" /><numHostDecor addZerosAsPrefix="3" length="3" />
+        <fHostString dataName="MT_SNIF_AMLA" /><numHostDecor addZerosAsPrefix="3" length="3" />
+        <fHostString dataName="MT_CH_AMLA" /><numHostDecor addZerosAsPrefix="6" length="6" />
+        <fHostString dataName="MT_STATUS_LAKOACH_1" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SUG_LAKOACH_1" /><numHostDecor length="1" />
+        <fHostString dataName="MT_STATUS_LAKOACH_2" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SUG_LAKOACH_2" /><numHostDecor length="1" />
+        <fHostString dataName="MT_KOD_AMLA_AHAVARA" /><numHostDecor length="3" addZerosAsPrefix="3" />
+        <fHostString dataName="MT_SHITAT_HAAVARA" /><numHostDecor length="1" />
+        <fHostString dataName="MT_TZEVET" /><numHostDecor length="2" />
+        <fHostString dataName="MT_REFERANT" /><numHostDecor length="2" />
+        <fHostString dataName="MT_ASMACHTA_SIDURI" /><numHostDecor length="2" />
+        <fHostString dataName="MT_TR" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_SUG_TAKBUL" /><numHostDecor length="1" />
+        <fHostString dataName="MT_SW_TIKUN_CH" /><abcHostDecor length="1" />
+        <fHostString dataName="MT_SW_HORAA_TEL_SIDURI" /><abcHostDecor length="1" />
+        <fHostString dataName="MT_HAMARA_HAFKADA" /><hebHostDecor length="16" />
+        <fHostString dataName="MT_BANK_AMLA" /><numHostDecor addZerosAsPrefix="2" length="2" />
+        <fHostString dataName="MT_SCH_LAKOACH" /><numHostDecor length="3" />
+    
+      </record>
+      <iCollF dataName="MTDI_TakbulDetailsOneColumn" times="250">
+        <record dataName="GLDL_OneColumn">
+          <fHostString dataName="GL_KOD" /><abcHostDecor length="1" />
+          <fHostString dataName="GL_TEXT" /><hebHostDecor length="80" />
+          <fHostString dataName="GL_MISPAR_TZEVA" /><abcHostDecor length="2" />
+        </record>
+      </iCollF>
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_MELL_MEIDA_NOSAF1" /><hebHostDecor length="75" />
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_MELL_MEIDA_NOSAF2" /><hebHostDecor length="75" />        
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_MID" /><abcHostDecor length="16" />
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_ST_TIPUL" /><numHostDecor length="2" addZerosOnEmpty="2" addZerosAsPrefix="2" />
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_COMENT_PAKID_FOR_MENAHEL" /><hebHostDecor length="50" />  
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_MENAHEL_COMENT" /><hebHostDecor length="50" />      
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_MAT_AMLA_KVUA_MENAHEL" /><numHostDecor addZerosAsPrefix="2" length="2" />      
+      <fHostString dataName="MT_FILLER" /> <abcHostDecor length="1896" />
+    </record>
+  </fmtDef>
+
+  <!-- Format for Hitmakdut server to client -->
+  <fmtDef id="MTFS_Hitmakdut">
+    <fCSRecord>
+      <refFmt refId="GLFS_HdrBtt" />
+      <fCSRecord dataName="MTDK_PirteyTakbulHitmakdut">
+        <fCSString dataName="MT_KOD_YAAD" />
+        <fCSString dataName="MT_ST_TIPUL" />
+        <fCSString dataName="MT_BANK" />
+        <fCSString dataName="MT_SNIF" />
+        <fCSString dataName="MT_MATBEA" />
+        <fCSString dataName="MT_SCH" />
+        <fCSString dataName="MT_CH" />
+        <fCSString dataName="MT_TR_HODAA" />
+        <fCSString dataName="MT_SHAA_HODAA" />
+        <fCSString dataName="MT_ASMACHTA" />
+        <fCSString dataName="MT_SHEM_LAKOACH" />
+        <fCSString dataName="MT_SUG_PEULA" />
+        <fCSString dataName="MT_SCHUM" />
+        <fCSString dataName="MT_TR_ERECH" />
+        <fCSString dataName="MT_ASMCHTA_TAKBUL" />
+        <fCSString dataName="MT_HORAA_GVIAT_AMLA" />
+        <fCSString dataName="MT_MATBEA_AMLA" />
+        <fCSString dataName="MT_SCH_AMLA" />
+        <fCSString dataName="MT_AMLA_ACHUZ" />
+        <fCSString dataName="MT_AMLA_MIN" />
+        <fCSString dataName="MT_AMLA_MAX" />
+        <fCSString dataName="MT_AMLA_CONST" />
+        <fCSString dataName="MT_AMLA_HAAVARA" />
+        <fCSString dataName="MT_SCHUM_REZERVA" />
+        <fCSString dataName="MT_KIDOMET_DIVUACH_1" />
+        <fCSString dataName="MT_DIVUACH_1" />
+        <fCSString dataName="MT_KIDOMET_DIVUACH_2" />
+        <fCSString dataName="MT_DIVUACH_2" />
+        <fCSString dataName="MT_TR_ISHUR" />
+        <fCSString dataName="MT_SHAA_ISHUR" />
+        <fCSString dataName="MT_PU" />
+        <fCSString dataName="MT_MAKOR_TAHANA" />
+        <fCSString dataName="MT_ZIHUY_PAKID" />
+        <fCSString dataName="MT_ZIHUY_MEASHER" />
+        <fCSString dataName="MT_MAHUT_TAKBUL" />
+        <fCSString dataName="MT_TAT_MAHUT" />
+        <fCSString dataName="MT_SNIF_AMLA" />
+        <fCSString dataName="MT_CH_AMLA" />
+        <fCSString dataName="MT_STATUS_LAKOACH_1" />
+        <fCSString dataName="MT_SUG_LAKOACH_1" />
+        <fCSString dataName="MT_STATUS_LAKOACH_2" />
+        <fCSString dataName="MT_SUG_LAKOACH_2" />
+        <fCSString dataName="MT_KOD_AMLA_AHAVARA" />
+        <fCSString dataName="MT_SHITAT_HAAVARA" />
+        <fCSString dataName="MT_TZEVET" />
+        <fCSString dataName="MT_REFERANT" />
+        <fCSString dataName="MT_ASMACHTA_SIDURI" />
+        <fCSString dataName="MT_TR" />
+        <fCSString dataName="MT_SUG_TAKBUL" />
+        <fCSString dataName="MT_SW_TIKUN_CH" />
+        <fCSString dataName="MT_SW_HORAA_TEL_SIDURI" />
+        <fCSString dataName="MT_HAMARA_HAFKADA" />
+        <fCSString dataName="MT_BANK_AMLA" />
+        <fCSString dataName="MT_SCH_LAKOACH" />
+      </fCSRecord>
+      <fCSList dataName="MTDI_TakbulDetailsOneColumn" times="*">
+        <fCSRecord dataName="GLDL_OneColumn">
+          <fCSString dataName="GL_KOD" />
+          <fCSString dataName="GL_TEXT" />
+          <fCSString dataName="GL_MISPAR_TZEVA" />
+        </fCSRecord>
+      </fCSList>
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_MELL_MEIDA_NOSAF1" />
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_MELL_MEIDA_NOSAF2" />        
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_MID" />
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_MENAHEL_COMENT" />
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_COMENT_PAKID_FOR_MENAHEL" />
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_MAT_AMLA_KVUA_MENAHEL" />   
+         
+      
+    </fCSRecord>
+  </fmtDef>
+
+  <!-- Format for Vade client to server  -->
+  <fmtDef id="MTFC_VadeKlot">
+    <fCSRecord>
+      <refFmt refId="GLFC_HdrBtt" />
+      <fCSRecord dataName="MTDK_PirteyTakbulHitmakdut">
+        <fCSString dataName="MT_SUG_PEULA" />
+        <fCSString dataName="MT_KOD_YAAD" />
+        <fCSString dataName="MT_BANK" />
+        <fCSString dataName="MT_SNIF" />
+        <fCSString dataName="MT_MATBEA" />
+        <fCSString dataName="MT_SCH" />
+        <fCSString dataName="MT_CH" />
+        <fCSString dataName="MT_TR_HODAA" />
+        <fCSString dataName="MT_SHAA_HODAA" />
+        <fCSString dataName="MT_ASMACHTA" />
+        <fCSString dataName="MT_SCHUM" />
+        <fCSString dataName="MT_TR_ERECH" />
+        <fCSString dataName="MT_ASMCHTA_TAKBUL" />
+        <fCSString dataName="MT_SIBA" />
+        <fCSString dataName="MT_MATBEA_AMLA" />
+        <fCSString dataName="MT_SCH_AMLA" />
+        <fCSString dataName="MT_AMLA_ACHUZ" />
+        <fCSString dataName="MT_AMLA_MIN" />
+        <fCSString dataName="MT_AMLA_MAX" />
+        <fCSString dataName="MT_AMLA_CONST" />
+        <fCSString dataName="MT_AMLA_HAAVARA" />
+        <fCSString dataName="MT_SCHUM_REZERVA" />
+        <fCSString dataName="MT_KIDOMET_DIVUACH_1" />
+        <fCSString dataName="MT_DIVUACH_1" />
+        <fCSString dataName="MT_KIDOMET_DIVUACH_2" />
+        <fCSString dataName="MT_DIVUACH_2" />
+        <fCSString dataName="MT_MAHUT_TAKBUL" />
+        <fCSString dataName="MT_TAT_MAHUT" />
+        <fCSString dataName="MT_BANK_AMLA" />
+        <fCSString dataName="MT_SNIF_AMLA" />
+        <fCSString dataName="MT_CH_AMLA" />
+        <fCSString dataName="MT_STATUS_LAKOACH_1" />
+        <fCSString dataName="MT_SUG_LAKOACH_1" />
+        <fCSString dataName="MT_STATUS_LAKOACH_2" />
+        <fCSString dataName="MT_SUG_LAKOACH_2" />
+        <fCSString dataName="MT_MELL_MEIDA_NOSAF1" />
+        <fCSString dataName="MT_MELL_MEIDA_NOSAF2" /> 
+        <fCSString dataName="MT_COMENT_PAKID_FOR_MENAHEL" />     
+        <fCSString dataName="MT_MENAHEL_COMENT" />   
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+	
+		<!-- Format for Vade server to host  -->
+  <fmtDef id="MTFI_VadeKlot">
+    <record>
+      <refFmt refId="GLFI_HdrBttNew" />
+      <record dataName="MTDK_PirteyTakbulHitmakdut">
+        <fHostString dataName="MT_SUG_PEULA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_KOD_YAAD" /><numHostDecor length="3" />
+        <fHostString dataName="MT_BANK" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SNIF" /><numHostDecor length="3" />
+        <fHostString dataName="MT_MATBEA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SCH" /><numHostDecor length="3" />
+        <fHostString dataName="MT_CH" /><numHostDecor length="6" />
+        <fHostString dataName="MT_TR_HODAA" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_SHAA_HODAA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_ASMACHTA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_SCHUM" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_TR_ERECH" /><dateHostDecor length="8" />
+        <fHostString dataName="MT_ASMCHTA_TAKBUL" /><numHostDecor length="9" />
+        <fHostString dataName="MT_SIBA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_MATBEA_AMLA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SCH_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_AMLA_ACHUZ" /><decimalHostDecor length="7" digitsAfterDecimal="4" />
+        <fHostString dataName="MT_AMLA_MIN" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_MAX" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_CONST" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_AMLA_HAAVARA" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_SCHUM_REZERVA" /><decimalHostDecor length="16" />
+        <fHostString dataName="MT_KIDOMET_DIVUACH_1" /><numHostDecor length="1" showZero="yes" />
+        <fHostString dataName="MT_DIVUACH_1" /><numHostDecor length="3" />
+        <fHostString dataName="MT_KIDOMET_DIVUACH_2" /><numHostDecor length="1" showZero="yes" />
+        <fHostString dataName="MT_DIVUACH_2" /><numHostDecor length="3" />
+        <fHostString dataName="MT_MAHUT_TAKBUL" /><numHostDecor length="2" />
+        <fHostString dataName="MT_TAT_MAHUT" /><numHostDecor length="3" />
+        <fHostString dataName="MT_BANK_AMLA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SNIF_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_CH_AMLA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_STATUS_LAKOACH_1" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SUG_LAKOACH_1" /><numHostDecor length="1" />
+        <fHostString dataName="MT_STATUS_LAKOACH_2" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SUG_LAKOACH_2" /><numHostDecor length="1" />
+        <fHostString dataName="MT_MELL_MEIDA_NOSAF1" /><hebHostDecor length="75" />
+        <fHostString dataName="MT_MELL_MEIDA_NOSAF2" /><hebHostDecor length="75" />
+        <fHostString dataName="MT_COMENT_PAKID_FOR_MENAHEL" /><hebHostDecor length="50" /> 
+        <fHostString dataName="MT_MENAHEL_COMENT" /><hebHostDecor length="50" />
+                
+  
+      </record>
+      <fHostString dataName="MT_FILLER" /><abcHostDecor length="400" />
+    </record>
+  </fmtDef>
+
+  <!-- Format for Vade server to host  -->
+  <fmtDef id="MTFR_VadeKlot">
+    <record>
+      <refFmt refId="GLFR_HdrBtt" />
+      <refFmt refId="GLFR_HdrHodaot10New" />
+      <fHostString dataName="MTDK_PirteyTakbulHitmakdut.MT_STATUS_KLOT" /><numHostDecor length="2" />
+      <fHostString dataName="MT_FILLER" /><abcHostDecor length="78" />
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MTFS_VadeKlot">
+    <fCSRecord>
+      <refFmt refId="GLFS_HdrBtt" />
+      <fCSString dataName="MTDK_PirteyTakbulHitmakdut.MT_STATUS_KLOT" />
+    </fCSRecord>
+  </fmtDef>
+
+  <operation id="MTOS_Srika" context="MTCS_MatachTakbulim">
+    <opStep id="GLOP_DelSrikaKey" />
+    <opStep TransId="MBNR" TransIdFromHost="MR" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+
+    <!-- formats -->
+    <refFormat name="MTFC_Srika" refId="MTFC_Srika" />
+    <refFormat name="hostSendFormat" refId="MTFI_Srika" />
+    <refFormat name="hostReceiveFormat" refId="MTFR_Srika" />
+    <refFormat name="csReplyFormat" refId="MTFS_Srika" />
+  </operation>
+
+  <operation id="MTOS_SrikaHemshech" context="MTCS_MatachTakbulim">
+    <opStep TransId="MBNR" TransIdFromHost="MR" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+
+    <!-- formats -->
+    <refFormat name="MTFC_Srika" refId="MTFC_Srika" />
+    <refFormat name="hostSendFormat" refId="MTFI_Srika" />
+    <refFormat name="hostReceiveFormat" refId="MTFR_Srika" />
+    <refFormat name="csReplyFormat" refId="MTFS_Srika" />
+  </operation>
+
+  <operation id="MTOS_Hitmakdut" context="MTCS_MatachTakbulimHitmakdut">
+    <opStep TransId="MBNS" TransIdFromHost="MS" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+    <!--     formats -->
+    <refFormat name="csReplyFormat" refId="MTFS_Hitmakdut" />
+    <refFormat name="hostSendFormat" refId="MTFI_Hitmakdut" />
+    <refFormat name="hostReceiveFormat" refId="MTFR_Hitmakdut" />
+    <refFormat name="MTFC_Hitmakdut" refId="MTFC_Hitmakdut" />
+  </operation>
+  
+  <operation id="MTOS_Vade" context="MTCS_MatachTakbulimHitmakdut">
+  	<opStep TransId="M0BS" TransIdFromHost="MV" id="GLOP_SetTransId"/>
+  	<refOpSteps refId="generalSendToHostFlowWithPrint"/>
+<!--     formats  -->
+		<refFormat name="csReplyFormat" refId="MTFS_VadeKlot"/>
+	    <refFormat name="hostSendFormat" refId="MTFI_VadeKlot"/>
+	    <refFormat name="hostReceiveFormat" refId="MTFR_VadeKlot"/>
+	    <refFormat name="clientToServerFormat" refId="MTFC_VadeKlot"/>
+  </operation>
+
+  <operation id="MTOS_Klot" context="MTCS_MatachTakbulimHitmakdut">
+    <opStep TransId="M0PS" TransIdFromHost="MU" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+    <!-- formats -->
+    <refFormat name="csReplyFormat" refId="MTFS_VadeKlot" />
+    <refFormat name="hostSendFormat" refId="MTFI_VadeKlot" />
+    <refFormat name="hostReceiveFormat" refId="MTFR_VadeKlot" />
+    <refFormat name="clientToServerFormat" refId="MTFC_VadeKlot" />
+  </operation>
+
+  <!-- AMALOT -->
+  <fmtDef id="MCFC_M312Amalot">
+    <fCSRecord>
+      <refFmt refId="GLFC_HdrBtt" />
+      <fCSRecord dataName="MTDK_PirteyTakbulHitmakdut">
+        <fCSString dataName="MT_BANK_AMLA" />
+        <fCSString dataName="MT_SNIF_AMLA" />
+        <fCSString dataName="MT_MATBEA_AMLA" />
+        <fCSString dataName="MT_SCH_AMLA" />
+        <fCSString dataName="MT_CH_AMLA" />
+        <fCSString dataName="MT_SUG_LAKOACH_1" />
+        <fCSString dataName="MT_STATUS_LAKOACH_1" />
+      </fCSRecord>
+      <fCSRecord dataName="MCDK_MatachMain">
+        <fCSString dataName="MC_SUG_BAKASH_AMLA" />
+        <fCSString dataName="MC_SUG_AMLA" />
+      </fCSRecord>
+      <fCSRecord dataName="MCDK_COMMON">
+        <fCSString dataName="MC_MAHUT_NICHNAS" />
+        <fCSString dataName="MC_TAT_MAHUT_NICHNAS" />
+      </fCSRecord>
+      <fCSRecord dataName="MTDK_PirteyTakbulHitmakdut">
+        <fCSString dataName="MT_KIDOMET_DIVUACH_1" />
+        <fCSString dataName="MT_DIVUACH_1" />
+        <fCSString dataName="MT_KIDOMET_DIVUACH_2" />
+        <fCSString dataName="MT_DIVUACH_2" />
+        <fCSString dataName="MT_SCHUM" />
+        <fCSString dataName="MT_AMLA_ACHUZ" />
+        <fCSString dataName="MT_AMLA_ACHUZ" />
+        <fCSString dataName="MT_MATBEA_AMLA" />
+        <fCSString dataName="MT_AMLA_CONST" />
+      </fCSRecord>
+      <fCSRecord dataName="MCDK_MatachMain">
+        <fCSString dataName="MC_AMLA_CONST_ORIG" />
+        <fCSString dataName="MC_FLAG_SWIFT_IN_OUT" />
+        <fCSString dataName="MC_AMLA_MULTI" />
+        <fCSString dataName="MC_SUG_AMLA_DOAR" />
+        <fCSString dataName="MC_MISLAKA" />
+        <fCSString dataName="MC_HAVER_MISLAKA" />
+        <fCSString dataName="MC_SUG_HAVARA" />
+        <fCSString dataName="MC_SUG_NIMAN" />
+        <fCSString dataName="MC_SHAAR_ISKA" />
+        <fCSString dataName="MC_GVIAT_HOTZAOT" />
+        <fCSString dataName="MC_TR_ERECH" />
+        <fCSString dataName="MC_ACHUZ_AMLA_MTI" />
+        <fCSString dataName="MC_ACHUZ_AMLA_MAKOR" />
+        <fCSString dataName="MC_ACHUZ_AMLA" />
+        <fCSString dataName="MC_ACHUZ_AMLA_MTC" />
+        <fCSString dataName="MC_SIBAT_HACHCZARA1" />
+        <fCSString dataName="MC_SIBAT_HACHCZARA2" />
+        <fCSString dataName="MC_SIBAT_HACHCZARA3" />
+        <fCSString dataName="MC_MISPAR_HAMCHAOT" />
+        <fCSString dataName="MC_EXT_KEY" />
+        <fCSString dataName="MC_MISPAR_ISKA" />
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <fmtDef id="MCFI_M312Amalot">
+    <record>
+      <refFmt refId="GLFI_HdrBttNew" />
+      <record dataName="MTDK_PirteyTakbulHitmakdut">
+        <fHostString dataName="MT_BANK_AMLA" /><numHostDecor length="2" />
+        <fHostString dataName="MT_SNIF_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_MATBEA_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_SCH_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MT_CH_AMLA" /><numHostDecor length="6" />
+        <fHostString dataName="MT_SUG_LAKOACH_1" /><numHostDecor length="1" />
+        <fHostString dataName="MT_STATUS_LAKOACH_1" /><numHostDecor length="2" />
+      </record>
+      <record dataName="MCDK_MatachMain">
+        <fHostString dataName="MC_SUG_BAKASH_AMLA" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SUG_AMLA" /><abcHostDecor length="4" />
+      </record>
+      <record dataName="MCDK_COMMON">
+        <fHostString dataName="MC_MAHUT_NICHNAS" /><numHostDecor length="2" />
+        <fHostString dataName="MC_TAT_MAHUT_NICHNAS" /><numHostDecor length="3" />
+      </record>
+      <record dataName="MTDK_PirteyTakbulHitmakdut">
+        <fHostString dataName="MT_KIDOMET_DIVUACH_1" /><numHostDecor length="1" />
+        <fHostString dataName="MT_DIVUACH_1" /><numHostDecor length="3" />
+        <fHostString dataName="MT_KIDOMET_DIVUACH_2" /><numHostDecor length="1" />
+        <fHostString dataName="MT_DIVUACH_2" /><numHostDecor length="3" />
+        <fHostString dataName="MT_SCHUM" /><decimalHostDecor length="15" />
+        <fHostString dataName="MT_AMLA_ACHUZ" /><decimalHostDecor length="6" digitsAfterDecimal="4" />
+        <fHostString dataName="MT_AMLA_ACHUZ" /><decimalHostDecor length="6" digitsAfterDecimal="4" />
+        <fHostString dataName="MT_MATBEA_AMLA" /><numHostDecor length="3" /> <!-- irrelevant -->
+        <fHostString dataName="MT_AMLA_CONST" /><decimalHostDecor length="9" />
+      </record>
+      <record dataName="MCDK_MatachMain">
+        <fHostString dataName="MC_AMLA_CONST_ORIG" /><decimalHostDecor length="9" />
+        <fHostString dataName="MC_FLAG_SWIFT_IN_OUT" /><numHostDecor length="1" />
+        <fHostString dataName="MC_AMLA_MULTI" /><numHostDecor length="4" />
+        <fHostString dataName="MC_SUG_AMLA_DOAR" /><numHostDecor length="1" />
+        <fHostString dataName="MC_MISLAKA" /><abcHostDecor length="3" />
+        <fHostString dataName="MC_HAVER_MISLAKA" /><abcHostDecor length="24" />
+        <fHostString dataName="MC_SUG_HAVARA" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SUG_NIMAN" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SHAAR_ISKA" /><decimalHostDecor length="10" digitsAfterDecimal="4" />
+        <fHostString dataName="MC_GVIAT_HOTZAOT" /><numHostDecor length="1" />
+        <fHostString dataName="MC_TR_ERECH" /><dateHostDecor length="8" />
+        <fHostString dataName="MC_ACHUZ_AMLA_MTI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_ACHUZ_AMLA_MAKOR" /><numHostDecor length="3" />
+        <fHostString dataName="MC_ACHUZ_AMLA" /><decimalHostDecor length="8" digitsAfterDecimal="4" />
+        <fHostString dataName="MC_ACHUZ_AMLA_MTC" /><decimalHostDecor length="8" digitsAfterDecimal="4" />
+        <fHostString dataName="MC_SIBAT_HACHCZARA1" /><numHostDecor length="3" />
+        <fHostString dataName="MC_SIBAT_HACHCZARA2" /><numHostDecor length="3" />
+        <fHostString dataName="MC_SIBAT_HACHCZARA3" /><numHostDecor length="3" />
+        <fHostString dataName="MC_MISPAR_HAMCHAOT" /><numHostDecor length="2" />
+        <fHostString dataName="MC_EXT_KEY" /><abcHostDecor length="50" />
+        <fHostString dataName="MC_MISPAR_ISKA" /><numHostDecor length="10" />
+        <fHostString dataName="MC_FILLER" /><abcHostDecor length="90" />
+      </record>
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MCFR_M312Amalot">
+    <record>
+      <refFmt refId="GLFR_HdrBtt" />
+      <refFmt refId="GLFR_HdrHodaot10New" />
+      <record dataName="MCDK_MatachMain">
+        <fHostString dataName="MC_SUG_BAKASH_AMLA" /><numHostDecor length="1" />
+        <fHostString dataName="MC_Z_AMLA" /><decimalHostDecor length="6" digitsAfterDecimal="4" />
+        <fHostString dataName="MC_AMLA_CONST" /><decimalHostDecor length="9" showZero="yes"/>
+        <fHostString dataName="MC_AMLA_CONST_MAT" /><numHostDecor length="3" showZero="yes"/>
+        <fHostString dataName="MC_AMLA_DOLAR" /><decimalHostDecor length="16" />
+        <fHostString dataName="MC_AMLA_BMATBEA" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_KOD_AMLA" /><numHostDecor length="3" />
+        <fHostString dataName="MC_AMLA_PTOR" /><numHostDecor length="1" />
+        <fHostString dataName="MC_AMLA_TAARIF_DOAR" /><decimalHostDecor length="16" />
+        <fHostString dataName="MC_AMLA_MIN_MAX" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SUG_AMLA_DOAR" /><numHostDecor length="1" />
+        <fHostString dataName="MC_HASIMA_AMLA_CONST" /><numHostDecor length="1" />
+        <fHostString dataName="MC_GVIAT_HOTZAOT" /><numHostDecor length="1" />
+        <fHostString dataName="MC_ACHUZ_AMLA_MTI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_FLAG_OPEN_MAT" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_ACHUZ_AMLA" /><decimalHostDecor length="8" digitsAfterDecimal="4" />
+        <fHostString dataName="MC_EXT_KEY" /><abcHostDecor length="50" />
+        <fHostString dataName="MC_FILLER" /><abcHostDecor length="100" />
+      </record>
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MCFS_M312Amalot">
+    <fCSRecord>
+      <refFmt refId="GLFS_HdrBtt" />
+      <fCSRecord dataName="MCDK_MatachMain">
+        <fCSString dataName="MC_SUG_BAKASH_AMLA" />
+        <fCSString dataName="MC_Z_AMLA" />
+        <fCSString dataName="MC_AMLA_CONST" />
+        <fCSString dataName="MC_AMLA_CONST_MAT" />
+        <fCSString dataName="MC_AMLA_DOLAR" />
+        <fCSString dataName="MC_AMLA_BMATBEA" />
+        <fCSString dataName="MC_KOD_AMLA" />
+        <fCSString dataName="MC_AMLA_PTOR" />
+        <fCSString dataName="MC_AMLA_TAARIF_DOAR" />
+        <fCSString dataName="MC_AMLA_MIN_MAX" />
+        <fCSString dataName="MC_SUG_AMLA_DOAR" />
+        <fCSString dataName="MC_HASIMA_AMLA_CONST" />
+        <fCSString dataName="MC_GVIAT_HOTZAOT" />
+        <fCSString dataName="MC_ACHUZ_AMLA_MTI" />
+        <fCSString dataName="MC_FLAG_OPEN_MAT" />
+        <fCSString dataName="MC_ACHUZ_AMLA" />
+        <fCSString dataName="MC_EXT_KEY" />
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <operation context="MTCS_MatachTakbulimHitmakdut" id="MTOS_M312Amalot">
+    <opStep TransId="BMLA" TransIdFromHost="MA" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+    <!-- formats -->
+    <refFormat name="csReplyFormat" refId="MCFS_M312Amalot" />
+    <refFormat name="hostSendFormat" refId="MCFI_M312Amalot" />
+    <refFormat name="hostReceiveFormat" refId="MCFR_M312Amalot" />
+    <refFormat name="MCFC_M312Amalot" refId="MCFC_M312Amalot" />
+  </operation>
+
+  <!--  FOR ITROT AND IFYUNIM -->
+  <fmtDef id="MCFC_M312Cheshbon">
+    <fCSRecord>
+      <refFmt refId="GLFC_HdrBtt" />
+      <fCSString dataName="GKSI_HdrBtt.GL_BANK" />
+      <fCSString dataName="GKSI_HdrBtt.GL_SNIF" />
+      <fCSString dataName="GKSI_HdrBtt.GL_SCH" />
+      <fCSString dataName="GKSI_HdrBtt.GL_CH" />
+      <fCSString dataName="GKSI_HdrBtt.GL_MATBEA" />
+      <fCSRecord dataName="MCDK_MatachMain">
+        <fCSString dataName="MC_BANK_NEGDI" />
+        <fCSString dataName="MC_SNIF_NEGDI" />
+        <fCSString dataName="MC_MATBEA_NEGDI" />
+        <fCSString dataName="MC_SCH_NEGDI" />
+        <fCSString dataName="MC_CH_NEGDI" />
+        <fCSString dataName="MC_CHOVA_ZCHUT" />
+        <fCSString dataName="MC_SUG_PEULA_MATACHA" />
+        <fCSString dataName="MC_FROM_MISCHAR" />
+        <fCSString dataName="MC_GVIAT_AMLA" />
+        <fCSString dataName="MC_SW_SHEDER_ONLY_IFYUN" />
+        <fCSString dataName="MC_SW_RASHI_ONLY" />	
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <fmtDef id="MCFI_M312Cheshbon">
+    <record>
+      <refFmt refId="GLFI_HdrBttNew" />
+      <record dataName="MCDK_MatachMain">
+        <fHostString dataName="MC_BANK_NEGDI" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SNIF_NEGDI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_MATBEA_NEGDI" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SCH_NEGDI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_CH_NEGDI" /><numHostDecor length="6" />
+        <fHostString dataName="MC_CHOVA_ZCHUT" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SUG_PEULA_MATACHA" /><abcHostDecor length="4" />
+        <fHostString dataName="MC_FROM_MISCHAR" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_GVIAT_AMLA" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_SW_SHEDER_ONLY_IFYUN" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_SW_RASHI_ONLY" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_FILLER" /><abcHostDecor length="98" />
+      </record>
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MCFR_M312Cheshbon">
+    <record>
+      <refFmt refId="GLFR_HdrBtt" />
+      <refFmt refId="GLFR_HdrHodaot10New" />
+      <record dataName="MCDK_MatachMain">
+        <fHostString dataName="MC_KOD_SHDIA-2" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_MISPAR-SHGIA-2" /><numHostDecor length="3" />
+        <fHostString dataName="MC_BANK_NEGDI" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SNIF_NEGDI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_MATBEA_NEGDI" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SCH_NEGDI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_CH_NEGDI" /><numHostDecor length="6" />
+        <fHostString dataName="MC_SHEM_LAKOACH" /><hebHostDecor length="12" />
+        <fHostString dataName="MC_SHEM_LAKOACH_ENG_1" /><abcHostDecor length="35" />
+        <fHostString dataName="MC_SHEM_LAKOACH_ENG_NEXT" /><abcHostDecor length="35" />
+        <fHostString dataName="MC_KTOVET_LAKOACH_ENG_1" /><abcHostDecor length="35" />
+        <fHostString dataName="MC_KTOVET_LAKOACH_ENG_NEXT" /><abcHostDecor length="35" />
+        <fHostString dataName="MC_MAMAD_LAKOACH" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SUG_LAKOACH" /><numHostDecor length="1" />
+        <fHostString dataName="MC_HERCEB_HATIMA1" /><numHostDecor length="2" />
+        <fHostString dataName="MC_YITRA_KLALIT1" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_MEZUMAN1" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_ADKANIT1" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_MESHICHA1" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_TIKSH_325_1" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_KOD_HODAA_MCH" /><numHostDecor length="2" />
+        <fHostString dataName="MC_MAKBILIM" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_MAHUT" /><numHostDecor length="2" />
+        <fHostString dataName="MC_TAT_MAHUT" /><numHostDecor length="3" />
+        <fHostString dataName="MC_KOD_TOSHAV_1" /><numHostDecor length="1" />
+        <fHostString dataName="MC_MISPAR_ZIHUY1" /><numHostDecor length="9" />
+        <fHostString dataName="MC_MONE_IFYUN1" /><numHostDecor length="2" />
+        <refFmt refId="MCFR_Ifyunim1" />
+        <fHostString dataName="MC_SHEM_LAKOACH2" /><hebHostDecor length="12" />
+        <fHostString dataName="MC_MAMAD_LAKOACH2" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SUG_LAKOACH2" /><numHostDecor length="1" />
+        <fHostString dataName="MC_HERCEB_HATIMA2" /><numHostDecor length="2" />
+        <fHostString dataName="MC_YITRA_KLALIT2" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_MEZUMAN2" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_ADKANIT2" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_MESHICHA2" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_YITRA_TIKSH_325_2" /><decimalHostDecor length="16" showZero="yes"/>
+        <fHostString dataName="MC_KOD_HODAA_MCH2" /><numHostDecor length="2" />
+        <fHostString dataName="MC_KOD_TOSHAV_2" /><numHostDecor length="1" />
+        <fHostString dataName="MC_MONE_IFYUN2" /><numHostDecor length="2" />
+        <refFmt refId="MCFR_Ifyunim2" />
+        <fHostString dataName="MC_KOD_MAS_HACHNASA" /><numHostDecor length="1" />
+        <fHostString dataName="MC_ACHUZ_MAS" /><decimalHostDecor length="5" />
+        <fHostString dataName="MC_ACHUZ_AMLA" /><decimalHostDecor digitsAfterDecimal="4" length="6" />
+        <fHostString dataName="MC_ACHUZ_HATAVA" /><decimalHostDecor digitsAfterDecimal="4" length="6" />
+        <fHostString dataName="MC_ACHUZ_HATAVA_RIBIT_PH1" /><decimalHostDecor digitsAfterDecimal="4" length="8" />
+        <fHostString dataName="MC_AMLAT_HAAVARA" /><decimalHostDecor length="12" />
+        <fHostString dataName="MC_AMLAT_HAAVARA_MIN" /><decimalHostDecor length="6" />
+        <fHostString dataName="MC_AMLAT_HAAVARA_MAX" /><decimalHostDecor length="9" />
+        <fHostString dataName="MC_AMLAT_HAAVARA_KVUA" /><decimalHostDecor length="9" />
+        <fHostString dataName="MC_AMLAT_HAAVARA_DOAR_LESHEDER" /><decimalHostDecor length="6" />
+        <fHostString dataName="MC_ACHUZ_HIYUV_HEFRESH_SHAAR" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_ACHUZ_HIYUV_AMLA_Y_ERECH" /><numHostDecor length="1" />
+        <fHostString dataName="MC_SHAAR_DO_KNIA" /><decimalHostDecor digitsAfterDecimal="4" length="10" />
+        <fHostString dataName="MC_SHAAR_DO_MECHIRA" /><decimalHostDecor digitsAfterDecimal="4" length="10" />
+        <fHostString dataName="MC_MATBEA_YECHIDA" /><numHostDecor length="2" />
+        <fHostString dataName="MC_SHAAR_DO_STATUS" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_Z_STIA_EMTZA_DO" /><decimalHostDecor length="4" />
+        <fHostString dataName="MC_KLOT_TIMEOUT" /><numHostDecor length="2" />
+        <fHostString dataName="MC_YACHAS_LE_YURO" /><decimalHostDecor digitsAfterDecimal="6" length="12" />
+        <fHostString dataName="MC_PK_HL_PANUY" /><numHostDecor length="9" />
+        <fHostString dataName="MC_NO_OF_PK_HL" /><numHostDecor length="2" />
+        <fHostString dataName="MC_PK_HL_OFFLINE" /><abcHostDecor length="1" />
+        <fHostString dataName="MC_SCH_PAIL_RASHI" /><numHostDecor length="3" />
+        <fHostString dataName="MC_SCH_PAIL_MISHNI" /><numHostDecor length="3" /> 
+
+		<!-- EliezerV begin -->
+		<fHostString dataName="MC_FILLER" /><abcHostDecor length="50" />
+
+		<fHostString dataName="SEMEL_DIVUACH1_CHOVA"/><numHostDecor length="1" addZerosOnEmpty="1"/>
+		<fHostString dataName="SEMEL_DIVUACH2_CHOVA"/><numHostDecor length="1" addZerosOnEmpty="1"/>
+		<fHostString dataName="SEMEL_DIVUACH3_CHOVA"/><numHostDecor length="1" addZerosOnEmpty="1"/>
+
+		<fHostString dataName="MC_FILLER" /><abcHostDecor length="41" />
+        <!--fHostString dataName="MC_FILLER" /><abcHostDecor length="94" /-->
+		<!-- EliezerV end -->
+      </record>
+    </record>
+  </fmtDef>
+
+  <fmtDef id="MCFR_Ifyunim1">
+    <iCollF dataName="MCSG_IFYUNIM_LIST1" times="30">
+      <record dataName="MCSG_IFYUNIM">
+        <fHostString dataName="MC_IFYUNIM" /><abcHostDecor length="3" />
+        <fHostString dataName="MC_KOD_TIPUL" /><hebHostDecor length="1" />
+      </record>
+    </iCollF>
+  </fmtDef>
+  
+  <fmtDef id="MCFR_Ifyunim2">
+    <iCollF dataName="MCSG_IFYUNIM_LIST2" times="30">
+      <record dataName="MCSG_IFYUNIM">
+        <fHostString dataName="MC_IFYUNIM" /><abcHostDecor length="3" />
+        <fHostString dataName="MC_KOD_TIPUL" /><hebHostDecor length="1" />
+      </record>
+    </iCollF>
+  </fmtDef>
+
+  <fmtDef id="MCFS_M312Cheshbon">
+    <fCSRecord>
+      <refFmt refId="GLFS_HdrBtt" />
+      <fCSRecord dataName="MCDK_MatachMain">
+        <fCSString dataName="MC_KOD_SHDIA-2" />
+        <fCSString dataName="MC_MISPAR-SHGIA-2" />
+        <fCSString dataName="MC_BANK_NEGDI" />
+        <fCSString dataName="MC_SNIF_NEGDI" />
+        <fCSString dataName="MC_MATBEA_NEGDI" />
+        <fCSString dataName="MC_SCH_NEGDI" />
+        <fCSString dataName="MC_CH_NEGDI" />
+        <fCSString dataName="MC_SHEM_LAKOACH" />
+        <fCSString dataName="MC_SHEM_LAKOACH_ENG_1" />
+        <fCSString dataName="MC_SHEM_LAKOACH_ENG_NEXT" />
+        <fCSString dataName="MC_KTOVET_LAKOACH_ENG_1" />
+        <fCSString dataName="MC_KTOVET_LAKOACH_ENG_NEXT" />
+        <fCSString dataName="MC_MAMAD_LAKOACH" />
+        <fCSString dataName="MC_SUG_LAKOACH" />
+        <fCSString dataName="MC_HERCEB_HATIMA1" />
+        <fCSString dataName="MC_YITRA_KLALIT1" />
+        <fCSString dataName="MC_YITRA_MEZUMAN1" />
+        <fCSString dataName="MC_YITRA_ADKANIT1" />
+        <fCSString dataName="MC_YITRA_MESHICHA1" />
+        <fCSString dataName="MC_YITRA_TIKSH_325_1" />
+        <fCSString dataName="MC_KOD_HODAA_MCH" />
+        <fCSString dataName="MC_MAKBILIM" />
+        <fCSString dataName="MC_MAHUT" />
+        <fCSString dataName="MC_TAT_MAHUT" />
+        <fCSString dataName="MC_KOD_TOSHAV_1" />
+        <fCSString dataName="MC_MISPAR_ZIHUY1" />
+        <fCSString dataName="MC_MONE_IFYUN1" />
+        <fCSList dataName="MCSG_IFYUNIM_LIST1" times="30">
+          <fCSRecord dataName="MCSG_IFYUNIM">
+            <fCSString dataName="MC_IFYUNIM" />
+            <fCSString dataName="MC_KOD_TIPUL" />
+          </fCSRecord>
+        </fCSList>
+        <fCSString dataName="MC_SHEM_LAKOACH2" />
+        <fCSString dataName="MC_MAMAD_LAKOACH2" />
+        <fCSString dataName="MC_SUG_LAKOACH2" />
+        <fCSString dataName="MC_HERCEB_HATIMA2" />
+        <fCSString dataName="MC_YITRA_KLALIT2" />
+        <fCSString dataName="MC_YITRA_MEZUMAN2" />
+        <fCSString dataName="MC_YITRA_ADKANIT2" />
+        <fCSString dataName="MC_YITRA_MESHICHA2" />
+        <fCSString dataName="MC_YITRA_TIKSH_325_2" />
+        <fCSString dataName="MC_KOD_HODAA_MCH2" />
+        <fCSString dataName="MC_KOD_TOSHAV_2" />
+        <fCSString dataName="MC_MONE_IFYUN2" />
+        <fCSList dataName="MCSG_IFYUNIM_LIST2" times="30">
+          <fCSRecord dataName="MCSG_IFYUNIM">
+            <fCSString dataName="MC_IFYUNIM" />
+            <fCSString dataName="MC_KOD_TIPUL" />
+          </fCSRecord>
+        </fCSList>
+        <fCSString dataName="MC_KOD_MAS_HACHNASA" />
+        <fCSString dataName="MC_ACHUZ_MAS" />
+        <fCSString dataName="MC_ACHUZ_AMLA" />
+        <fCSString dataName="MC_ACHUZ_HATAVA" />
+        <fCSString dataName="MC_ACHUZ_HATAVA_RIBIT_PH1" />
+        <fCSString dataName="MC_AMLAT_HAAVARA" />
+        <fCSString dataName="MC_AMLAT_HAAVARA_MIN" />
+        <fCSString dataName="MC_AMLAT_HAAVARA_MAX" />
+        <fCSString dataName="MC_AMLAT_HAAVARA_KVUA" />
+        <fCSString dataName="MC_AMLAT_HAAVARA_DOAR_LESHEDER" />
+        <fCSString dataName="MC_ACHUZ_HIYUV_HEFRESH_SHAAR" />
+        <fCSString dataName="MC_ACHUZ_HIYUV_AMLA_Y_ERECH" />
+        <fCSString dataName="MC_SHAAR_DO_KNIA" />
+        <fCSString dataName="MC_SHAAR_DO_MECHIRA" />
+        <fCSString dataName="MC_MATBEA_YECHIDA" />
+        <fCSString dataName="MC_SHAAR_DO_STATUS" />
+        <fCSString dataName="MC_Z_STIA_EMTZA_DO" />
+        <fCSString dataName="MC_KLOT_TIMEOUT" />
+        <fCSString dataName="MC_YACHAS_LE_YURO" />
+        <fCSString dataName="MC_PK_HL_PANUY" />
+        <fCSString dataName="MC_NO_OF_PK_HL" />
+        <fCSString dataName="MC_PK_HL_OFFLINE" />
+        <fCSString dataName="MC_SCH_PAIL_RASHI" />
+        <fCSString dataName="MC_SCH_PAIL_MISHNI" /> 
+
+		<!-- EliezerV begin -->
+		<fCSString dataName="SEMEL_DIVUACH1_CHOVA"/>
+		<fCSString dataName="SEMEL_DIVUACH2_CHOVA"/>
+		<fCSString dataName="SEMEL_DIVUACH3_CHOVA"/>
+		<!-- EliezerV end -->
+
+      </fCSRecord>
+    </fCSRecord>
+  </fmtDef>
+
+  <operation context="MTCS_MatachTakbulim" id="MCOS_M312Cheshbon">
+    <opStep TransId="MB60" TransIdFromHost="MC" id="GLOP_SetTransId" />
+    <refOpSteps refId="generalSendToHostFlowWithPrint" />
+    <!-- formats -->
+    <refFormat name="csReplyFormat" refId="MCFS_M312Cheshbon" />
+    <refFormat name="hostSendFormat" refId="MCFI_M312Cheshbon" />
+    <refFormat name="hostReceiveFormat" refId="MCFR_M312Cheshbon" />
+    <refFormat name="hostReceiveFormat_continue" refId="MCFR_M312Cheshbon" />
+    <refFormat name="MCFC_M312Cheshbon" refId="MCFC_M312Cheshbon" />
+  </operation>
+</matachtakbulim.xml>
