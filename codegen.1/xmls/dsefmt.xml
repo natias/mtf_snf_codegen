@@ -1,0 +1,2839 @@
+<?xml version="1.0" encoding="ISO-8859-8"?>
+<!-- 5-3-2009 : Tibi Glaser : BTT 6.1 - Migrated manually and cleanup -->
+<dsefmts.xml>
+	<!-- SERVER FORMAT DEFs.    ================================================ -->
+	<!--========================================================================-->
+	<!-- Empty format															-->
+	<!--========================================================================-->
+	<fmtDef id="emptyFmt">
+		<fCSRecord></fCSRecord>
+	</fmtDef>
+
+	<!--=========================================================================-->
+	<!-- Server StartUp Operation Formats                                                -->
+	<!--=========================================================================-->
+	<mapperConverter id="bankServerFmt">
+		<move from="GL_BANK" to="GLDK_BANK_MARECHET.GL_BANK" />
+		<move from="GL_SHEM_BANK" to="GLDK_BANK_MARECHET.GL_SHEM_BANK" />
+		<move from="GL_KOD_LBITACHON" to="GLDK_BANK_MARECHET.GL_KOD_LBITACHON" />
+		<move from="GL_SW_KVUTZAT_FIBI" to="GLDK_BANK_MARECHET.GL_SW_KVUTZAT_FIBI" />
+		<move from="GL_BDIKA_VALIDIT" to="GLDK_BANK_MARECHET.GL_BDIKA_VALIDIT" />
+		<move from="GL_SW_CH_HACZARA" to="GLDK_BANK_MARECHET.GL_SW_CH_HACZARA" />
+		<move from="GL_BANK_MEMAZEG" to="GLDK_BANK_MARECHET.GL_BANK_MEMAZEG" />
+		<move from="GL_BANK_URL" to="GLDK_BANK_MARECHET.GL_BANK_URL" />
+		<move from="GL_SHEM_BANK_AROCH" to="GLDK_BANK_MARECHET.GL_SHEM_BANK_AROCH" />
+		<move from="GL_SHEM_CALL_CENTER" to="GLDK_BANK_MARECHET.GL_SHEM_CALL_CENTER" />
+	</mapperConverter>
+
+	<mapperConverter id="machozServerFmt">
+		<move from="GL_SIDR_MAHOZ" to="GLDK_MAHOZ_MARECHET.GL_SIDR_MAHOZ" />
+		<move from="GL_SHEM_MAHOZ" to="GLDK_MAHOZ_MARECHET.GL_SHEM_MAHOZ" />
+	</mapperConverter>
+
+	<mapperConverter id="branchServerFmt">
+		<move from="GL_SNIF" to="GLSG_GLBL.GKSG_KEY.GL_SNIF" />
+		<move from="GL_SHEM_SNIF" to="GLSG_GLBL.GL_SHEM_SNIF" />
+		<move from="GL_BANK" to="GLSG_GLBL.GL_BANK" />
+		<move from="GL_SNIF_HANHALA" to="GLSG_GLBL.GL_SNIF_HANHALA_MRKZ" />
+		<move from="GL_SNIF_MYUHAD_MERAKEZ" to="GLSG_GLBL.GL_SNIF_MYUHAD" />
+		<move from="GL_SNIF" to="GLDK_SNIF_MARECHET.GL_SNIF" />
+		<move from="GL_SHEM_SNIF" to="GLDK_SNIF_MARECHET.GL_SHEM_SNIF" />
+		<move from="GL_SNIF_HANHALA" to="GLDK_SNIF_MARECHET.GL_SNIF_HANHALA" />
+		<move from="GL_SNIF_MYUHAD_MERAKEZ" to="GLDK_SNIF_MARECHET.GL_SNIF_MYUHAD_MERAKEZ" />
+		<move from="GL_SNIF_LAKOCHOT" to="GLDK_SNIF_MARECHET.GL_SNIF_LAKOCHOT" />
+		<move from="GL_SIDR_MAHOZ" to="GLDK_SNIF_MARECHET.GL_SIDR_MAHOZ" />
+		<move from="GL_SNIF_EM" to="GLDK_SNIF_MARECHET.GL_SNIF_EM" />
+		<move from="GL_LOTUS_NUM" to="GLDK_SNIF_MARECHET.GL_LOTUS_NUM" />
+		<move from="GL_BANK" to="GLDK_SNIF_MARECHET.GL_BANK" />
+	</mapperConverter>
+
+	<!--========================================================================-->
+	<!-- Version Check Operation Formats										-->
+	<!--========================================================================-->
+	<fmtDef id="versionCheckReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="GL_GIRSA_BTT"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--=========================================================================-->
+	<!-- Java StartUp Operation Formats                                          -->
+	<!--=========================================================================-->
+	<fmtDef id="startupReqFmt">
+		<fCSRecord>
+			<fCSString dataName="TID"/>
+			<fCSString dataName="UserId"/>
+			<fCSString dataName="adUserId"/>
+			<fCSString dataName="WKSContext"/>
+			<fCSString dataName="WKSParentContext"/>
+			<fCSString dataName="ipAddress"/>
+			<fCSString dataName="eventsPort"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!-- format GLFS_GLBL_startup : Reply server to client format -->
+	<fmtDef id="GLFS_GLBL_startup">
+		<fCSRecord dataName="GLSG_GLBL">
+			<fCSString dataName="GKSG_KEY.GL_SNIF"/>
+			<fCSString dataName="GL_BANK"/>
+			<fCSString dataName="GL_SHEM_SNIF"/>
+			<fCSString dataName="GL_SNIF_HANHALA_MRKZ"/>
+			<fCSString dataName="GL_SNIF_MYUHAD"/>
+		</fCSRecord>
+	</fmtDef>
+	<!-- end format GLFS_GLBL_startup -->
+
+	<!-- format GLFS_BANK_MARECHET : Reply server to client format -->
+	<fmtDef id="GLFS_BANK_MARECHET">
+		<fCSRecord dataName="GLDK_BANK_MARECHET">
+			<fCSString dataName="GL_BANK"/>
+			<fCSString dataName="GL_SHEM_BANK"/>
+			<fCSString dataName="GL_KOD_LBITACHON"/>
+			<fCSString dataName="GL_SW_KVUTZAT_FIBI"/>
+			<fCSString dataName="GL_FIBI_SNIF_KFULIM"/>
+			<fCSString dataName="GL_SW_KAYAM_SCH"/>
+			<fCSString dataName="GL_BDIKA_VALIDIT"/>
+			<fCSString dataName="GL_SW_CH_HACZARA"/>
+			<fCSString dataName="GL_BANK_MEMAZEG"/>
+			<fCSString dataName="GL_BANK_URL"/>
+			<fCSString dataName="GL_SHEM_BANK_AROCH"/>
+			<fCSString dataName="GL_SHEM_CALL_CENTER"/>
+		</fCSRecord>
+	</fmtDef>
+	<!-- end format GLFS_BANK_MARECHET -->
+
+	<!-- format GLFS_MAHOZ_MARECHET : Reply server to client format -->
+	<fmtDef id="GLFS_MAHOZ_MARECHET">
+		<fCSRecord dataName="GLDK_MAHOZ_MARECHET">
+			<fCSString dataName="GL_SIDR_MAHOZ"/>
+			<fCSString dataName="GL_SHEM_MAHOZ"/>
+		</fCSRecord>
+	</fmtDef>
+	<!-- end format GLFS_MAHOZ_MARECHET -->
+
+	<!-- format GLFS_SNIF_MARECHET : Reply server to client format -->
+	<fmtDef id="GLFS_SNIF_MARECHET">
+		<fCSRecord dataName="GLDK_SNIF_MARECHET">
+			<fCSString dataName="GL_SNIF"/>
+			<fCSString dataName="GL_SHEM_SNIF"/>
+			<fCSString dataName="GL_SNIF_HANHALA"/>
+			<fCSString dataName="GL_SNIF_MYUHAD_MERAKEZ"/>
+			<fCSString dataName="GL_SNIF_LAKOCHOT"/>
+			<fCSString dataName="GL_SIDR_MAHOZ"/>
+			<fCSString dataName="GL_SNIF_EM"/>
+			<fCSString dataName="GL_LOTUS_NUM"/>
+			<fCSString dataName="GL_BANK"/>
+		</fCSRecord>
+	</fmtDef>
+	<!-- end format GLFS_SNIF_MARECHET -->
+
+	<fmtDef id="startupContextTreeFmt">
+		<fCSRecord>
+			<refFmt refId="GLFS_GLBL_startup"/>
+			<refFmt refId="GLFS_BANK_MARECHET"/>
+			<refFmt refId="GLFS_MAHOZ_MARECHET"/>
+			<refFmt refId="GLFS_SNIF_MARECHET"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="startupReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="TID"/>
+			<fCSString dataName="sessionID"/>
+			<fCSString dataName="WKSContext"/>
+			<fCSString dataName="WKSParentContext"/>
+			<fCSDynXml dataName="commonSettings"/>
+			<refFmt refId="startupContextTreeFmt"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--=========================================================================-->
+    <!-- 	User Logon/Logoff Server Request Format                                                  -->
+    <!--=========================================================================-->
+	<fmtDef id="userLogonReqFmt">
+		<fCSRecord>
+			<fCSString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID"/>
+			<fCSString dataName="GLSE_GLBL.GL_ZIHUI_PAKID_AD"/>
+		</fCSRecord>
+	</fmtDef>
+    
+	<!--=========================================================================-->
+    <!-- 	User Logon/Logoff Server Reply Format                                                  -->
+    <!--=========================================================================-->
+	<fmtDef id="userLogonReplyFmt">
+		<fCSRecord>
+		    <fCSList dataName="BusinessMessagesList" times="*" append="false">
+		     	<fCSRecord dataName="BusinessMessageRecord">
+		          	<fCSMessage dataName="BusinessMessage" />
+		        </fCSRecord>
+		    </fCSList>
+			<fCSString dataName="tasksList"/>
+			<fCSString dataName="pmenuList"/>
+		</fCSRecord>
+	</fmtDef>
+    
+	<!--=========================================================================-->
+    <!-- 	End Session Format                                                  -->
+    <!--=========================================================================-->
+	<fmtDef id="endSessionFmt">
+		<fCSRecord>
+			<fCSString dataName="sessionID"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--=========================================================================-->
+    <!-- 	Set User Status Request Format                                                  -->
+    <!--=========================================================================-->
+	<fmtDef id="setUserStatusReqFmt">
+		<fCSRecord>
+			<fCSString dataName="status"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--=========================================================================-->
+    <!-- 	Remove Workstation Server Request Format                                                  -->
+    <!--=========================================================================-->
+	<fmtDef id="removeWorkstationReqFmt">
+		<fCSRecord>
+			<fCSString dataName="station"/>
+		</fCSRecord>
+	</fmtDef>
+    
+	<!--================================================-->
+	<!-- Global data passed from client to server		-->
+	<!--================================================-->
+	<fmtDef id="glfsGlobalBranchThanaPakid">
+		<fCSRecord>
+			<fCSString dataName="GLSG_GLBL.GL_TR_ASAKIM"/>
+			<fCSString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_YYYY"/>
+			<fCSString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_MM"/>
+			<fCSString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_DD"/>
+			<fCSString dataName="GLSG_GLBL.GL_SNIF_PATUACH"/>
+			<fCSString dataName="GLSG_GLBL.GL_MAZAV_SNIF"/>
+			<fCSString dataName="GLSG_GLBL.GL_MISHMERET"/>
+			<fCSString dataName="GLSG_GLBL.GL_SESSION"/>
+			<fCSString dataName="GLSG_GLBL.GL_SHEM_DISK"/>
+			<fCSString dataName="GLSG_GLBL.GL_MAHADURA"/>
+			<fCSString dataName="GLSF_GLBL.GL_MISPAR_TAHANA"/>
+			<fCSString dataName="GLSF_GLBL.GL_SIDURI_TAHANA_CZ"/>
+			<fCSString dataName="GLSF_GLBL.GL_MIS_BERUR_CZ"/>
+			<fCSString dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF"/>
+			<fCSString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID"/>
+			<fCSString dataName="GLSE_GLBL.GL_ZIHUI_PAKID_AD" />
+			<fCSString dataName="GLSE_GLBL.GL_SHEM_KATZAR"/>
+			<fCSString dataName="GLSE_GLBL.GL_SAMCHUT"/>
+			<fCSString dataName="GLSF_MAZAV.GL_TR_NOCHECHI"/>
+			<fCSString dataName="GLSF_MAZAV.GL_SHAA"/>
+			<fCSString dataName="GLSF_MAZAV.GL_SNIF_NE"/>
+			<fCSString dataName="GLSF_MAZAV.GL_SHAA_MARECHET_MHS"/>
+			<fCSString dataName="debugMode"/>
+		</fCSRecord>
+	</fmtDef>
+	<!--=========================================================================-->
+	<!-- Global data only format		 				                         -->
+	<!--=========================================================================-->
+	<fmtDef id="globalDataOnlyFmt">
+		<fCSRecord>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+		</fCSRecord>
+	</fmtDef>
+	<!--=========================================================================-->
+	<!-- Tables Loader Operation Formats                                         -->
+	<!--=========================================================================-->
+	<fmtDef id="tablesLoaderReqFmt">
+		<fCSRecord>
+			<fCSString dataName="dynamicMarketingEnabled"/>
+			<refFmt refId="glfsGlobalBranchThanaPakid"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="tablesLoaderReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="dynamicMarketingEnabled"/>
+			<fCSString dataName="cicsEnv"/>
+			<fCSString dataName="GL_SNIF_IS_CENTRAL"/>
+			<fCSList dataName="personalMenuData.personalMenuTrxList" times="*">
+				<fCSRecord dataName="personalMenuTrxRecord">
+					<fCSString dataName="trxId"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLDI_Pakid" times="*">
+				<fCSRecord dataName="GLDL_Pakid">
+					<fCSString dataName="GL_ZIHUI_PAKID"/>
+					<fCSString dataName="GL_SHEM_PAKID"/>
+					<fCSString dataName="GL_SAMCHUT_PAKID"/>
+					<fCSString dataName="GL_ZIHUI_PAKID_AD"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_SNIF" times="*">
+				<fCSRecord dataName="GLDK_SNIF">
+					<fCSString dataName="GL_SNIF"/>
+					<fCSString dataName="GL_SHEM_SNIF"/>
+					<fCSString dataName="GL_SNIF_HANHALA"/>
+					<fCSString dataName="GL_SNIF_MYUHAD_MERAKEZ"/>
+					<fCSString dataName="GL_SNIF_LAKOCHOT"/>
+					<fCSString dataName="GL_SIDR_MAHOZ"/>
+					<fCSString dataName="GL_SNIF_EM"/>
+					<fCSString dataName="GL_LOTUS_NUM"/>
+					<fCSString dataName="GL_BANK"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_BANK" times="*">
+				<fCSRecord dataName="GLDK_BANK">
+					<fCSString dataName="GL_BANK"/>
+					<fCSString dataName="GL_SHEM_BANK"/>
+					<fCSString dataName="GL_KOD_LBITACHON"/>
+					<fCSString dataName="GL_SW_KVUTZAT_FIBI"/>
+					<fCSString dataName="GL_FIBI_SNIF_KFULIM"/>
+					<fCSString dataName="GL_SW_KAYAM_SCH"/>
+					<fCSString dataName="GL_BDIKA_VALIDIT"/>
+					<fCSString dataName="GL_SW_CH_HACZARA"/>
+					<fCSString dataName="GL_BANK_MEMAZEG"/>
+					<fCSString dataName="GL_BANK_URL"/>
+					<fCSString dataName="GL_SHEM_BANK_AROCH"/>
+					<fCSString dataName="GL_SHEM_CALL_CENTER"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_BANK_GROUP" times="*">
+				<fCSRecord dataName="GLDK_BANK">
+					<fCSString dataName="GL_BANK"/>
+					<fCSString dataName="GL_SHEM_BANK"/>
+					<fCSString dataName="GL_KOD_LBITACHON"/>
+					<fCSString dataName="GL_SW_KVUTZAT_FIBI"/>
+					<fCSString dataName="GL_FIBI_SNIF_KFULIM"/>
+					<fCSString dataName="GL_SW_KAYAM_SCH"/>
+					<fCSString dataName="GL_BDIKA_VALIDIT"/>
+					<fCSString dataName="GL_SW_CH_HACZARA"/>
+					<fCSString dataName="GL_BANK_MEMAZEG"/>
+					<fCSString dataName="GL_BANK_URL"/>
+					<fCSString dataName="GL_SHEM_BANK_AROCH"/>
+					<fCSString dataName="GL_SHEM_CALL_CENTER"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_BANK_GROUP_WITH_NEW" times="*">
+				<fCSRecord dataName="GLDK_BANK">
+					<fCSString dataName="GL_BANK"/>
+					<fCSString dataName="GL_SHEM_BANK"/>
+					<fCSString dataName="GL_KOD_LBITACHON"/>
+					<fCSString dataName="GL_SW_KVUTZAT_FIBI"/>
+					<fCSString dataName="GL_FIBI_SNIF_KFULIM"/>
+					<fCSString dataName="GL_SW_KAYAM_SCH"/>
+					<fCSString dataName="GL_BDIKA_VALIDIT"/>
+					<fCSString dataName="GL_SW_CH_HACZARA"/>
+					<fCSString dataName="GL_BANK_MEMAZEG"/>
+					<fCSString dataName="GL_BANK_URL"/>
+					<fCSString dataName="GL_SHEM_BANK_AROCH"/>
+					<fCSString dataName="GL_SHEM_CALL_CENTER"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_SCH" times="*">
+				<fCSRecord dataName="GLDK_SCH">
+					<fCSString dataName="GL_SCH"/>
+					<fCSString dataName="GL_SHEM_SCH"/>
+					<fCSString dataName="GL_SW_HAFKADA"/>
+					<fCSString dataName="GL_SW_SB_CH"/>
+					<fCSString dataName="GL_SW_SHIDUR_INQ"/>
+					<fCSString dataName="GL_SW_ASM_SEMEL_DIV"/>
+					<fCSString dataName="GL_SW_SD_035"/>
+					<fCSString dataName="GL_SW_SD_507"/>
+					<fCSString dataName="GL_SW_SD_892"/>
+					<fCSString dataName="GL_SW_SD_973"/>
+					<fCSString dataName="GL_SW_TD"/>
+					<fCSString dataName="GL_SUG_CH"/>
+					<fCSString dataName="GL_SW_PTICHOT_SCH"/>
+					<fCSString dataName="GL_SW_ASMACHTA_HOVA" />				
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_MEDINOT" times="*">
+				<fCSRecord dataName="GLDK_MEDINOT">
+					<fCSString dataName="GL_KOD_MEDINA"/>
+					<fCSString dataName="GL_KOD_ISO"/>
+					<fCSString dataName="GL_SHEM_MEDINA"/>
+					<fCSString dataName="GL_SHEM_MEDINA_ENG"/>
+					<fCSString dataName="GL_FLAG_HAAVARA_MTH"/>
+					<fCSString dataName="GL_FLAG_PTICHA_CH"/>
+					<fCSString dataName="GL_FLAG_TOSEFET_4" />
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="MZST_MATBEA_SHEM" times="*">
+				<fCSRecord dataName="MZDK_MATBEA_SHEM">
+					<fCSString dataName="GL_MATBEA"/>
+					<fCSString dataName="MZ_MATBEA_SHEM_MYDAS"/>
+					<fCSString dataName="GL_SHEM_MATBEA"/>
+					<fCSString dataName="MZ_SHEM_MATBEA_KATZAR"/>
+					<fCSString dataName="MZ_MEZ_MIN_YEHIDOT"/>
+					<fCSString dataName="MZ_MEZ_MIN_YEHIDOT"/>
+					<fCSString dataName="MZ_MATBEA_MAKOR"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="MZST_BANK_MATBEA" times="*">
+				<fCSRecord dataName="MZDK_BANK_MATBEA">
+					<fCSString dataName="MZ_BANK_MATBEA"/>
+					<fCSString dataName="MZ_MISPAR_SIDURI"/>
+					<fCSString dataName="MZ_SW_SHR_YAZIG"/>
+					<fCSString dataName="MZ_SW_SHR_MEZ"/>
+					<fCSString dataName="MZ_SW_SHR_HVRA"/>
+					<fCSString dataName="MZ_SW_SHR_DO_ZDADI"/>
+					<fCSString dataName="MZ_SW_MAT_CONV_URO"/>
+					<fCSString dataName="MZ_SW_CH"/>
+					<fCSString dataName="MZ_SW_CH_NEG"/>
+					<fCSString dataName="MZ_SW_LIMIT"/>
+					<fCSString dataName="MZ_SW_FWD"/>
+					<fCSString dataName="MZ_SW_HAAVAROT"/>
+					<fCSString dataName="MZ_SW_BITACHON"/>
+					<fCSString dataName="MZ_SW_AMLA"/>
+					<fCSString dataName="MZ_BANK"/>
+					<fCSString dataName="GL_SHEM_MATBEA"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="MZST_SCH" times="*">
+				<fCSRecord dataName="MZDK_SCH">
+					<fCSString dataName="GL_SCH"/>
+					<fCSString dataName="GL_SHEM_SCH"/>
+					<fCSString dataName="MZ_SW_BANKAI"/>
+					<fCSString dataName="MZ_SW_SB_CH"/>
+					<fCSString dataName="MZ_SUG_CH"/>
+					<fCSString dataName="MZ_SW_KOD_DIVUACH"/>
+					<fCSString dataName="MZ_SW_PAMAZ"/>
+					<fCSString dataName="MZ_SW_CORSP"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_SAMCHUT" times="*">
+				<fCSRecord dataName="GLDK_SAMCHUT_TCHUM">
+					<fCSString dataName="GL_KOD"/>
+					<fCSString dataName="GL_TEUR"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="GLST_TCHUM" times="*">
+				<fCSRecord dataName="GLDK_SAMCHUT_TCHUM">
+					<fCSString dataName="GL_KOD"/>
+					<fCSString dataName="GL_TEUR"/>
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="BusinessMessagesList" times="*">
+				<fCSRecord dataName="BusinessMessageRecord">
+					<fCSMessage dataName="BusinessMessage" />
+				</fCSRecord>
+			</fCSList>
+		  	<refFmt refId="GLFS_ADIfyuneyPakid" /> 
+		</fCSRecord>
+	</fmtDef>
+
+	<!-- AS+IM 11/05/09 - this format returns the pakid record from AD -->
+	<fmtDef id="GLFS_ADIfyuneyPakid">
+		<fCSRecord dataName="GLDK_ADIfyuneyPakid">
+			<fCSString dataName="GL_FULL_NAME"/> 
+			<fCSString dataName="GL_IS_USER_LOCKED"/> 
+			<fCSString dataName="GL_EMPLOYEE_ID"/> 
+			<fCSString dataName="GL_EMPLOYEE_TYPE"/> 
+			<fCSString dataName="GL_LAST_NAME"/> 
+			<fCSString dataName="GL_FIRST_NAME"/> 
+			<fCSString dataName="GL_ID"/> 
+			<fCSString dataName="GL_STREET_ADDRESS"/> 
+			<fCSString dataName="GL_CITY"/> 
+			<fCSString dataName="GL_POSTAL_CODE"/> 
+			<fCSString dataName="GL_ALLOWED"/> 
+			<fCSString dataName="GL_SAMCHUT_PAKID"/> 
+			<fCSString dataName="GL_IFYUNEY_PAKID"/> 
+			<fCSString dataName="GL_SNIFIM"/> 
+			<fCSString dataName="GL_SNIFIM_RAV_MUTAGI"/> 
+			<fCSString dataName="GL_MENAEL_MEASHER"/> 
+			<fCSString dataName="GL_ZEVET"/> 
+			<fCSString dataName="GL_SAMCHUT_SNIF60"/> 
+			<fCSString dataName="GL_DEPARTMENT"/> 
+			<fCSString dataName="GL_REFERANT"/> 
+			<fCSString dataName="GL_NO_LNUSER"/> 
+			<fCSString dataName="GL_PHONE_WORK"/> 
+			<fCSString dataName="GL_SAMCHUT_OBLIGO"/>
+			<fCSString dataName="GL_SECTOR_EZOR"/>
+			<fCSString dataName="GL_ZIHUI_PAKID_AD"/>
+			<fCSString dataName="GL_YECHIDAT_SAMCHUT"/>
+			<fCSString dataName="GL_YECHIDAT_PAKID_MEVATZEA"/>
+			<fCSList dataName="GLDI_SAMCHUT_YECHIDA" times="*">
+				<fCSRecord dataName="GLDL_SAMCHUT_YECHIDA">
+					<fCSString dataName="GL_SAMCHUT"/>
+					<fCSString dataName="GL_YECHIDA"/>
+				</fCSRecord>
+			</fCSList>
+		</fCSRecord>
+	</fmtDef>
+	<!-- CLIENT FORMAT DEFs.    ================================================ -->
+	<!-- RefTables format -->
+	<fmtDef id="refTablesReqFmt">
+		<fCSDynXml kCollInsertedOnFormat="no" createKCollOnUnformat="no" />
+	</fmtDef>
+
+	<fmtDef id="refTablesReplyFmt">
+		<fCSDynXml kCollInsertedOnFormat="no" createKCollOnUnformat="no" />
+	</fmtDef>
+
+	<fmtDef id="cacheRefreshReqFmt">
+		<fCSRecord>
+			<fCSString dataName="tableName"/>
+			<fCSString dataName="timestamp"/>
+			<fCSString dataName="commaSeparatedColumns"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="cacheRefreshReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="cacheTableBean" size="4" compress="yes"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!-- generic CS mechanism formats -->
+	<fmtDef id="genReqFmt">
+		<fCSRecord>
+			<fCSString dataName="opName" />
+			<fCSString dataName="opDesc" />
+			<fCSString dataName="ctxName" />
+			<fCSString dataName="ctxData" size="4" compress="yes"/>
+			<fCSString dataName="logData"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="genReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="opName" />
+			<fCSString dataName="opDesc" />
+			<fCSString dataName="ctxName" />
+			<fCSString dataName="ctxData" size="4" compress="yes"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	ManagersList Request Format					-->
+	<!--================================================-->
+	<fmtDef id="managersListRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="snifPakid" />
+			<fCSString dataName="snifLakoah" />
+			<fCSString dataName="samchutNidreshet" />
+			<fCSString dataName="inSessionOnly"/>
+			<fCSString dataName="visibleOnly"/>
+			<fCSString dataName="puId"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	ManagersList Reply Format					-->
+	<!--================================================-->
+	<fmtDef id="managersListReplyFmt">
+		<fCSRecord>
+			<fCSList dataName="managersList" times="*" append="false">
+				<fCSRecord dataName="managerData">
+					<fCSString dataName="searchBranch" />
+					<fCSString dataName="managerBranch" />
+					<fCSString dataName="managerId" />
+					<fCSString dataName="managerName" />
+					<fCSString dataName="samchutMeasheret" />
+					<fCSString dataName="telephoneNumber" />
+					<fCSString dataName="TID" />
+					<fCSString dataName="adUserId" />
+				</fCSRecord>
+			</fCSList>
+			<fCSList dataName="BusinessMessagesList" times="*" append="false">
+				<fCSRecord dataName="BusinessMessageRecord">
+					<fCSMessage dataName="BusinessMessage"/>
+				</fCSRecord>
+			</fCSList>			
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	AuthenticateUser Request Format					-->
+	<!--================================================-->
+	<fmtDef id="authenticateUserRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="branch" />
+			<fCSString dataName="userid" />
+			<fCSString dataName="paswrd" />
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	AuthenticateUser Reply Format					-->
+	<!--================================================-->
+	<fmtDef id="authenticateUserReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="result" />
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	Exclusive Transaction Request Format	    -->
+	<!--================================================-->
+	<fmtDef id="mutexTransRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="request" />
+			<fCSString dataName="GL_SNIF" />
+			<fCSString dataName="GL_PU_ID" />
+			<fCSString dataName="GL_TRANS_ID" />
+			<fCSString dataName="GL_MISPAR_TAHANA" />
+			<fCSString dataName="GL_ZIHUI_PAKID" />
+		</fCSRecord>
+	</fmtDef>
+	
+	<!--================================================-->
+	<!-- 	Exclusive Transaction Reply Format		-->
+	<!--================================================-->
+	<fmtDef id="mutexTransReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="result" />
+			<fCSString dataName="lockstat" />
+			<fCSString dataName="lockuser" />
+		</fCSRecord>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	Header of Transaction Request Format		-->
+	<!--================================================-->
+	<!-- sarit 15-06-05-	Replace the decorator fixlength with  numHostDecor , as Noam requested  -->
+	<fmtDef id="GKSI_HDR">
+		<record>
+			<fHostString dataName="GKSI_HDR.GL_TRANS_ID"/><numHostDecor length="4"/>
+			<fHostString dataName="GKSI_HDR.GL_GIRSA"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HDR.GL_PEULA"/><numHostDecor length="4"/>
+			<fHostString dataName="GKSI_HDR.GL_BANK"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HDR.GL_SNIF"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HDR.GL_MATBEA"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HDR.GL_SCH"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HDR.GL_CH"/><numHostDecor length="6"/>
+			<!--constant value for GL_EXT_KEY -->
+			<constant value=""/><abcHostDecor length="12"/>
+			<fHostString dataName="GL_PU_ID"/><abcHostDecor length="3"/>
+			<fHostString dataName="GLSF_GLBL.GL_MISPAR_TAHANA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_PU_ID"/><abcHostDecor length="3"/>
+			<fHostString dataName="GLSF_GLBL.GL_MISPAR_TAHANA"/><numHostDecor length="3"/>
+			<!--constant value for GL_MAARECHET -->
+			<constant value=""/><abcHostDecor length="1"/>
+			<fHostString dataName="GLSG_GLBL.GL_SESSION"/><numHostDecor length="3"/>
+			<!--constant value for GL_SIDURI_YOMAN -->
+			<constant value=""/><numHostDecor length="4"/>
+			<fHostString dataName="GLSF_MAZAV.GL_TR_NOCHECHI"/><dateHostDecor length="6" source="ddmmyyyy" target="ddmmyy" />
+			<fHostString dataName="GLSF_MAZAV.GL_SHAA"/><numHostDecor length="4"/>
+			<fHostString dataName="GKSI_HDR.GL_SIDURI_ID"/><numHostDecor length="2"/>
+			<!--constant value for GL_SUG_MISHTAMESH -->
+			<constant value=""/><abcHostDecor length="1"/>
+			<fHostString dataName="GLSG_GLBL.GL_BANK"/><numHostDecor length="2"/>
+			<fHostString dataName="GLSG_GLBL.GKSG_KEY.GL_SNIF"/><numHostDecor length="3"/>
+			<fHostString dataName="GLSG_GLBL.GL_BANK"/><numHostDecor length="2"/>
+			<fHostString dataName="GLSF_MAZAV.GL_SNIF_NE"/><numHostDecor length="3"/>
+			<fHostString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID"/><numHostDecor length="10"/>
+			<fHostString dataName="GLSE_GLBL.GL_SAMCHUT"/><numHostDecor length="2"/>
+			<!--constant value for GL_KARTIS_DATA -->
+			<constant value=""/><abcHostDecor length="1"/>
+			<fHostString dataName="GLSG_GLBL.GL_TR_ASAKIM"/><numHostDecor length="8"/>
+			<fHostString dataName="GLSG_GLBL.GL_MISHMERET"/><numHostDecor length="1"/>
+			<fHostString dataName="GLSG_GLBL.GL_SNIF_PATUACH"/><numHostDecor length="1"/>
+			<constant value=""/><abcHostDecor length="1"/>
+			<!--constant value for GL_SUG_KIVUTZ -->
+			<constant value=""/><abcHostDecor length="1"/>
+			<!--constant value for GL_ORECH_DATA -->
+			<constant value=""/><numHostDecor length="5"/>
+		</record>
+	</fmtDef>
+
+<!-- sarit 15-06-05-	Replace the decorator fixlength with  numHostDecor , as Noam requested   -->
+	<fmtDef id="GKSI_HDR_CONT">
+		<record>
+			<fHostString dataName="GLSG_GLBL.GL_SHEM_DISK"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HDR_CONT.GL_SIDURI_TAHANA"/><numHostDecor length="4"/>
+			<fHostString dataName="trxORData.samchutMeasheret"/><numHostDecor length="2"/>
+			<fHostString dataName="trxORData.mgrUserId"/><numHostDecor length="6"/>
+		</record>
+	</fmtDef>
+
+<!-- sarit 15-06-05-	Replace the decorator fixlength with  numHostDecor , as Noam requested   -->
+	<fmtDef id="GKSI_HDR_CONT1">
+		<record>
+			<fHostString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_YYYY"/><numHostDecor length="4"/>
+			<fHostString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_MM"/><numHostDecor length="2"/>
+			<fHostString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_DD"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_SW_LVARER"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_SW_MVATELET"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_SIDURI_BITUL"/><numHostDecor length="4"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_SUG_ISHUR_MENAEL"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_ISKA_ME_SHICHZUR"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HDR_CONT1.GL_FILLER"/><abcHostDecor length="18"/>
+		</record>
+	</fmtDef>
+
+	<fmtDef id="GKSI_HDR_CONT2">
+		<record>
+			<fHostString dataName="GKSI_HDR_CONT2.GL_SRIKA2"/><binHostDecor length="25"/>
+			<fHostString dataName="GKSI_HDR_CONT2.GL_FILLER"/><abcHostDecor length="25"/>
+		</record>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	Header of Transaction Reply Format			-->
+	<!--================================================-->
+	<fmtDef id="GKSR_HDR">
+		<record>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_TRANS_ID"/><abcHostDecor length="2"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_GIRSA"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_PEULA"/><abcHostDecor length="4"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_BANK"/><abcHostDecor length="2"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SNIF"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MATBEA"/><abcHostDecor length="2"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SCH"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_CH"/><abcHostDecor length="6"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_EXT_KEY"/><abcHostDecor length="12"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_YAAD_PU"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_YAAD_TAHANA"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MAKOR_PU"/><abcHostDecor length="3" formatAs="upper" />
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MAKOR_TAHANA"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MAARECHET"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SESSION"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SIDURI_YOMAN"/><abcHostDecor length="4"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_TR_NOCHECHI"/><abcHostDecor length="6"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SHAA"/><abcHostDecor length="4"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SIDURI_ID"/><abcHostDecor length="2"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SAMCHUT_PAKID"/><abcHostDecor length="2"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_TIPUL"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_OFI_SHEDER"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_NOSE_SGIA"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_SGIA"/><abcHostDecor length="3"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_SUG_KIVUTZ"/><abcHostDecor length="1"/>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_ORECH_DATA"/><abcHostDecor length="5"/>
+		</record>
+	</fmtDef>
+
+	<fmtDef id="GKSR_HDR_CONT">
+		<record>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR_CONT.GL_HODAA"/><hebHostDecor length="40" justify="center" codeSet="Cp037" useoverride="true" />
+		</record>
+	</fmtDef>
+	<!--========================================================================-->
+	<!-- 	Header of Transaction Reply Format To Use In Continue Operations	-->
+	<!--========================================================================-->
+	<fmtDef id="GKSR_HDR_Continue">
+		<record>
+			<!-- HostHeaderReplyData.GKSR_HDR.GL_TRANS_ID + GL_GIRSA + GL_PEULA + GL_BANK + GL_SNIF + GL_MATBEA + GL_SCH + GL_CH /-->
+			<constant value="" /><fixedLength length="23" />
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_EXT_KEY"/><abcHostDecor length="12" />
+			<!-- HostHeaderReplyData.GKSR_HDR.GL_YAAD_PU + GL_YAAD_TAHANA + GL_MAKOR_PU + GL_MAARECHET + GL_SESSION + GL_SIDURI_YOMAN + GL_TR_NOCHECHI + GL_SHAA + GL_SIDURI_ID + GL_SAMCHUT_PAKID/ -->
+			<constant value="" /><fixedLength length="34" />
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_TIPUL_continue"/><abcHostDecor length="1" />
+			<!-- HostHeaderReplyData.GKSR_HDR.GL_OFI_SHEDER +GL_NOSE_SGIA + GL_KOD_SGIA + GL_SUG_KIVUTZ + GL_ORECH_DATA / -->
+			<constant value="" /><fixedLength length="11" />
+		</record>
+	</fmtDef>
+
+	<fmtDef id="GKSR_HDR_CONT_Continue">
+		<record>
+			<!-- HostHeaderReplyData.GKSR_HDR_CONT.GL_HODAA /-->
+			<constant value=""/><fixedLength length="40" />
+		</record>
+	</fmtDef>
+
+	<!-- ======================================================= -->
+	<!--  Manager Approval Trx format							 -->
+	<!-- ======================================================= -->
+	
+    <!-- See sendCheckDetailsServerOp.checkIshurMenahelInSlikaOpStep. -->	
+	<fmtDef id="managerAprovalTrxRequestFmt">
+		<record>
+			<refFmt refId="GKSI_HDR" />
+		</record>
+	</fmtDef>
+	
+	<!--===========================================================================-->
+	<!-- Transaction Validations Formats definitions								           -->
+	<!--===========================================================================-->
+	<fmtDef id="checkConnectionToHostRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="debugMode"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="checkConnectionToHostReplyFmt">
+		<fCSRecord dataName="validatorData">
+			<fCSString dataName="returnCode"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="checkUserAuthRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="trxId"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="checkUserAuthReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="returnCode"/>
+		</fCSRecord>
+	</fmtDef>
+	
+	<fmtDef id="userAuthDataRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="TRX_ID" />
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="userAuthDataReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="SAMHUT" />
+			<fCSString dataName="MEAFIENIM" />
+			<fCSString dataName="PERMIT_ERROR" />
+			<fCSString dataName="AUTHORITY_ERROR" />
+		</fCSRecord>
+	</fmtDef>
+	
+	<fmtDef id="checkExclusiveTransactionCsRequestFmt">
+		<fCSRecord>
+			<fCSString dataName="selectedTaskName"/>
+			<fCSString dataName="TID"/>
+		</fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="checkExclusiveTransactionCsReplyFmt">
+		<fCSRecord>
+			<fCSString dataName="returnCode"/>
+			<fCSString dataName="TID"/>
+		</fCSRecord>
+	</fmtDef>
+	
+	<!--===========================================================================-->
+	<!-- Personal menu Formats definitions								           -->
+	<!--===========================================================================-->
+	<fmtDef id="personalMenuCsRequestFmt">
+		<record>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+			<fString dataName="GL_PU_ID" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="personalMenuData.selectedTaskName" />
+			<nullCheck />
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>
+
+	<fmtDef id="personalMenuCsReplyFmt">
+		<record>
+			<refFmt refId="GLFS_HdrHodaa"/>		
+		</record>
+	</fmtDef>
+
+	<fmtDef id="personalMenuTableFmt">
+		<hashtable>
+			<fObject dataName="GL_PU_ID" />
+			<fObject dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF" />
+			<fObject dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+			<fObject dataName="personalMenuData.selectedTaskName" />
+		</hashtable>
+	</fmtDef>
+
+	<!--===========================================================================-->
+	<!-- User query Formats definitions								           -->
+	<!--===========================================================================-->
+	<fmtDef id="userQueryCsRequestFmt">
+		<record>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+			<fString dataName="GL_PU_ID" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+			<delim delimChar="#" />
+			<nullCheck />
+			<fString dataName="queryId" />
+			<nullCheck />
+			<delim delimChar="#" />
+			<fString dataName="queryModel" />
+			<nullCheck />
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>
+
+	<fmtDef id="userQueryCsReplyFmt">
+		<record></record>
+	</fmtDef>
+
+	<fmtDef id="userQueriesTableFmt">
+		<hashtable>
+			<fObject dataName="GL_PU_ID" />
+			<fObject dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF" />
+			<fObject dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+			<fObject dataName="queryId" />
+			<fObject dataName="queryModel" />
+		</hashtable>
+	</fmtDef>
+	
+	<!--=========================================================================-->
+	<!-- GENERAL				                         -->
+    <!-- IM 21/09/09 - Change to new delimiter convention						-->	
+	<!--=========================================================================-->
+	<fmtDef id="GLFC_InitIska">
+		<fCSRecord>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+			<fCSString dataName="taskAttributes.transactionModel"/>
+			<fCSString dataName="taskAttributes.trxId"/>
+			<fCSString dataName="taskAttributes.subjectCode"/>
+		</fCSRecord>
+	</fmtDef>
+	<fmtDef id="GLFS_InitIska">
+		<fCSRecord>
+			<fCSList dataName="queriesList" times="*">
+				<fCSRecord dataName="queryData">
+					<fCSString dataName="queryName"/>
+					<fCSString dataName="queryId" />
+				</fCSRecord>
+			</fCSList>
+		    <fCSList dataName="BusinessMessagesList" times="*" append="false">
+		     	<fCSRecord dataName="BusinessMessageRecord">
+		          	<fCSMessage dataName="BusinessMessage" />
+		        </fCSRecord>
+		    </fCSList>
+		</fCSRecord>
+	</fmtDef>
+
+	<!-- ********************************** -->
+	<!-- GENERAL FORMAT FOR ISKOT SRIKA -->
+	<!-- ********************************** -->
+	<fmtDef id="GLFC_ChatachSrika">
+		<record>
+			<record dataName="GLDK_SrikaChatach">
+        		<fVisualField dataName="GL_ZIHUI_PAKID" />
+        		<delim delimChar="~~" />
+        		<nullCheck/>
+        		<fVisualField dataName="GL_MISPAR_TAHANA" />
+       			 <delim delimChar="~~" />
+       			 <nullCheck/>
+      		</record>
+		</record>
+	</fmtDef>
+	<fmtDef id="GLFI_HdrChatachSrika">
+		<record>
+			<record dataName="GLDK_SrikaChatach">
+        		<fHostString dataName="GL_ZIHUI_PAKID" /><numHostDecor length="6" />
+        		<fHostString dataName="GL_MISPAR_TAHANA" /><numHostDecor length="3" />
+      		</record>
+		</record>
+	</fmtDef>
+	<!-- THIS IS A GENERAL FORMAT FOR LIST SCREEN -->
+	<!-- Added by Sarit 12.7.06 -->
+
+	<fmtDef id="GLFR_HdrReshima">
+		<record>
+			<record dataName="GLDL_HdrReshima">
+        		<fHostString dataName="GL_SRIKA_KEY"/><binHostDecor length="50" />
+        		<fHostString dataName="GL_KOD_HITMAKDUT" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_TRANS_HITMAKDUT" /><abcHostDecor length="4" />
+				<fHostString dataName="GL_TZEVA_SHURA" /><abcHostDecor length="2" />
+				<fHostString dataName="GL_BANK" /><numHostDecor length="2" addZerosAsPrefix="2"/>
+				<fHostString dataName="GL_SNIF" /><numHostDecor length="3" addZerosAsPrefix="3"/>
+				<fHostString dataName="GL_SCH" /><numHostDecor length="3" addZerosAsPrefix="3"/>
+				<fHostString dataName="GL_CH" /><numHostDecor length="6" addZerosAsPrefix="6"/>
+				<fHostString dataName="GL_MATBEA" /><numHostDecor length="2" addZerosAsPrefix="2"/>
+				<fHostString dataName="GL_MEDINA" /><matafNumHostDecor length="3" addZerosAsPrefix="3"  addZerosOnEmpty="3"/>
+				<fHostString dataName="GL_TZ" /><numHostDecor length="9" />
+				<fHostString dataName="GL_FLG_PIRTEY_CH" /><numHostDecor length="1" />
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="9" />
+      		</record>
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFS_HdrReshima">
+		<record>
+			<record dataName="GLDL_HdrReshima">
+				<fString dataName="GL_SRIKA_KEY"/><nullCheck /><delim delimChar="^^" />
+		        <fString dataName="GL_KOD_HITMAKDUT"/><nullCheck /><delim delimChar="^^" />
+	        	<fString dataName="GL_TRANS_HITMAKDUT"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_TZEVA_SHURA"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_BANK"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_SNIF"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_SCH"/><nullCheck /><delim delimChar="^^" />
+	        	<fString dataName="GL_CH"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_MATBEA"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_MEDINA"/><nullCheck /><delim delimChar="^^" />
+				<fString dataName="GL_TZ"/><nullCheck /><delim delimChar="^^" />
+ 				<fString dataName="GL_FLG_PIRTEY_CH"/>	<nullCheck /><delim delimChar="^^" />
+	        	</record>		
+		</record>
+	</fmtDef>
+	
+
+	<!-- IM 29/01/2008 - Add headers for supporting hebrew new code -->	
+	<fmtDef id="GLFR_HdrHitmakdutNew">
+	  <record>
+		<record dataName="GLDK_HdrHitmakdut">
+          <fHostString dataName="GL_NOSE_PEULA" /><abcHostDecor length="1" />
+          <fHostString dataName="GL_SUG_PEULA" /><numHostDecor length="3" addZerosAsPrefix="3" />
+		  <fHostString dataName="GL_TR_MARECHET" /> <dateHostDecor length="8" />
+		  <fHostString dataName="GL_SHAA" /><abcHostDecor length="4" />
+		  <fHostString dataName="GL_MISHMERET" /><matafNumHostDecor length="1" addZerosOnEmpty="1" />
+		  <fHostString dataName="GL_ZIHUI_PAKID" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_ZIHUI_MENAHEL" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_SAMCHUT_MEASHERET" /><numHostDecor length="2" />
+		  <fHostString dataName="GL_MISPAR_TAHANA" /><numHostDecor length="3" />
+		  <fHostString dataName="GL_SW_PEULA" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_SNIF_PEULA" /><numHostDecor length="3" />
+		  <fHostString dataName="GL_PU_BITUL" /><numHostDecor length="2" />
+		  <fHostString dataName="GL_SIDURI_YOMAN" /><numHostDecor length="4" />
+		  <fHostString dataName="GL_MAKASH_IDKUN" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_MAKASH_BITUL" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_MAKASH_ISHUR" /><numHostDecor length="1" />
+		  <!-- 15/04/07 I.M. Added for Hitmakdut Bitul -->
+		  <fHostString dataName="KOD_SIBAT_BITUL" /><numHostDecor length="3" />
+		  <fHostString dataName="MELEL_SIBAT_BITUL" /><hebHostDecor length="50" />
+		  <fHostString dataName="GL_SHEM_MOSER" /><hebHostDecor length="22" />
+		  <fHostString dataName="GL_YOZEM_BITUL" /><numHostDecor length="1" />
+		  <!-- 14/04/10 Sarit add for pirtey bitul - change filler to 5  -->
+		  <fHostString dataName="GL_PAKID_BITUL" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_SHAA_BITUL" /><abcHostDecor length="4" />
+		  <!-- fHostString dataName="GL_KOD_SIBA_DCHIA" /><abcHostDecor length="2" /-->
+		  <fHostString dataName="GL_FILLER" /><numHostDecor length="3" />
+      	</record>
+	  </record>
+	</fmtDef>
+
+	<fmtDef id="GLFS_HdrHitmakdut">
+	  <fCSRecord>
+		<fCSRecord dataName="GLDK_HdrHitmakdut">
+          <fCSString dataName="GL_NOSE_PEULA" />
+          <fCSString dataName="GL_SUG_PEULA" />
+		  <fCSString dataName="GL_TR_MARECHET" />
+		  <fCSString dataName="GL_SHAA" />
+		  <fCSString dataName="GL_MISHMERET" />
+		  <!-- 24/10/12 Tibi Added business date for shichzur -->	
+		  <fCSString dataName="GL_TR_ASAKIM" />
+		  <fCSString dataName="GL_ZIHUI_PAKID" />
+		  <fCSString dataName="GL_ZIHUI_MENAHEL" />
+		  <fCSString dataName="GL_SAMCHUT_MEASHERET" />
+		  <fCSString dataName="GL_MISPAR_TAHANA" />
+		  <fCSString dataName="GL_SW_PEULA" />
+		  <fCSString dataName="GL_SNIF_PEULA" />
+		  <fCSString dataName="GL_PU_BITUL" />
+		  <fCSString dataName="GL_SIDURI_YOMAN" />
+		  <fCSString dataName="GL_MAKASH_IDKUN" />
+		  <fCSString dataName="GL_MAKASH_BITUL" />
+		  <fCSString dataName="GL_MAKASH_ISHUR" />
+		  <!-- 14/04/10 Sarit Added for pirteyBitul -->
+		  <fCSString dataName="GL_PAKID_BITUL" />
+		  <fCSString dataName="GL_SHAA_BITUL" />
+		  <!-- 16/04/07 I.M. Added for Hitmakdut Bitul -->
+		  <fCSString dataName="KOD_SIBAT_BITUL" />
+		  <fCSString dataName="MELEL_SIBAT_BITUL" />
+		  <fCSString dataName="GL_SHEM_MOSER" />
+		  <fCSString dataName="GL_YOZEM_BITUL" />
+		  <fCSString dataName="GL_KOD_SIBA_DCHIA" />
+		</fCSRecord>
+	  </fCSRecord>
+	</fmtDef>
+
+	<!-- Sarit 10/08/2010 - Add new Hdr for himakdut srika -->	
+	<fmtDef id="GLFR_HdrHitmakdutSrika">
+	  <record>
+		<record dataName="GLDK_HdrHitmakdut">
+          <fHostString dataName="GL_NOSE_PEULA" /><abcHostDecor length="1" />
+		  <fHostString dataName="GL_SUG_PEULA" /><numHostDecor length="3" addZerosAsPrefix="3" />          
+		  <fHostString dataName="GL_TR_MARECHET" /> <dateHostDecor length="8" />
+		  <fHostString dataName="GL_SHAA" /><abcHostDecor length="4" />
+		  <fHostString dataName="GL_MISHMERET" /><matafNumHostDecor length="1" addZerosOnEmpty="1" />
+		  <fHostString dataName="GL_ZIHUI_PAKID" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_ZIHUI_MENAHEL" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_SAMCHUT_MEASHERET" /><numHostDecor length="2" />
+		  <fHostString dataName="GL_MISPAR_TAHANA" /><numHostDecor length="3" />
+		  <fHostString dataName="GL_SW_PEULA" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_SNIF_PEULA" /><numHostDecor length="3" />
+		  <fHostString dataName="GL_SIDURI_YOMAN" /><numHostDecor length="5" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_MAKASH_IDKUN" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_MAKASH_BITUL" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_MAKASH_ISHUR" /><numHostDecor length="1" />
+		  <!-- pirtey bitul  -->
+		  <fHostString dataName="KOD_SIBAT_BITUL" /><numHostDecor length="3" />
+		  <fHostString dataName="MELEL_SIBAT_BITUL" /><hebHostDecor length="50" />
+		  <fHostString dataName="GL_SHEM_MOSER" /><hebHostDecor length="22" />
+		  <fHostString dataName="GL_YOZEM_BITUL" /><numHostDecor length="1" />
+		  <fHostString dataName="GL_PAKID_BITUL" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_MENAHEL_BITUL" /><matafNumHostDecor length="6" addZerosAsPrefix="6" />
+		  <fHostString dataName="GL_SHAA_BITUL" /><abcHostDecor length="4" />
+		  <fHostString dataName="GL_SNIF_BITUL" /><abcHostDecor length="3" />
+		  <fHostString dataName="GL_TR_BITUL" /><dateHostDecor length="8" />
+		  <fHostString dataName="GL_MAKOR_PU" /><abcHostDecor length="3" formatAs="upper" />
+		  <fHostString dataName="GL_MAKOR_PU_BITUL" /><abcHostDecor length="3" formatAs="upper" />
+		  <fHostString dataName="GL_TACHANA_BITUL" /><matafNumHostDecor length="3" addZerosAsPrefix="3" />
+		  <fHostString dataName="GL_TR_ASAKIM" /> <dateHostDecor length="8" />
+		  <fHostString dataName="GL_KOD_SIBA_DCHIA" /><abcHostDecor length="2" />
+		  <fHostString dataName="GL_FILLER" /><abcHostDecor length="81" />
+      	</record>
+	  </record>
+	</fmtDef>
+
+	<!-- Sarit 10/08/2010 - Add new Hdr for himakdut srika -->		
+	<fmtDef id="GLFS_HdrHitmakdutSrika">
+	  <fCSRecord>
+		<fCSRecord dataName="GLDK_HdrHitmakdut">
+          <fCSString dataName="GL_NOSE_PEULA" />
+          <fCSString dataName="GL_SUG_PEULA" />
+		  <fCSString dataName="GL_TR_MARECHET" />
+		  <fCSString dataName="GL_SHAA" />
+		  <fCSString dataName="GL_MISHMERET" />
+		  <!-- 24/10/12 Tibi Added business date for shichzur -->	
+		  <fCSString dataName="GL_TR_ASAKIM" />
+		  <fCSString dataName="GL_ZIHUI_PAKID" />
+		  <fCSString dataName="GL_ZIHUI_MENAHEL" />
+		  <fCSString dataName="GL_SAMCHUT_MEASHERET" />
+		  <fCSString dataName="GL_MISPAR_TAHANA" />
+		  <fCSString dataName="GL_SW_PEULA" />
+		  <fCSString dataName="GL_SNIF_PEULA" />
+		  <fCSString dataName="GL_SIDURI_YOMAN" />
+		  <fCSString dataName="GL_MAKASH_IDKUN" />
+		  <fCSString dataName="GL_MAKASH_BITUL" />
+		  <fCSString dataName="GL_MAKASH_ISHUR" />
+		  <fCSString dataName="GL_MAKOR_PU" /> <!-- add at 5.29 Sarit-->
+		  <!-- pirtey bitul  -->
+		  <fCSString dataName="GL_MAKOR_PU_BITUL" /> <!-- add at 5.29 Sarit-->
+    	   <fCSString dataName="GL_TACHANA_BITUL" /> <!-- add at 5.29 Sarit-->
+		  <fCSString dataName="GL_SNIF_BITUL" />
+		  <fCSString dataName="GL_PAKID_BITUL" />
+		  <fCSString dataName="GL_SHAA_BITUL" />
+		  <fCSString dataName="GL_TR_BITUL" />
+		  <fCSString dataName="GL_KOD_SIBA_DCHIA" />
+		  <fCSString dataName="KOD_SIBAT_BITUL" />
+		  <fCSString dataName="MELEL_SIBAT_BITUL" />
+		  <fCSString dataName="GL_SHEM_MOSER" />
+		  <fCSString dataName="GL_YOZEM_BITUL" />
+		  <fCSString dataName="GL_MENAHEL_BITUL" />	 
+		</fCSRecord>
+	  </fCSRecord>
+	</fmtDef>
+	<!-- ********************************************* -->
+	<!-- Formats used in case of error or not answered -->
+	<!-- ********************************************* -->
+	<fmtDef id="csErrorFormatOldHdr">
+	  <fCSRecord>
+		<fCSString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_TIPUL" />
+		<fCSList dataName="BusinessMessagesList" times="*" append="false">
+			<fCSRecord dataName="BusinessMessageRecord">
+				<fCSMessage dataName="BusinessMessage"/>
+			</fCSRecord>
+		</fCSList>
+	  </fCSRecord>
+	</fmtDef>
+
+	<fmtDef id="csErrorFormatNewHdr">
+	  <fCSRecord>
+		<fCSString dataName="GKSR_HdrBtt.GL_KOD_TIPUL" />
+		<fCSList dataName="BusinessMessagesList" times="*" append="false">
+			<fCSRecord dataName="BusinessMessageRecord">
+				<fCSMessage dataName="BusinessMessage"/>
+			</fCSRecord>
+		</fCSList>
+	  </fCSRecord>
+	</fmtDef>
+	
+	<fmtDef id="csUnansweredFormat">
+	  <fCSRecord>
+		<fCSConstant value="" />
+		<fCSList dataName="BusinessMessagesList" times="*" append="false">
+			<fCSRecord dataName="BusinessMessageRecord">
+				<fCSMessage dataName="BusinessMessage"/>
+			</fCSRecord>
+		</fCSList>
+	  </fCSRecord>
+	</fmtDef>
+	<!--=========================================================================-->
+	<!-- END GENERAL				                         -->
+	<!--=========================================================================-->
+	<!--=========================================================================-->
+	<!-- TEST ZONE 				                         -->
+	<!--=========================================================================-->
+	<fmtDef id="testArvoutFmt">
+		<record>
+			<fStringCharSet dataName="arvutAsBinary" />
+			<nullCheck />
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>
+		
+	<!--=========================================================================-->
+	<!-- Testing EJB Support Format definitions   				                         -->
+	<!--=========================================================================-->
+	
+	<ejbMapper id="ejbCreateMapper" convType="ws"> 
+	  <ejbMapperElement dataName="firstValue"/> 
+	</ejbMapper> 
+	
+	<ejbMapper id="ejbInputMapper" convType="ws"> 
+	  <ejbMapperElement dataName="firstValue" byReference="false" isPrimitive="false" /> 
+	  <ejbMapperElement dataName="secondValue" byReference="false" /> 
+	  <ejbMapperElement dataName="thirdValue" isPrimitive="true" /> 
+	  <ejbMapperElement dataName="fourthValue"/> 
+	</ejbMapper> 
+
+	<ejbMapper id="ejbOutputMapper" convType="ws"> 
+	  <ejbMapperElement dataName="firstValue"/> 
+	</ejbMapper> 
+
+	<!--=========================================================================-->
+	<!-- General Format definitions for Sheiltot   				                         -->
+	<!--=========================================================================-->
+	
+	<fmtDef id="SHSI_HDR">
+		<record>
+			<fHostString dataName="SHSI_HDR.SH_TSHUVA" />
+			<abcHostDecor length="1"/>
+
+			<fHostString dataName="SHSI_HDR.SH_YAAD" />
+			<abcHostDecor length="1"/>
+
+			<fHostString dataName="SHSI_HDR.SH_KODZIUD" />
+			<abcHostDecor length="5"/>
+
+			<fHostString dataName="SHSI_HDR.SH_SRIKA1" />
+			<binHostDecor length="30"/>
+
+			<fHostString dataName="SHSI_HDR.SH_DIFDUF" />
+			<abcHostDecor length="1"/>
+		</record>
+	</fmtDef>
+
+	<fmtDef id="SHSR_HDR">
+		<record>
+			<fHostString dataName="SHSR_HDR.SH_TSHUVA" />
+			<abcHostDecor length="1"  />
+
+			<fHostString dataName="SHSR_HDR.SH_YAAD" />
+			<abcHostDecor length="1"  />
+
+			<fHostString dataName="SHSR_HDR.SH_KODZIUD" />
+			<abcHostDecor length="5"  />
+
+			<fHostString dataName="SHSR_HDR.SH_SRIKA1" />
+			<binHostDecor length="30"  />
+
+			<fHostString dataName="SHSR_HDR.SH_KODSHIDUR" />
+			<abcHostDecor length="1"  />
+
+			<fHostString dataName="SHSR_HDR.SH_MISPAR_SHEDER" />
+			<abcHostDecor length="4"  />
+
+			<fHostString dataName="SHSR_HDR.SH_SHRNUM" />
+			<abcHostDecor length="4"  />
+
+			<fHostString dataName="SHSR_HDR.GL_MISGERET" />
+			<fixedLength length="1"  />
+			<codeSetTrans to="Cp037" />
+		</record>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	Get Clerk Name Request Format				-->
+	<!--================================================-->
+
+	<fmtDef id="getClerkNameRequestFmt">
+		<record>
+			<fString dataName="GL_SNIF" />
+			<nullCheck />
+			<delim delimChar="#" />
+
+			<fString dataName="GL_ZIHUI_PAKID" />
+			<nullCheck />
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>
+
+	<!--================================================-->
+	<!-- 	Get Clerk Name Reply Format					-->
+	<!--================================================-->
+
+	<fmtDef id="getClerkNameReplyFmt">
+		<record>
+			<fString dataName="GL_SHEM_PAKID" />
+			<nullCheck />
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>
+
+	<!--=========================================================================-->
+    <!-- 	Queries list Reply Format                                            -->
+    <!-- Added by Itay Ben Yehuda 26/09/05 										 -->
+    <!--=========================================================================-->
+	<fmtDef id="GLFS_initQueriesList">
+		<record>
+			<iCollF dataName="queriesList" times="*">
+				<record dataName="queryData">
+					<fString dataName="queryName" />
+					<delim delimChar="@" />
+					<nullCheck />
+					<fString dataName="queryId" />
+					<delim delimChar="@" />
+					<nullCheck />
+				</record>
+			</iCollF>
+		</record>
+	</fmtDef>
+	
+	<!--=========================================================================-->
+    <!-- MQ send message to log format											 -->
+    <!-- Added by Tibi Glaser 11/12/12 										 	 -->
+    <!--=========================================================================-->
+	<fmtDef id="MQ_SEND_MESSAGE_fmt">
+		<record>
+			<fString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+			<fixedLength length="6" />
+			<constant value=" " />
+			<fString dataName="GLSG_GLBL.GL_MISHMERET" />
+			<fixedLength length="1" />
+			<constant value=" " />
+			<fString dataName="GLSG_GLBL.GKSG_KEY.GL_SNIF" />
+			<fixedLength length="3" />
+			<constant value=" " />
+			<fString dataName="GLSF_MAZAV.GL_SHAA" />
+			<fixedLength length="4" />
+			<constant value=" " />
+			<fString dataName="GLSG_GLBL.GL_TR_ASAKIM" />
+			<fixedLength length="8" />
+			<constant value=" " />
+			<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_DD" />
+			<fixedLength length="2" />
+			<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_MM" />
+			<fixedLength length="2" />
+			<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_YYYY" />
+			<fixedLength length="4" />
+			<constant value=" " />
+			<fString dataName="GLSG_GLBL.GL_PU_ID" />
+			<fixedLength length="2" />
+			<constant value=" " />
+			<fString dataName="GLSF_GLBL.GL_MISPAR_TAHANA" />
+			<fixedLength length="3" />
+			<constant value=" " />
+		</record>
+	</fmtDef>
+
+	<!--=========================================================================-->
+    <!-- 	Hdr Hodaot Reply Format                                            -->
+    <!-- Added by sARIT 									 -->
+    <!--=========================================================================--> 
+	<fmtDef id="GLFR_HdrHodaa20">
+		<record>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HdrHodaaKlali.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<iCollF dataName="HostHeaderReplyData.GKSR_HdrHodaaKlali.GKSR_HdrHodaaList" times="20">
+				<record dataName="GKSR_HdrHodaaData">
+					<fHostString dataName="GL_HODAA_NOSE1" /><abcHostDecor length="1" />
+					<fHostString dataName="GL_HODAA_MISPAR1" /><abcHostDecor length="3" />
+					<fHostString dataName="GL_HODAA_1" /><hebHostDecor length="40" codeSet="Cp037"/>
+				</record>
+			</iCollF>
+		</record>
+	</fmtDef>
+
+		<!-- START NEW HDR -->
+	<fmtDef id="GLFI_HdrBtt">
+		<record>
+			<fHostString dataName="GKSI_HdrBtt.GL_TRANS_ID" /><abcHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.MQ_MSGID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSI_HdrBtt.MQ_CORRELID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SHAA" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_NOCHECHI" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_ASAKIM" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_MARECHET" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.SVIVA" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MISHMERET" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_YOMAN_HOST" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_GIRSA" /><numHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.GL_PEULA" /><abcHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_CH" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SCH" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MATBEA" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_PU" /><abcHostDecor length="3" formatAs="upper" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_TAHANA" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK_MARECHET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_MARECHET" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PAKID" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_PAKID" /><numHostDecor length="10" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_PAKID" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PATUACH" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.YOZEM_PEULA" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_HORAA" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SHEM_MOSER" /><hebHostDecor length="22" codeSet="Cp037"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_KOD_MEDINA" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI" /><numHostDecor length="9" />
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER" /><abcHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.KAMUT_ISHURIM" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_MEASHERET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_MEASHER" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_ISHUR_MENAEL" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_LVARER" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_MVATELET" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_BITUL" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.KOD_SIBAT_BITUL" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.MELEL_SIBAT_BITUL" /><hebHostDecor length="50" codeSet="Cp037"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SRIKA_KEY" /><binHostDecor length="100" />
+			<fHostString dataName="GKSI_HdrBtt.GL_RECIEVE_SEND_FIELD" /><binHostDecor length="50" />
+			
+			<!-- IM - 17/01/07 add girsat btt to header. Changed the filler from 50 to 44 -->
+			<fHostString dataName="GKSI_HdrBtt.GL_GIRSA_BTT" /><abcHostDecor length="6" />
+			
+			<!-- Sarit - 18/09/08 add nose isko to header. Changed the filler from 44 to 43-->
+			<fHostString dataName="GKSI_HdrBtt.GL_NOSE_ISKI" /><abcHostDecor length="1" />
+			<!-- Sarit - 14/04/10 add misparZihui16 to header. Changed the filler from 43 to 27-->
+			<fHostString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI_16" /><abcHostDecor length="16" />
+			<!-- Tibi - 06/11/18 add GL_ISHUR_MEUHAD to header. Changed the filler from 27 to 26-->
+			<fHostString dataName="GKSI_HdrBtt.GL_ISHUR_MEUHAD" /><numHostDecor length="1" />
+			<!-- Tibi - 27/10/20 add GL_ISHUR_MENAHEL_BACHIR to header. Changed the filler from 26 to 25-->
+			<fHostString dataName="GKSI_HdrBtt.GL_ISHUR_MENAHEL_BACHIR" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER" /><abcHostDecor length="25" /></record>
+	</fmtDef>
+	
+	<!-- IM 29/01/2008 - Add headers for supporting hebrew new code -->
+		<!-- START NEW HDR -->
+	<fmtDef id="GLFI_HdrBttNew">
+		<record>
+			<fHostString dataName="GKSI_HdrBtt.GL_TRANS_ID" /><abcHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.MQ_MSGID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSI_HdrBtt.MQ_CORRELID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SHAA" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_NOCHECHI" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_ASAKIM" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_MARECHET" /><numHostDecor length="8" />
+			<fHostString dataName="GKSI_HdrBtt.SVIVA" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MISHMERET" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_YOMAN_HOST" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_GIRSA" />	<numHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.GL_PEULA" /><abcHostDecor length="4" />
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_CH" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SCH" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MATBEA" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_PU" /><abcHostDecor length="3" formatAs="upper" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_TAHANA" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK_MARECHET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_MARECHET" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PAKID" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_PAKID" /><numHostDecor length="10" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_PAKID" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PATUACH" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.YOZEM_PEULA" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_HORAA" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SHEM_MOSER" /><hebHostDecor length="22" />
+			<fHostString dataName="GKSI_HdrBtt.GL_KOD_MEDINA" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI" /><numHostDecor length="9" />
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET2" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.KAMUT_ISHURIM" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_MEASHERET" /><numHostDecor length="2" />
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_MEASHER" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_ISHUR_MENAEL" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_LVARER" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_MVATELET" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_BITUL" /><numHostDecor length="6" />
+			<fHostString dataName="GKSI_HdrBtt.KOD_SIBAT_BITUL" /><numHostDecor length="3" />
+			<fHostString dataName="GKSI_HdrBtt.MELEL_SIBAT_BITUL" /><hebHostDecor length="50" />
+			<fHostString dataName="GKSI_HdrBtt.GL_SRIKA_KEY" /><binHostDecor length="100" />
+			<fHostString dataName="GKSI_HdrBtt.GL_RECIEVE_SEND_FIELD" /><binHostDecor length="50" />
+			<!-- IM - 17/01/07 add girsat btt to header. Changed the filler from 50 to 44 -->
+			<fHostString dataName="GKSI_HdrBtt.GL_GIRSA_BTT" /><abcHostDecor length="6" />
+			<!-- Sarit - 18/09/08 add nose iski to header. Changed the filler from 44 to 43-->
+			<fHostString dataName="GKSI_HdrBtt.GL_NOSE_ISKI" /><abcHostDecor length="1" />
+			<!-- Sarit - 14/04/10 add misparZihui16 to header. Changed the filler from 43 to 27-->
+			<fHostString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI_16" /><abcHostDecor length="16" />
+			<!-- Tibi - 06/11/18 add GL_ISHUR_MEUHAD to header. Changed the filler from 27 to 26-->
+			<fHostString dataName="GKSI_HdrBtt.GL_ISHUR_MEUHAD" /><numHostDecor length="1" />
+			<!-- Tibi - 27/10/20 add GL_ISHUR_MENAHEL_BACHIR to header. Changed the filler from 26 to 25-->
+			<fHostString dataName="GKSI_HdrBtt.GL_ISHUR_MENAHEL_BACHIR" /><numHostDecor length="1" />
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER" /><abcHostDecor length="25" />
+		</record>
+	</fmtDef>
+<!-- Added by Marcelo Lior Sechterr on 01/2007 -->
+
+	<fmtDef id="GLFI_HdrBtt_XML">
+   <!--<fXML dataName="GKSI_HdrBtt"> -->
+		<fXML dataName="FROM-PS-HDR">
+			<fHostString dataName="GKSI_HdrBtt.GL_TRANS_ID"/><abcHostDecor length="4"/>
+			<fHostString dataName="GKSI_HdrBtt.MQ_MSGID"/><abcHostDecor length="24"/>
+			<fHostString dataName="GKSI_HdrBtt.MQ_CORRELID"/><abcHostDecor length="24"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SHAA"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_NOCHECHI"/><numHostDecor length="8"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_ASAKIM"/><numHostDecor length="8"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_TR_MARECHET"/><numHostDecor length="8"/>
+			<fHostString dataName="GKSI_HdrBtt.SVIVA"/><abcHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_MISHMERET"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_YOMAN_HOST"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_GIRSA"/><numHostDecor length="4"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_PEULA"/><abcHostDecor length="4"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_CH"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SCH"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_MATBEA"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_PU"/><abcHostDecor length="3" formatAs="upper"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_MAKOR_TAHANA"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_BANK_MARECHET"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_MARECHET"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PAKID"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_PAKID"/><numHostDecor length="10"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_PAKID"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SNIF_PATUACH"/><abcHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.YOZEM_PEULA"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_HORAA"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SHEM_MOSER"/><hebHostDecor length="22"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_KOD_MEDINA"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI"/><numHostDecor length="9"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER"/><abcHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.KAMUT_ISHURIM"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SAMCHUT_MEASHERET"/><numHostDecor length="2"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_ZIHUI_MEASHER"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SUG_ISHUR_MENAEL"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_LVARER"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SW_MVATELET"/><numHostDecor length="1"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SIDURI_BITUL"/><numHostDecor length="6"/>
+			<fHostString dataName="GKSI_HdrBtt.KOD_SIBAT_BITUL"/><numHostDecor length="3"/>
+			<fHostString dataName="GKSI_HdrBtt.MELEL_SIBAT_BITUL"/><hebHostDecor length="50"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_SRIKA_KEY"/><binHostDecor length="100"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_RECIEVE_SEND_FIELD"/><binHostDecor length="50"/>
+			<fHostString dataName="GKSI_HdrBtt.GL_FILLER"/><abcHostDecor length="50"/>
+		</fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFR_HdrBtt">
+		<record>
+			<!-- <fHostString dataName="GKSR_HdrBtt.GL_FILLER" /><abcHostDecor length="3" />       -->
+			<fHostString dataName="GKSR_HdrBtt.GL_TRANS_ID" /><abcHostDecor length="2" />
+			<fHostString dataName="GKSR_HdrBtt.MQ_MSGID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSR_HdrBtt.MQ_CORRELID" /><abcHostDecor length="24" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SHAA" /><abcHostDecor length="6" />
+			<fHostString dataName="GKSR_HdrBtt.GL_TR_NOCHECHI" /><abcHostDecor length="8" />
+			<fHostString dataName="GKSR_HdrBtt.TR_ASAKIM_CICS" /><abcHostDecor length="8" />
+			<fHostString dataName="GKSR_HdrBtt.MISHMERET" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SIDURI_YOMAN_HOST" /><abcHostDecor length="6" />
+			<fHostString dataName="GKSR_HdrBtt.GL_BANK" /><abcHostDecor length="2" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SNIF" /><abcHostDecor length="3" />
+			<fHostString dataName="GKSR_HdrBtt.GL_CH" /><abcHostDecor length="6" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SCH" /><abcHostDecor length="3" />
+			<fHostString dataName="GKSR_HdrBtt.GL_MATBEA" /><abcHostDecor length="2" />
+			<fHostString dataName="GKSR_HdrBtt.GL_KOD_TIPUL" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.YOZEM_PEULA" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.GL_KOD_MEDINA" /><fBlankWhenZero/><abcHostDecor length="3" />
+			<fHostString dataName="GKSR_HdrBtt.GL_MISPAR_ZIHUI" /><fBlankWhenZero/><abcHostDecor length="9" />
+			<fHostString dataName="GKSR_HdrBtt.GL_FILLER" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.SAMCHUT_NIDRESHET2" /><numHostDecor length="2" />
+			<fHostString dataName="GKSR_HdrBtt.SAMCHUT_NIDRESHET" /><abcHostDecor length="2" />
+			<fHostString dataName="GKSR_HdrBtt.KAMUT_ISHURIM" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SUG_ISHUR_MENAEL" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.SH_KOD_SHIDUR" /><abcHostDecor length="1" />
+			<fHostString dataName="GKSR_HdrBtt.SH_MISPAR_SHEDER" /><abcHostDecor length="4" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SRIKA_KEY" /><binHostDecor length="100" />
+			<fHostString dataName="GKSR_HdrBtt.GL_RECIEVE_SEND_FIELD" /><binHostDecor length="50" />
+			<fHostString dataName="GKSR_HdrBtt.GL_MONE_RESHUMOT" /><abcHostDecor length="3" />
+			<!-- 12/04/07 I.M. Added for Hitmakdut Bitul
+			<fHostString dataName="GKSR_HdrBtt.KOD_SIBAT_BITUL" /><abcHostDecor length="3" />
+			<fHostString dataName="GKSR_HdrBtt.MELEL_SIBAT_BITUL" /><abcHostDecor length="50" />
+			<fHostString dataName="GKSR_HdrBtt.GL_SHEM_MOSER" /><abcHostDecor length="22" />   -->
+			<!-- 12/04/07 I.M. Changed from 47 to 100  -->	
+			<!-- Sarit - 14/04/10 add misparZihui16 to header. Changed the filler from 47 to 31-->
+			<!-- BorisG - 06/10/13 Changed from GKSI_HdrBtt to GKSR_HdrBtt qc. 3138-->
+			<fHostString dataName="GKSR_HdrBtt.GL_MISPAR_ZIHUI_16" /><abcHostDecor length="16" justify="center" />
+			<!-- Doron V Change 1680 23/3/2011 add flag if allow ishur merosh -->
+			<fHostString dataName="GKSR_HdrBtt.ISHUR_MEROSH" /><abcHostDecor length="1" />
+			<!-- GuyM Fix 3887 08/3/2016 add flag for ishur meuhad -->					
+			<fHostString dataName="GKSR_HdrBtt.GL_ISHUR_MEUHAD"/><abcHostDecor length="1"/>
+			<!-- TibiG 30/9/2020 add flag for ishur menahel bachir -->					
+			<fHostString dataName="GKSR_HdrBtt.GL_ISHUR_MENAHEL_BACHIR"/><abcHostDecor length="1"/>
+            <fHostString dataName="GKSR_HdrBtt.GL_FILLER" /><abcHostDecor length="28" />
+		</record>
+	</fmtDef>
+	
+	
+	<fmtDef id="GLFR_HdrHodaot10">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa10"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa10">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="10">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" codeSet="Cp037" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>
+
+	<fmtDef id="GLFR_HdrHodaot20">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa20"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa20">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="20">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" codeSet="Cp037" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>
+	
+	<!-- IM 29/01/2008 - Add headers for supporting hebrew new code -->
+	<fmtDef id="GLFR_HdrHodaot10New">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa10New"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa10New">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="10">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>
+
+	<fmtDef id="GLFR_HdrHodaot20New">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa20New"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa20New">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="20">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>	
+		
+	<!-- IM 29/01/2008 - Add headers for supporting hebrew new code -->
+	<fmtDef id="GLFR_HdrHodaot10New">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa10New"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa10New">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="10">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>
+
+	<fmtDef id="GLFR_HdrHodaot20New">
+		<record>
+			<fHostString dataName="GLDK_HdrHodaot.GL_MONE_HODAOT" /><abcHostDecor length="2" />
+			<!-- The list of the hodaot -->
+			<refFmt refId="GLFR_HdrHodaa20New"/> 
+		</record>
+	</fmtDef>
+	
+	<fmtDef id="GLFR_HdrHodaa20New">
+		<iCollF dataName="GLDK_HdrHodaot.GLDI_HdrHodaa" times="20">
+			<record dataName="GLDK_HdrHodaa">
+				<fHostString dataName="GL_HODAA_NOSE" /><abcHostDecor length="1" />
+				<fHostString dataName="GL_HODAA_KOD" /><abcHostDecor length="3" />
+				<fHostString dataName="GL_HODAA_TEUR" /><hebHostDecor length="70" justify="center" useoverride="true"/>
+				<fHostString dataName="GL_FILLER" /><abcHostDecor length="5" />
+			</record>
+		</iCollF>
+	</fmtDef>	
+		
+	<fmtDef id="GLFC_HdrBtt">
+		<fCSRecord>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+			<fCSString dataName="GKSI_HdrBtt.MQ_MSGID" />
+			<fCSString dataName="GKSI_HdrBtt.MQ_CORRELID" />	
+			<fCSString dataName="GKSI_HdrBtt.SVIVA" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SIDURI_YOMAN_HOST" />
+			<fCSString dataName="GKSI_HdrBtt.GL_GIRSA" />
+			<fCSString dataName="TRX_ID" />
+			<fCSString dataName="SUBJECT_CHAR" />
+			<fCSString dataName="GKSI_HdrBtt.GL_BANK" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SNIF" />
+			<fCSString dataName="GKSI_HdrBtt.GL_CH" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SCH" />
+			<fCSString dataName="GKSI_HdrBtt.GL_MATBEA" />
+			<fCSString dataName="GKSI_HdrBtt.YOZEM_PEULA" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SUG_HORAA" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SHEM_MOSER" />
+			<fCSString dataName="GKSI_HdrBtt.GL_KOD_MEDINA" />
+			<fCSString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI" />
+			<fCSString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET" />
+			<fCSString dataName="GKSI_HdrBtt.SAMCHUT_NIDRESHET2" />
+			<fCSString dataName="GKSI_HdrBtt.KAMUT_ISHURIM" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SAMCHUT_MEASHERET" />
+			<fCSString dataName="GKSI_HdrBtt.GL_ZIHUI_MEASHER" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SUG_ISHUR_MENAEL" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SW_LVARER" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SW_MVATELET" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SIDURI_BITUL" />
+			<fCSString dataName="GKSI_HdrBtt.KOD_SIBAT_BITUL" />
+			<fCSString dataName="GKSI_HdrBtt.MELEL_SIBAT_BITUL" />
+			<fCSString dataName="GKSI_HdrBtt.GL_SRIKA_KEY" />
+			<fCSString dataName="GKSI_HdrBtt.GL_RECIEVE_SEND_FIELD" />
+			<!-- IM 20/01/07 added for the girsat btt-->
+			<fCSString dataName="GKSI_HdrBtt.GL_GIRSA_BTT" />			
+			<!-- Sarit 18/09/08 added for the kod nose iska from subjectData-->
+			<fCSString dataName="GKSI_HdrBtt.GL_NOSE_ISKI" />
+			<!-- Sarit 27.12.09 added at 5.24.5 trans id + shem tshuva-->
+			<fCSString dataName="GKSI_HdrBtt.GL_TRANS_ID" />
+			<fCSString dataName="GKSR_HdrBtt.GL_TRANS_ID" />
+			<fCSString dataName="GKSI_HdrBtt.GL_MISPAR_ZIHUI_16" />			
+			<fCSString dataName="GKSI_HdrBtt.GL_ISHUR_MEUHAD" />			
+			<fCSString dataName="GKSI_HdrBtt.GL_ISHUR_MENAHEL_BACHIR" />			
+		</fCSRecord>
+	</fmtDef>		
+	
+	<fmtDef id="GLFS_HdrBtt">
+		<fCSRecord>
+			<refFmt refId="GLFS_HdrHodaa"/>
+			<!-- IM 02/02/2011 - Fix #1704 - use header fields for CICS -->
+			<fCSString dataName="GKSR_HdrBtt.MQ_MSGID"/>
+			<fCSString dataName="GKSR_HdrBtt.MQ_CORRELID"/>			
+			<fCSString dataName="GKSR_HdrBtt.SAMCHUT_NIDRESHET"/>
+			<fCSString dataName="GKSR_HdrBtt.SAMCHUT_NIDRESHET2"/>
+			<fCSString dataName="GKSR_HdrBtt.KAMUT_ISHURIM"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_SUG_ISHUR_MENAEL"/>			
+			<fCSString dataName="GKSR_HdrBtt.GL_KOD_TIPUL"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_MONE_RESHUMOT_TOTAL"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_BANK"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_SIDURI_YOMAN_HOST"/>
+			<!-- Doron V., GuyM Change 1680 23/3/2011 Add ishur merosh flag -->	
+			<fCSString dataName="GKSR_HdrBtt.ISHUR_MEROSH" />
+			<!-- Sarit L , Added in 5.29 16.5.12 -->
+			<fCSString dataName="GKSR_HdrBtt.GL_RECIEVE_SEND_FIELD" />
+			<!-- BorisG 3099 5.34.02 01.05.14 -->
+			<fCSString dataName="GKSR_HdrBtt.GL_KOD_MEDINA" />
+			<fCSString dataName="GKSR_HdrBtt.GL_MISPAR_ZIHUI" />
+			<fCSString dataName="GKSR_HdrBtt.GL_MISPAR_ZIHUI_16" />
+			<fCSString dataName="GKSR_HdrBtt.GL_ISHUR_MEUHAD"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_ISHUR_MENAHEL_BACHIR"/>
+			<fCSString dataName="GKSR_HdrBtt.GL_SRIKA_KEY"/>
+		</fCSRecord>
+	</fmtDef>		
+
+	<fmtDef id="GLFS_HdrHodaa">
+		<fCSRecord>	
+			<fCSList dataName="BusinessMessagesList" times="*" append="false">
+				<fCSRecord dataName="BusinessMessageRecord">
+					<fCSMessage dataName="BusinessMessage"/>
+				</fCSRecord>
+			</fCSList>
+		</fCSRecord>
+	</fmtDef>	
+	
+	<!-- Sarit 5.24 - for not delete all old Msg -->
+	<fmtDef id="GLFS_HdrHodaaAppendTrue">
+		<record>	
+			<iCollF dataName="BusinessMessagesList" times="*" append="true">
+				<record dataName="BusinessMessageRecord">
+					<fMsgField dataName="BusinessMessage"/>
+					<delim delimChar="^^"/>
+					<nullCheck/>
+				</record>
+			</iCollF>
+			<delim delimChar="~~"/>
+		</record>
+	</fmtDef>	
+	<!-- הודעות של החשבון צריכות להכנס לתוך קונטקסט חשבון -->
+	
+	<!-- Sarit 2.52 20.02.07 -->
+	
+	<fmtDef id="GLFS_HdrCheshbon">
+		<record>
+			<refFmt refId="GLFS_HdrHodaaCheshbon"/>
+			<fString dataName="GKSR_HdrBtt.SAMCHUT_NIDRESHET"/><nullCheck/><delim delimChar="#"/>
+			<fString dataName="GKSR_HdrBtt.KAMUT_ISHURIM" /><nullCheck/><delim delimChar="#"/>
+			<fString dataName="GKSR_HdrBtt.GL_SUG_ISHUR_MENAEL" /><nullCheck/><delim delimChar="#"/>			
+			<fString dataName="GKSR_HdrBtt.GL_SRIKA_KEY" /><nullCheck/><delim delimChar="#"/>
+			<fString dataName="GKSR_HdrBtt.GL_KOD_TIPUL" /><nullCheck/><delim delimChar="#"/>
+			<fString dataName="GKSR_HdrBtt.GL_MONE_RESHUMOT_TOTAL"/><nullCheck/><delim delimChar="#"/>
+			<fString dataName="GKSR_HdrBtt.GL_BANK"/><nullCheck/><delim delimChar="#"/>
+		</record>
+	</fmtDef>		
+	<fmtDef id="GLFS_HdrHodaaCheshbon">
+		<record>	
+			<iCollF dataName="BusinessMessagesList" times="*" append="false">
+				<record dataName="BusinessMessageRecord">
+					<fMsgField dataName="BusinessMessage"/><delim delimChar="@"/><nullCheck/>
+				</record>
+			</iCollF>
+			<delim delimChar="#" />
+		</record>
+	</fmtDef>	
+	
+	<mapper id="GLMF_SHEDER">
+		<fmtDef id="GLMS_SHEDER">
+			<record>
+				<fString dataName="GLSF_MAZAV.GL_SHAA_MARECHET_MHS"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSF_MAZAV.GL_TR_NOCHECHI"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GL_TR_ASAKIM"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_DD"/><nullCheck/>
+				<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_MM"/><nullCheck/>
+				<fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_YYYY"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GL_MISHMERET"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="SUBJECT_CHAR"/><nullCheck/>
+				<fString dataName="TRX_ID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GL_PU_ID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSF_GLBL.GL_MISPAR_TAHANA"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GL_BANK" /><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GKSG_KEY.GL_SNIF"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSE_GLBL.GKSE_KEY.GL_SNIF"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSE_GLBL.GL_SAMCHUT" /><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GLSG_GLBL.GL_SNIF_PATUACH" /><nullCheck /><delim delimChar="#"/>				
+				<constant value="false" /><delim delimChar="#"/>
+			</record>
+		</fmtDef>
+
+		<fmtDef id="GLMT_SHEDER">
+			<record>
+				<fString dataName="GKSI_HdrBtt.GL_SHAA"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_TR_NOCHECHI"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_TR_ASAKIM"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_TR_MARECHET"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_MISHMERET"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_PEULA"/><nullCheck /><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_MAKOR_PU"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_MAKOR_TAHANA"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_BANK_MARECHET"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_SNIF_MARECHET"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_SNIF_PAKID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_ZIHUI_PAKID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_SAMCHUT_PAKID"/><nullCheck/><delim delimChar="#"/>
+				<fString dataName="GKSI_HdrBtt.GL_SNIF_PATUACH"/><nullCheck/><delim delimChar="#"/>			
+				<fString dataName="debugMode"/><nullCheck/><delim delimChar="#"/>	
+			</record>
+		</fmtDef>
+	</mapper>
+	<!-- END NEW HDR -->
+	<!-- Sarit Lev 23.11.06 -->
+	<!-- format for one column table -->
+	<!-- לשימוש במצבים שהמסך מעוצב ע"י ההוסט -->
+	<fmtDef id="GLFR_OneColumn">
+		<record>
+	  		<iCollF dataName="GLDI_OneColumn" times="50" append="true">
+				<record dataName="GLDL_OneColumn">	
+	    			<fHostString dataName="GL_KOD" /><abcHostDecor length="1" />
+				 	<fHostString dataName="GL_TEXT" /><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+				 	<fHostString dataName="GL_MISPAR_TZEVA" /><abcHostDecor length="2" />
+		 		</record>
+			</iCollF>
+  		</record>              
+	</fmtDef>
+
+	<!-- IM 29/01/2008 - Add headers for supporting hebrew new code -->
+	<fmtDef id="GLFR_OneColumnNew">
+		<record>
+	  		<iCollF dataName="GLDI_OneColumn" times="50" append="true">
+				<record dataName="GLDL_OneColumn">	
+	    			<fHostString dataName="GL_KOD" /><abcHostDecor length="1" />
+				 	<fHostString dataName="GL_TEXT" /><hebHostDecor length="80" useoverride="true"/>
+				 	<fHostString dataName="GL_MISPAR_TZEVA" /><abcHostDecor length="2" />
+		 		</record>
+			</iCollF>
+  		</record>              
+	</fmtDef>
+
+	<!-- Sarit V5.23 change delimiter from @ to ~~  -->
+	<fmtDef id="GLFS_OneColumn">
+  		<record>
+ 			<iCollF dataName="GLDI_OneColumn" times="*" append="true">
+				<record dataName="GLDL_OneColumn">	
+			     	<!-- ILANA START 02.08.07 - V3.08 - תיקון באג - חייב להיות מחרוזת  -->
+    			 	<fString dataName="GL_KOD" /><nullCheck /><delim delimChar="^^" />
+			 	 	<fVisualField dataName="GL_TEXT" /><nullCheck /><delim delimChar="^^" />
+			 	 	<fString dataName="GL_MISPAR_TZEVA" /><nullCheck /><delim delimChar="^^" />
+	 			</record>
+			</iCollF>		
+  			<delim delimChar="~~" />
+  		</record>              
+	</fmtDef>
+
+	<!-- פורמט כללי לביטול פעולה -->
+	<fmtDef id="GLFC_BitulPeula">
+    	<record>
+ 	  	<fString dataName="GKSI_HdrBtt.YOZEM_PEULA" /><nullCheck /><delim delimChar="~~" />
+	  	<fString dataName="GKSI_HdrBtt.KOD_SIBAT_BITUL" /><nullCheck /><delim delimChar="~~" />
+	  	<fString dataName="GKSI_HdrBtt.MELEL_SIBAT_BITUL" /><nullCheck /><delim delimChar="~~" />
+		</record>              
+	</fmtDef>  
+<!--END Sarit Lev 23.11.06 -->
+
+	<fmtDef id="GLFI_GetBdikatXMLShederDataNew_XML">
+      <fXML dataName="GLDK_TestLior">
+          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+          <fString dataName="GL_BANK" /><fixedLength length="2" />
+          <fString dataName="GL_SNIF" /><fixedLength length="3" />
+	   </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_Bakasha_XML">
+          <fXML dataName="GLDK_TestLior">
+          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+          <fString dataName="GL_BANK" /><fixedLength length="2" />
+          <fString dataName="GL_SNIF" /><fixedLength length="3" />
+	   </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_Tshuva_XML">
+          <fXML dataName="GLDK_TestLiorTshuva">
+          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+          <fString dataName="GL_BANK" /><fixedLength length="2" />
+          <fString dataName="GL_SNIF" /><fixedLength length="3" />
+	   </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_Bakasha_XML2Ramot">
+          <fXML dataName="GLDK_TestLior2Ramot">
+			<refFmt refId="GLFI_Rama2Bakasha" />
+	     </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_Rama2Bakasha">
+          	<fXML dataName="Rama2Bakasha">
+	          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+    	      <fString dataName="GL_BANK" /><fixedLength length="2" />
+	          <fString dataName="GL_SNIF" /><fixedLength length="3" />
+		   </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_Tshuva_XML2Ramot">
+          <fXML dataName="GLDK_TestLiorTshuva2Ramot">
+         	<fXML dataName="Rama2Tshuva">
+	          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+    	      <fString dataName="GL_BANK" /><fixedLength length="2" />
+        	  <fString dataName="GL_SNIF" /><fixedLength length="3" />
+		   </fXML>
+	   </fXML>
+	</fmtDef>
+
+
+	<fmtDef id="GLFI_INAXI"> 
+          <fXML dataName="INAXI">
+			<refFmt refId="GLFI_T05CIHDR" />
+	     </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_T05CIHDR">
+          <fXML dataName="T05CIHDR">
+			<refFmt refId="GLFI_FROM-PS-BTT" />
+	     </fXML>
+	</fmtDef>
+
+	<fmtDef id="GLFI_FROM-PS-BTT">
+          <fXML dataName="FROM-PS-BTT">
+			<refFmt refId="GLFI_FROM-PS-HDR" />
+	     </fXML>
+	</fmtDef>
+
+<!--   //  - 28.12.2006 עובד ניסוי  -->
+	<fmtDef id="GLFI_FROM-PS-HDR">
+	    <refFmt refId="GLFI_HdrBtt_XML" />
+	</fmtDef>
+
+
+	<fmtDef id="GLFI_Rama2Bakasha">
+          	<fXML dataName="Rama2Bakasha">
+	          <fString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+    	      <fString dataName="GL_BANK" /><fixedLength length="2" />
+	          <fString dataName="GL_SNIF" /><fixedLength length="3" />
+		   </fXML>
+	</fmtDef>
+
+<!--  Marcelo Lior - S203 - 25/08/08 START -->
+<!-- fXML are not recognized in the self defined files -->
+<!-- fXML does NOT accepts decorators - need to use fixedLength -->
+<fmtDef id="SHFI_S203_XML"> <!-- WORKS -->
+	    <fXML dataName="T30C0N79">
+			<fXML dataName="FROM-PS-BTT">
+				<!-- <fXML dataName="FROM-PS-HDR-BTT"> -->
+				    <refFmt refId="GLFI_HdrBttNew_XML" />
+					<!-- 
+					<fHostString dataName="elemento1"/><fixedLength length="2"/>
+					<fHostString dataName="elemento2"/><fixedLength length="2"/>
+					<fHostString dataName="elemento3"/><fixedLength length="2"/>
+					<fHostString dataName="elemento4"/><fixedLength length="2"/>
+					<fHostString dataName="elemento5"/><fixedLength length="2"/>
+                    -->
+					<fHostString dataName="SHSI_S203.NE_MISPAR_NIYAR"/><fixedLength length="8"/>
+					<fHostString dataName="SHSI_S203.GL_TZEVET"/><fixedLength length="2"/>
+					<fHostString dataName="SHSI_S203.GL_REFERANT"/><fixedLength length="2"/>
+				<!-- </fXML>  -->
+			</fXML>
+		</fXML>
+</fmtDef>
+
+<fmtDef id="SHFR_S203_XML"> <!--  24/10/2008 - Marcelo Lior -->
+	    <fXML dataName="T30C0N79">
+					<fHostString dataName="elemento1"/><fixedLength length="2"/>
+	    <!-- 
+	    <fXML dataName="T30C0N79">
+			<fXML dataName="TO-PS-BTT">
+				    <refFmt refId="GLFR_HdrBttNew_XML" />
+			</fXML>
+		</fXML>
+        -->
+		</fXML>
+</fmtDef>
+
+<!-- This format is based on GLFI_HdrBttNew, for fXML and with fixedLength (no decorators)  -->
+<fmtDef id="GLFI_HdrBttNew_XML">
+		<fXML dataName="GKSI_HdrBtt">
+			<fHostString dataName="GL_TRANS_ID" /><fixedLength length="4" />
+			<fHostString dataName="MQ_MSGID" /><fixedLength length="24" />
+			<fHostString dataName="MQ_CORRELID" /><fixedLength length="24" />
+		    <fHostString dataName="GL_SHAA" /><fixedLength length="6" /> 
+			<fHostString dataName="GL_TR_NOCHECHI" /><fixedLength length="8" />
+			<fHostString dataName="GL_TR_ASAKIM" /><fixedLength length="8" />
+			<fHostString dataName="GL_TR_MARECHET" /><fixedLength length="8" />
+			<fHostString dataName="SVIVA" /><fixedLength length="1" />
+			<fHostString dataName="GL_MISHMERET" /><fixedLength length="1" />
+			<fHostString dataName="GL_SIDURI_YOMAN_HOST" /><fixedLength length="6" />
+			<fHostString dataName="GL_GIRSA" /><fixedLength length="4" />
+			<fHostString dataName="GL_PEULA" /><fixedLength length="4" />
+			<fHostString dataName="GL_BANK" /><fixedLength length="2" />
+			<fHostString dataName="GL_SNIF" /><fixedLength length="3" />
+			<fHostString dataName="GL_CH" /><fixedLength length="6" />
+			<fHostString dataName="GL_SCH" /><fixedLength length="3" />
+			<fHostString dataName="GL_MATBEA" /><fixedLength length="2" />
+			<fHostString dataName="GL_MAKOR_PU" /><fixedLength length="3" />
+			<fHostString dataName="GL_MAKOR_TAHANA" /><fixedLength length="3" />
+			<fHostString dataName="GL_BANK_MARECHET" /><fixedLength length="2" />
+			<fHostString dataName="GL_SNIF_MARECHET" /><fixedLength length="3" />
+			<fHostString dataName="GL_SNIF_PAKID" /><fixedLength length="3" />
+			<fHostString dataName="GL_ZIHUI_PAKID" /><fixedLength length="10" />
+			<fHostString dataName="GL_SAMCHUT_PAKID" /><fixedLength length="2" />
+			<fHostString dataName="GL_SNIF_PATUACH" /><fixedLength length="1" />
+			<fHostString dataName="YOZEM_PEULA" /><fixedLength length="1" />
+			<fHostString dataName="GL_SUG_HORAA" /><fixedLength length="1" />
+			<fHostString dataName="GL_SHEM_MOSER" /><fixedLength length="22" />
+			<fHostString dataName="GL_KOD_MEDINA" /><fixedLength length="3" />
+			<fHostString dataName="GL_MISPAR_ZIHUI" /><fixedLength length="9" />
+			<fHostString dataName="GL_FILLER" /><fixedLength length="3" />
+			<fHostString dataName="SAMCHUT_NIDRESHET" /><fixedLength length="2" />
+			<fHostString dataName="KAMUT_ISHURIM" /><fixedLength length="1" />
+			<fHostString dataName="GL_SAMCHUT_MEASHERET" /><fixedLength length="2" />
+			<fHostString dataName="GL_ZIHUI_MEASHER" /><fixedLength length="6" />
+			<fHostString dataName="GL_SUG_ISHUR_MENAEL" /><fixedLength length="1" />
+			<fHostString dataName="GL_SW_LVARER" /><fixedLength length="1" />
+			<fHostString dataName="GL_SW_MVATELET" /><fixedLength length="1" />
+			<fHostString dataName="GL_SIDURI_BITUL" /><fixedLength length="6" />
+			<fHostString dataName="KOD_SIBAT_BITUL" /><fixedLength length="3" />
+			<fHostString dataName="MELEL_SIBAT_BITUL" /><fixedLength length="50" />
+  	  		<fHostString dataName="GL_SRIKA_KEY" /><fixedLength length="100" />
+			<fHostString dataName="GL_RECIEVE_SEND_FIELD" /><fixedLength length="50" />
+			<fHostString dataName="GL_GIRSA_BTT" /><fixedLength length="6" />
+			<fHostString dataName="GL_NOSE_ISKI" /><fixedLength length="1" />
+			<fHostString dataName="GL_FILLER" /><fixedLength length="43" />
+		</fXML>
+	</fmtDef>
+
+
+ <fmtDef id="MQ_SEND_MESSAGE_fmt">
+    <record>
+      <fString dataName="GLSE_GLBL.GKSE_KEY.GL_ZIHUI_PAKID" />
+      <fixedLength length="6" />
+      <constant value=" " />
+      <fString dataName="GLSG_GLBL.GL_MISHMERET" />
+      <fixedLength length="1" />
+      <constant value=" " />
+      <fString dataName="GLSG_GLBL.GKSG_KEY.GL_SNIF" />
+      <fixedLength length="3" />
+      <constant value=" " />
+      <fString dataName="GLSF_MAZAV.GL_SHAA" />
+      <fixedLength length="4" />
+      <constant value=" " />
+      <fString dataName="GLSG_GLBL.GL_TR_ASAKIM" />
+      <fixedLength length="8" />
+      <constant value=" " />
+      <fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_DD" />
+      <fixedLength length="2" />
+      <fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_MM" />
+      <fixedLength length="2" />
+      <fString dataName="GLSG_GLBL.GKSG_TR_MARECHET.GL_TR_YYYY" />
+      <fixedLength length="4" />
+      <constant value=" " />
+      <fString dataName="GLSG_GLBL.GL_PU_ID" />
+      <fixedLength length="2" />
+      <constant value=" " />
+      <fString dataName="GLSF_GLBL.GL_MISPAR_TAHANA" />
+      <fixedLength length="3" />
+      <constant value=" " />
+    </record>
+  </fmtDef>
+ 
+
+<!--  Marcelo Lior - S203 - 25/08/08 START -->
+<!-- ******************************************************************************** -->
+
+	<!--===========================================================-->
+	<!-- START OF DYNAMIC MARKETING CONVERSION FORMAT DEFINITIONS			   -->
+	<!--===========================================================-->
+	<!-- format GLFC_VADEKLOT_CommonData : common data for request client to server format -->
+	<fmtDef id="GLFC_VADEKLOT_CommonData">
+		<record>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_TRANS_ID"/><nullCheck/><delim delimChar="~~"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFC_VADEKLOT_CommonData -->
+	<!-- format GLFS_VADEKLOT_CommonData : Reply common data format -->
+	<fmtDef id="GLFS_VADEKLOT_CommonData">
+		<record>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_TIPUL"/><nullCheck/><delim delimChar="~~"/>
+			<iCollF dataName="BusinessMessagesList" times="*" append="false">
+				<record dataName="BusinessMessageRecord">
+					<fMsgField dataName="BusinessMessage"/><delim delimChar="^^"/>
+				</record>
+			</iCollF>
+			<delim delimChar="~~" />
+		</record>
+	</fmtDef>
+	<!-- end format GLFS_VADEKLOT_CommonData -->
+	
+	<!--===========================================================-->
+	<!-- END OF DYNAMIC MARKETING CONVERSION FORMAT DEFINITIONS			   -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- START OF QUERIES CONVERSION FORMAT DEFINITIONS			   -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- START OF MODEL (GLSHOWLS) FORMAT DEFINITIONS 			       -->
+	<!--===========================================================-->
+	<!-- format GLFC_CommonData : Request common data format -->
+	<fmtDef id="GLFC_CommonData">
+		<record>
+			<fVisualField dataName="isCicsContinueButtonClicked"/><delim delimChar="~~"/>
+			<fString dataName="SHSR_HDR.SH_SRIKA1"/><delim delimChar="~~"/>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_TRANS_ID"/><delim delimChar="~~"/>
+		</record>
+	</fmtDef>
+	<!-- format GLFC_CommonData : Request common data format -->
+
+	<!-- format GLFC_HeaderData : Request header data format -->
+	<fmtDef id="GLFC_HeaderData">
+		<record dataName="GKSI_HDR">
+			<fString dataName="GL_TRANS_ID"/><delim delimChar="~~"/>
+			<fString dataName="GL_GIRSA"/><delim delimChar="~~"/>
+			<fString dataName="GL_PEULA"/><delim delimChar="~~"/>
+			<fString dataName="GL_BANK"/><delim delimChar="~~"/>
+			<fString dataName="GL_SNIF"/><delim delimChar="~~"/>
+			<fString dataName="GL_MATBEA"/><delim delimChar="~~"/>
+			<fString dataName="GL_SCH"/><delim delimChar="~~"/>
+			<fString dataName="GL_CH"/><delim delimChar="~~"/>
+		</record>
+	</fmtDef>
+	<!-- format GLFC_HeaderData : Request header data format -->
+
+	<!-- format SHFS_CommonData : Reply common data format -->
+	<fmtDef id="SHFS_CommonData">
+		<record>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_KOD_TIPUL"/><nullCheck/><delim delimChar="~~"/>
+			<fVisualField dataName="isCicsContinueButtonClicked"/><nullCheck/><delim delimChar="~~"/>
+			<fString dataName="SHSR_HDR.SH_SRIKA1"/><delim delimChar="~~"/>
+			<iCollF dataName="BusinessMessagesList" times="*" append="false">
+				<record dataName="BusinessMessageRecord">
+					<fMsgField dataName="BusinessMessage"/><delim delimChar="^^"/>
+				</record>
+			</iCollF>
+			<delim delimChar="~~" />
+		</record>
+	</fmtDef>
+	<!-- end format SHFS_CommonData -->
+
+	<!-- format GLFR_ML_HDRS : Response host to server format -->
+	<fmtDef id="GLFR_ML_HDRS">
+		<record dataName="GLSR_ML">
+			<fHostString dataName="GL_KOT1_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A"/> <hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT2_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A2"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT3_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A3"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT4_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A4"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT5_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A5"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT6_TZEVA"/><numHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET_A6"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML_HDRS : Response host to server format -->
+
+	<!-- format GLFR_ML_NOHDRS : Response host to server format -->
+	<fmtDef id="GLFR_ML_NOHDRS">
+		<record dataName="GLSR_ML">
+			<!-- fString dataName="GL_KOT1_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A"/  --> <constant value=""/><fixedLength length="79"/>
+			<!-- fString dataName="GL_KOT2_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A2"/ --> <constant value=""/><fixedLength length="79"/>
+			<!-- fString dataName="GL_KOT3_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A3"/ --> <constant value=""/><fixedLength length="79"/>
+			<!-- fString dataName="GL_KOT4_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A4"/ --> <constant value=""/><fixedLength length="79"/>
+			<!-- fString dataName="GL_KOT5_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A5"/ --> <constant value=""/><fixedLength length="79"/>
+			<!-- fString dataName="GL_KOT6_TZEVA"/ --> <constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET_A6"/ --> <constant value=""/><fixedLength length="79"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML_NOHDRS : Response host to server format -->
+
+	<!-- format GLFR_ML_LINES : Response host to server format -->
+	<fmtDef id="GLFR_ML_LINES">
+		<record>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MONE_RESHOMOT"/><numHostDecor length="3"/>
+			<record dataName="GLSR_ML">
+				<iCollF dataName="GLDI_MOFA_ML" times="11" append="true">
+					<record dataName="GLSR_MOFA_ML">
+						<fHostString dataName="GL_MOFA_SRIKA"/><binHostDecor length="30"/>
+						<fHostString dataName="GL_OFI_SHURA_ML"/><abcHostDecor length="1"/>
+						<fHostString dataName="GL_KOD_HITMKDUT"/><abcHostDecor length="1"/>
+						<fHostString dataName="GL_TZEVA_SHURA"/><abcHostDecor length="3"/>
+						<fHostString dataName="GL_SHURA_LIST"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+						<fHostString dataName="GL_SHURA2_LIST"/><hebHostDecor length="79" codeSet="Cp037" useoverride="true"/>
+						<fHostString dataName="GL_FLG_PIRTEY_CH"/><abcHostDecor length="1"/>
+						<fHostString dataName="GL_PRATIM_SHIRSHUR"/><abcHostDecor length="13"/>
+					</record>
+				</iCollF>
+				<fHostString dataName="GL_SRIKA2"/><binHostDecor length="25"/>
+				<fHostString dataName="GL_FILLER"/><abcHostDecor length="9"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML_LINES : Response host to server format -->
+
+	<!-- format GLFR_ML : Response host to server format -->
+	<fmtDef id="GLFR_ML">
+		<record>
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+			<refFmt refId="SHSR_HDR"/>
+			<refFmt refId="GLFR_ML_HDRS"/>
+			<refFmt refId="GLFR_ML_LINES"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML -->
+
+	<!-- format GLFR_ML_Continue : Response host to server format -->
+	<fmtDef id="GLFR_ML_Continue">
+		<record>
+			<refFmt refId="GKSR_HDR_Continue"/>
+			<refFmt refId="GKSR_HDR_CONT_Continue"/>
+			<refFmt refId="SHSR_HDR"/>
+			<refFmt refId="GLFR_ML_NOHDRS"/>
+			<refFmt refId="GLFR_ML_LINES"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML_Continue -->
+
+	<!-- format GLFR_ML_Continue2 : Response host to server format -->
+	<fmtDef id="GLFR_ML_Continue2">
+		<record>
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+			<refFmt refId="SHSR_HDR"/>
+			<refFmt refId="GLFR_ML_NOHDRS"/>
+			<refFmt refId="GLFR_ML_LINES"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_ML_Continue2 -->
+
+	<!-- format GLFS_ML : Reply server to client format -->
+	<fmtDef id="GLFS_ML">
+		<record>
+			<refFmt refId="SHFS_CommonData"/>
+			<record dataName="GLSR_ML">
+				<fString dataName="GL_KOT1_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT2_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A2"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT3_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A3"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT4_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A4"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT5_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A5"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT6_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET_A6"/><nullCheck/><delim delimChar="~~"/>
+			</record>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_MONE_RESHOMOT_total"/><nullCheck/><delim delimChar="~~"/>
+			<record dataName="GLSR_ML">
+				<iCollF dataName="GLDI_MOFA_ML" times="*">
+					<record dataName="GLSR_MOFA_ML">
+						<fString dataName="GL_MOFA_SRIKA"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_OFI_SHURA_ML"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_KOD_HITMKDUT"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_TZEVA_SHURA"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_SHURA_LIST"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_SHURA2_LIST"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_FLG_PIRTEY_CH"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_PRATIM_SHIRSHUR"/><nullCheck/><delim delimChar="^^"/>
+					</record>
+				</iCollF><delim delimChar="~~"/>
+				<fString dataName="GL_SRIKA2"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_FILLER"/><nullCheck/><delim delimChar="~~"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFS_ML -->
+
+	<!-- mapper GLMF_None -->
+	<mapper id="GLMF_None">
+		<fmtDef id="GLMS_None">
+			<record/>
+		</fmtDef>
+		<fmtDef id="GLMT_None">
+			<record/>
+		</fmtDef>
+	</mapper>
+	<!-- end mapper GLMF_None -->
+
+	<!--===========================================================-->
+	<!-- DRILLDOWN FORMAT DEFINITIONS						       -->
+	<!--===========================================================-->
+
+	<!-- format GLFC_MIHG : Request client to server format -->
+	<fmtDef id="GLFC_MIHG">
+		<record>
+			<refFmt refId="glfsGlobalBranchThanaPakid" />
+			<refFmt refId="GLFC_CommonData" />
+			<refFmt refId="GLFC_HeaderData"/>
+			<record dataName="GLSI_MIHG">
+				<fString dataName="GL_KOD_BAKA"/><delim delimChar="~~"/>
+				<fString dataName="GL_SRIKA"/><delim delimChar="~~"/>
+				<fString dataName="GL_SAMCHUT_MEASHERET"/><delim delimChar="~~"/>
+				<fString dataName="GL_ZIHUI_MEASHER"/><delim delimChar="~~"/>
+				<fString dataName="GL_COLOR"/><delim delimChar="~~"/>
+				<fString dataName="HT_MISPAR_CHEQUE"/><delim delimChar="~~"/>
+				<fString dataName="HT_MAMAR"/><delim delimChar="~~"/>
+				<fString dataName="GL_FILLER"/><delim delimChar="~~"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFC_MIHG -->
+
+	<!-- format GLFI_MIHG : Inquiry server to host format -->
+	<fmtDef id="GLFI_MIHG">
+		<record>
+			<refFmt refId="GKSI_HDR"/> 
+			<refFmt refId="SHSI_HDR"/>
+			<refFmt refId="GKSI_HDR_CONT1"/>
+			<record dataName="GLSI_MIHG">
+				<fHostString dataName="GL_KOD_BAKA"/><numHostDecor length="2"/>
+				<fHostString dataName="GL_SRIKA"/><binHostDecor length="30"/>
+				<fHostString dataName="GL_SAMCHUT_MEASHERET"/><numHostDecor length="2"/>
+				<fHostString dataName="GL_ZIHUI_MEASHER"/><numHostDecor length="6"/>
+				<fHostString dataName="GL_COLOR"/><abcHostDecor length="2"/>
+				<fHostString dataName="HT_MISPAR_CHEQUE"/><numHostDecor length="10"/>
+				<fHostString dataName="HT_MAMAR"/><hebHostDecor codeSet="Cp037" length="15"/>
+				<fHostString dataName="GL_FILLER"/><abcHostDecor length="15"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFI_MIHG -->
+
+	<!-- format GLFR_GM_HDRS : Response host to server format -->
+	<fmtDef id="GLFR_GM_HDRS">
+		<record dataName="GLSR_GM">
+			<fHostString dataName="GL_KOT1_TZEVA"/><abcHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET1"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT2_TZEVA"/><abcHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET2"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT3_TZEVA"/><abcHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET3"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT4_TZEVA"/><abcHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET4"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOT5_TZEVA"/><abcHostDecor length="3"/>
+			<fHostString dataName="GL_KOTERET5"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+			<fHostString dataName="GL_KOTERET"/><hebHostDecor length="30" codeSet="Cp037" useoverride="true"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_GM_HDRS -->
+
+	<!-- format GLFR_GM_NOHDRS : Response host to server format -->
+	<fmtDef id="GLFR_GM_NOHDRS">
+		<record dataName="GLSR_GM">
+			<!-- fString dataName="GL_KOT1_TZEVA"/   --><constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET1"/     --><constant value=""/><fixedLength length="80"/>
+			<!-- fString dataName="GL_KOT2_TZEVA"/   --><constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET2"/     --><constant value=""/><fixedLength length="80"/>
+			<!-- fString dataName="GL_KOT3_TZEVA"/   --><constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET3"/     --><constant value=""/><fixedLength length="80"/>
+			<!-- fString dataName="GL_KOT4_TZEVA"/   --><constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET4"/     --><constant value=""/><fixedLength length="80"/>
+			<!-- fString dataName="GL_KOT5_TZEVA"/   --><constant value=""/><fixedLength length="3"/>
+			<!-- fString dataName="GL_KOTERET5"/     --><constant value=""/><fixedLength length="80"/>
+			<!-- fString dataName="GL_KOTERET"/      --><constant value=""/><fixedLength length="30"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_GM_NOHDRS -->
+
+	<!-- format GLFR_GM_LINES : Response host to server format -->
+	<fmtDef id="GLFR_GM_LINES">
+		<record>
+			<fHostString dataName="HostHeaderReplyData.GKSR_HDR.GL_MONE_RESHOMOT"/><numHostDecor length="3"/>
+			<record dataName="GLSR_GM">
+				<iCollF dataName="GLDI_MOFA" times="29" append="true">
+					<record dataName="GLSR_MOFA">
+						<fHostString dataName="GL_KOD_COLOR"/><abcHostDecor length="3"/>
+						<fHostString dataName="GL_LINE"/><hebHostDecor length="80" codeSet="Cp037" useoverride="true"/>
+					</record>
+				</iCollF>
+				<fHostString dataName="GL_ZIHUI_PAKID"/><abcHostDecor length="6"/>
+				<fHostString dataName="GL_KOD"/><abcHostDecor length="5"/>
+				<fHostString dataName="GL_FILLER"/><abcHostDecor length="50"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_GM_LINES -->
+
+	<!-- format GLFR_GM : Response host to server format -->
+	<fmtDef id="GLFR_GM">
+		<record>
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+			<refFmt refId="SHSR_HDR"/>
+			<refFmt refId="GLFR_GM_HDRS"/>
+			<refFmt refId="GLFR_GM_LINES"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_GM -->
+
+	<!-- format GLFR_GM_Continue : Response host to server format -->
+	<fmtDef id="GLFR_GM_Continue" >
+		<record>
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+			<refFmt refId="SHSR_HDR"/>
+			<refFmt refId="GLFR_GM_NOHDRS"/>
+			<refFmt refId="GLFR_GM_LINES"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_GM_Continue -->
+
+	<!-- format GLFS_GM : Reply server to client format -->
+	<fmtDef id="GLFS_GM">
+		<record>
+			<refFmt refId="SHFS_CommonData"/>
+			<record dataName="GLSR_GM">
+				<fString dataName="GL_KOT1_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET1"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT2_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET2"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT3_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET3"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT4_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET4"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOT5_TZEVA"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET5"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOTERET"/><nullCheck/><delim delimChar="~~"/>
+			</record>
+			<fString dataName="HostHeaderReplyData.GKSR_HDR.GL_MONE_RESHOMOT_total"/><nullCheck/><delim delimChar="~~"/>
+			<record dataName="GLSR_GM">
+				<iCollF dataName="GLDI_MOFA" times="*">
+					<record dataName="GLSR_MOFA">
+						<fString dataName="GL_KOD_COLOR"/><nullCheck/><delim delimChar="^^"/>
+						<fString dataName="GL_LINE"/><nullCheck/><delim delimChar="^^"/>
+					</record>
+				</iCollF><delim delimChar="~~"/>
+				<fString dataName="GL_ZIHUI_PAKID"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_KOD"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_FILLER"/><nullCheck/><delim delimChar="~~"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFS_GM -->
+	<!--===========================================================-->
+	<!-- END OF MODEL (GLSHOWLS) FORMAT DEFINITIONS 			       -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- END OF QUERIES CONVERSION FORMAT DEFINITIONS			   -->
+	<!--===========================================================-->
+	
+	<!--===========================================-->
+	<!-- START OF FORMAT DEFINITIONS FOR CTG PILOT -->
+	<!--===========================================-->
+	<jcaRecordMapper id="GenericJCARecordMapper" initInstance="setter"
+    recordClassName="mataf.jca.eis.record.GenericJcaRecord"> 
+	    <jcaRecordAttributeMapper dataName="commarea" javaType="byte[]" encoding="8859_1"/>
+	</jcaRecordMapper>
+	<!--=========================================-->
+	<!-- END OF FORMAT DEFINITIONS FOR CTG PILOT -->
+	<!--=========================================-->
+	
+<!-- Lior - test - 05/06/2008 - start -->
+
+	<fmtDef id="SHFC_S203XML">
+		<fXML dataName="TESTDK">
+				<fString dataName="SH_BANK"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="SH_SNIF"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="SH_MISPAR_NIYAR"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_REFERANT"/><nullCheck/><delim delimChar="~~"/>
+				<fString dataName="GL_TZEVET"/><nullCheck/><delim delimChar="~~"/>
+	  </fXML>
+	</fmtDef>
+
+<!-- Lior - test - 05/06/2008 - end -->
+
+	<!--===========================================-->
+	<!--  SARI M. 08.12.08   START OF FORMAT OL35  -->
+	<!--===========================================-->
+
+	<!-- format GLFC_OL35Rashi : Request client to server format -->
+	<fmtDef id="GLFC_OL35Rashi">
+	  <record>
+		<refFmt refId="glfsGlobalBranchThanaPakid" />
+		<refFmt refId="GLFC_CommonData" />
+		<refFmt refId="GLFC_HeaderData"/>
+		<record dataName="GLDK_OL35">
+			<fString dataName="GL_SUG_BDIKA"/><nullCheck/><delim delimChar="~~"/>
+			<fString dataName="GL_SCHUM"/><nullCheck/><delim delimChar="~~"/>
+		</record>
+	  </record>
+	</fmtDef>
+	<!-- end format GLFC_OL35Rashi -->	
+	
+ 	<!-- format GLFI_OL35 : Inquiry server to host format -->
+	<fmtDef id="GLFI_OL35Rashi">
+	  <record>
+		<refFmt refId="GKSI_HDR"/>
+		<refFmt refId="GKSI_HDR_CONT"/>
+		<refFmt refId="GKSI_HDR_CONT1"/>
+		<record dataName="GLDK_OL35">
+			<fHostString dataName="GL_SUG_BDIKA"/><abcHostDecor length="12"/>
+			<fHostString dataName="GL_SCHUM"/><decimalHostDecor length="13"/>
+			<fHostString dataName="GL_FILLER"/><abcHostDecor length="20"/>
+		</record>
+     </record>
+	</fmtDef>
+	<!-- end format GLFI_OL35 -->
+	
+	<!-- format GLFR_OK : Response host to server format -->
+	<fmtDef id="GLFR_OK">
+		<record>
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_OK -->
+	
+	<!-- format GLFS_OK : Reply server to client format -->
+	<fmtDef id="GLFS_OK">
+		<record>
+		 <refFmt refId="SHFS_CommonData"/>
+		 <fString dataName="HostHeaderReplyData.GKSR_HDR.GL_EXT_KEY"/><delim delimChar="~~"/>
+		</record>
+	</fmtDef>
+	<!-- end format GLFS_OK -->	
+	
+	<!--===========================================-->
+	<!--             END OF FORMAT OL35            -->
+	<!--===========================================-->
+	
+	<!--===========================================-->
+	<!--  SARI M. 01.03.09   START OF FORMAT OL36  -->
+	<!--===========================================-->
+	
+	<!-- format GLFC_OL36 : Request client to server format -->	
+	<fmtDef id="GLFC_OL36">
+	<record>
+		<refFmt refId="glfsGlobalBranchThanaPakid" />
+		<refFmt refId="GLFC_CommonData" />
+		<refFmt refId="GLFC_HeaderData"/>
+		<record dataName="GLDK_OL36">
+			<fString dataName="GL_COMPUTER_NAME"/><delim delimChar="~~"/>
+			<fString dataName="GL_TEUDAT_ZEHUT"/><delim delimChar="~~"/>
+		</record>
+	</record>	
+	</fmtDef>
+	<!-- end format GLFC_OL36 -->
+	
+	<!-- format GLFI_OL36 : Inquiry server to host format -->
+	<fmtDef id="GLFI_OL36">
+	  <record>
+		<refFmt refId="GKSI_HDR"/>
+		<refFmt refId="GKSI_HDR_CONT"/>
+		<refFmt refId="GKSI_HDR_CONT1"/>
+		<record dataName="GLDK_OL36">
+			<fHostString dataName="GL_COMPUTER_NAME"/><abcHostDecor length="8"/>
+			<fHostString dataName="GL_TEUDAT_ZEHUT"/><numHostDecor length="9"/>
+			<fHostString dataName="GL_FILLER"/><abcHostDecor length="50"/>
+		</record>
+     </record>
+	</fmtDef>
+	<!-- end format GLFI_OL36 -->
+	
+	<!-- format GLFR_SK : Response host to server format -->
+	<fmtDef id="GLFR_SK">
+		<record> 
+			<refFmt refId="GKSR_HDR"/>
+			<refFmt refId="GKSR_HDR_CONT"/>
+			<record dataName="GLDK_OL36">
+				<fHostString dataName ="GL_FILLER2"/><abcHostDecor length="50"/>
+				<fHostString dataName="GL_KOD"/><hebHostDecor codeSet="Cp037" length="26"/>
+				<fHostString dataName="GL_FILLER3"/><abcHostDecor length="50"/>
+			</record>
+		</record>
+	</fmtDef>
+	<!-- end format GLFR_SK -->
+	
+	<!-- format GLFS_SK : Reply server to client format -->
+	<fmtDef id="GLFS_SK">
+		<record>
+			<refFmt refId="SHFS_CommonData"/><delim delimChar="~~"/>
+			<fString dataName="GLDK_OL36.GL_KOD" />
+		</record>
+	</fmtDef>
+	<!-- end format GLFS_SK -->	
+	
+	<!--===========================================-->
+	<!--             END OF FORMAT OL36            -->
+	<!--===========================================-->
+	
+	
+	<!--======================================================================================================-->
+	<!-- MALAM - START common data for server to client respond format at transactions that are sent to MALAM -->
+	<!--======================================================================================================-->
+	<fmtDef id="GLFR_MALAM">
+	  <record>
+	    <refFmt refId="GLFR_HdrBtt"/>
+		<refFmt refId="GLFR_HdrHodaot10New"/>	
+	    <record dataName="GLDK_MALAM">	    
+	    	<fHostString dataName="GL_MISPAR_ZIHUY"/><matafNumHostDecor length="9" addZerosAsPrefix="9"/>
+	    	<fHostString dataName="GL_KOD_STATUS_SUCCESS"/><numHostDecor length="1"/>
+	    	<fHostString dataName="GL_STATUS_SUCCESS_SW"/><matafNumHostDecor addZerosOnEmpty="1" length="1"/>      
+          	<fHostString dataName="GL_SHEM_MISHPACHA"/><hebHostDecor length="19" codeSet="Cp037"/>
+          	<fHostString dataName="GL_SHEM_PRATI"/><hebHostDecor length="15" codeSet="Cp037"/>         
+	        <fHostString dataName="GL_SHEM_MISHPACHA_KODEM"/><hebHostDecor length="12" codeSet="Cp037"/>
+	        <fHostString dataName="GL_SHEM_MISHPACHA_KODEM_SW"/><matafNumHostDecor addZerosOnEmpty="1" length="1"/>
+	        <fHostString dataName="GL_SHEM_AV"/><hebHostDecor length="8" codeSet="Cp037"/>
+	        <fHostString dataName="GL_SHEM_AV_SW"/><matafNumHostDecor addZerosOnEmpty="1" length="1"/>
+	        <fHostString dataName="GL_SHEM_EM"/><hebHostDecor length="8" codeSet="Cp037" />
+	        <fHostString dataName="GL_SHEM_EM_SW"/><matafNumHostDecor addZerosOnEmpty="1" length="1"/>
+	        <fHostString dataName="GL_TR_LEIDA_YYYY"/><numHostDecor length="4"/>          
+	        <fHostString dataName="GL_TR_LEIDA"/><abcHostDecor length="8"/>
+	        <fHostString dataName="GL_SUG_TR_LEIDA"/><numHostDecor length="1"/>       
+	        <fHostString dataName="GL_TR_HANPAKA"/><dateHostDecor length="8"/>
+	        <fHostString dataName="GL_KOD_STATUS_TEUDA"/><numHostDecor length="1"/>
+	        <fHostString dataName="GL_YESHUV"/><hebHostDecor length="17" codeSet="Cp037"/>
+	        <fHostString dataName="GL_YESHUV_SEMEL"/><matafNumHostDecor length="4" addZerosAsPrefix="4" addZerosOnEmpty="4"/>	                 
+	        <fHostString dataName="GL_RECHOV"/><hebHostDecor length="17" codeSet="Cp037"/>	        
+	        <fHostString dataName="GL_MS_BAYIT"/><matafNumHostDecor length="4" addZerosAsPrefix="4"/>	        
+	        <fHostString dataName="GL_OT_BAYIT"/><hebHostDecor length="1" codeSet="Cp037"/> 
+	        <fHostString dataName="GL_MS_DIRA"/><matafNumHostDecor  length="3" addZerosAsPrefix="3"/>
+	        <fHostString dataName="GL_MIKUD"/><numHostDecor length="5"/>
+	        <fHostString dataName="GL_SEX"/><hebHostDecor length="1"/>
+	        <fHostString dataName="GL_FILLER"/><abcHostDecor length="100"/>	               
+	  	</record>    	
+	  </record>
+	</fmtDef>
+
+	<fmtDef id="GLFS_MALAM">
+	  <record>
+	  	<refFmt refId="GLFS_HdrBtt"/> 
+	   	<record dataName="GLDK_MALAM">	   	
+	      <fString dataName="GL_MISPAR_ZIHUY"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_KOD_STATUS_SUCCESS"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_STATUS_SUCCESS_SW"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_MISHPACHA"/><nullCheck /><delim delimChar="~~"/>	      
+	      <fString dataName="GL_SHEM_PRATI"/><nullCheck /><delim delimChar="~~"/>	          
+	      <fString dataName="GL_SHEM_MISHPACHA_KODEM"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_MISHPACHA_KODEM_SW"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_AV"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_AV_SW"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_EM"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SHEM_EM_SW"/><nullCheck /><delim delimChar="~~"/>	            
+          <fString dataName="GL_TR_LEIDA_YYYY"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_TR_LEIDA"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_SUG_TR_LEIDA"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_TR_HANPAKA"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_KOD_STATUS_TEUDA"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_YESHUV"/><nullCheck /><delim delimChar="~~"/>
+          <fString dataName="GL_YESHUV_SEMEL"/><nullCheck /><delim delimChar="~~"/>	      
+	      <fString dataName="GL_RECHOV"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_MS_BAYIT"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_OT_BAYIT"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_MS_DIRA"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_MIKUD"/><nullCheck /><delim delimChar="~~"/>
+	      <fString dataName="GL_SEX"/><nullCheck /><delim delimChar="~~"/>	                             
+       	</record>	    
+	  </record> 
+	</fmtDef>
+	
+	<!--======================================================================================================-->   						                       
+	<!-- MALAM - END																						  -->
+	<!--===========================================================+++++++++++++++++++++++++++++++++++++++++++-->
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- chatach klali boris -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	
+	<fmtDef id="GLFC_HdrSrikaKlali">
+		<fCSRecord>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_BANK_PEULA"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SNIF_PEULA"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_MISPAR_TAHANA"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_ZIHUI_PAKID"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_MS_PEULA_ME"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_MS_PEULA_AD"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_TAARICH"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SHAA_ME"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SHAA_AD"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_KOD_MISHMERET"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SUG_PEULA"/>
+			<!-- fCSString dataName="BGDK_ChatachSrikaKlali.GL_MATBEA"/-->
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SCHUM_ME"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_SCHUM_AD"/>	
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_STATUS_PEULA"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_ISHUR_MENAHEL"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_MENAHEL_MEASHER"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_OFEN_KABALAT_HORAA_KOD"/>
+			<fCSString dataName="BGDK_ChatachSrikaKlali.GL_MAKOR_PEULA"/>
+		</fCSRecord>
+	</fmtDef>
+	
+	<fmtDef id="GLFI_HdrSrikaKlali">
+		<record>
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_BANK_PEULA" /><numHostDecor length="2" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SNIF_PEULA" /><numHostDecor length="3" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_MISPAR_TAHANA" /><numHostDecor length="3" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_ZIHUI_PAKID" /><numHostDecor length="6" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_MS_PEULA_ME" /><numHostDecor length="4" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_MS_PEULA_AD" /><numHostDecor length="4" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_TAARICH" /><dateHostDecor length="8" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SHAA_ME" /><timeHostDecor length="4" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SHAA_AD" /><timeHostDecor length="4" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_KOD_MISHMERET" /><numHostDecor length="1" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SUG_PEULA" /><numHostDecor length="3" />
+			<!-- fHostString dataName="BGDK_ChatachSrikaKlali.GL_MATBEA"/-->
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SCHUM_ME" /><decimalHostDecor length="16" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_SCHUM_AD" /><decimalHostDecor length="16" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_STATUS_PEULA" /><numHostDecor length="1" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_ISHUR_MENAHEL" /><numHostDecor length="1" addZerosAsPrefix="6" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_MENAHEL_MEASHER" /><numHostDecor length="6" addZerosAsPrefix="6" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_OFEN_KABALAT_HORAA_KOD"/><abcHostDecor length="1" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_MAKOR_PEULA" /><abcHostDecor length="2" />
+			<fHostString dataName="BGDK_ChatachSrikaKlali.GL_FILLER"/><abcHostDecor length="100"/>
+		</record>
+	</fmtDef>
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- chatach klali boris -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	
+	<!--===========================================================-->
+<!-- General format YomAsakimArochForVadeKlot - 16.1.13 - 5.30.03 - added by Sarit+Talmor-->
+ 
+ <fmtDef id="GLFC_YomAsakimArochForVadeKlot">
+	<fCSRecord dataName="GLDK_YomAsakimArochForVadeKlot">
+       	<fCSString dataName="GL_YOM_ASAKIM" />
+    	<fCSString dataName="GL_FLAG_YOM_KODEM" />
+     	<fCSString dataName="GL_TR_ASAKIM" />
+     	<fCSString dataName="GL_MISHMERET" />
+      	<fCSString dataName="GL_FILLER" />
+     </fCSRecord> 
+ </fmtDef> 	 
+ <fmtDef id="GLFI_YomAsakimArochForVadeKlot">
+	<record dataName="GLDK_YomAsakimArochForVadeKlot">
+       	<fHostString dataName="GL_YOM_ASAKIM" /><numHostDecor length="1" />
+     	<fHostString dataName="GL_FLAG_YOM_KODEM" /><numHostDecor length="1" />
+      	<fHostString dataName="GL_TR_ASAKIM" /><dateHostDecor length="8" />
+        <fHostString dataName="GL_MISHMERET" /><numHostDecor length="1" />
+        <fHostString dataName="GL_FILLER" /><abcHostDecor length="50" />
+   	 </record>	
+ </fmtDef>   
+ 
+ <fmtDef id="GLFC_GlobalAdditionalData">
+ 	<fCSRecord dataName="GLDK_GlobalAdditionalData">
+		<fCSString dataName="GL_PAKID_ID" />
+		<fCSString dataName="GL_PAKID_NAME" />
+		<fCSString dataName="GL_PAKID_NOTE" />
+		<fCSString dataName="GL_MANAGER1_ID" />
+		<fCSString dataName="GL_MANAGER1_NAME" />
+		<fCSString dataName="GL_MANAGER1_NOTE" />
+		<fCSString dataName="GL_MANAGER2_ID" />
+		<fCSString dataName="GL_MANAGER2_NAME" />
+		<fCSString dataName="GL_MANAGER2_NOTE" />
+		<fCSString dataName="GL_FILLER" />
+	</fCSRecord>
+ </fmtDef>	 
+
+ <fmtDef id="GLFS_GlobalAdditionalData">
+	<fCSRecord dataName="GLDK_GlobalAdditionalData">
+		<fCSString dataName="GL_PAKID_ID" />
+		<fCSString dataName="GL_PAKID_NAME" />
+		<fCSString dataName="GL_PAKID_NOTE" />
+		<fCSString dataName="GL_MANAGER1_ID" />
+		<fCSString dataName="GL_MANAGER1_NAME" />
+		<fCSString dataName="GL_MANAGER1_NOTE" />
+		<fCSString dataName="GL_MANAGER2_ID" />
+		<fCSString dataName="GL_MANAGER2_NAME" />
+		<fCSString dataName="GL_MANAGER2_NOTE" />
+		<fCSString dataName="GL_FILLER" />
+	</fCSRecord>
+ </fmtDef>
+
+ <fmtDef id="GLFI_GlobalAdditionalData">
+	<record dataName="GLDK_GlobalAdditionalData">
+		<fHostString dataName="GL_PAKID_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_PAKID_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_PAKID_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_MANAGER1_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_MANAGER1_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_MANAGER1_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_MANAGER2_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_MANAGER2_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_MANAGER2_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_FILLER" /><hebHostDecor length="1000" />
+	</record>
+ </fmtDef>
+
+ <fmtDef id="GLFR_GlobalAdditionalData">
+	<record dataName="GLDK_GlobalAdditionalData">
+		<fHostString dataName="GL_PAKID_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_PAKID_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_PAKID_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_MANAGER1_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_MANAGER1_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_MANAGER1_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_MANAGER2_ID" /><numHostDecor length="6" />
+		<fHostString dataName="GL_MANAGER2_NAME" /><hebHostDecor length="20" />
+		<fHostString dataName="GL_MANAGER2_NOTE" /><hebHostDecor length="200" />
+		<fHostString dataName="GL_FILLER" /><hebHostDecor length="1000" />
+	</record>
+ </fmtDef>
+
+</dsefmts.xml>

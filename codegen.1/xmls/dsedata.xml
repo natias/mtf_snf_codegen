@@ -1,0 +1,3135 @@
+<?xml version="1.0" encoding="ISO-8859-8"?>
+<!-- 5-3-2009 : Tibi Glazer : BTT 6.1 - Migrated manually and cleanup -->
+<dsedata.xml>
+
+	<!-- server -->
+
+	<!-- 
+		When you add a field, please:
+		1 Do a "Find" on the field's id to make sure that the field does not already exist.
+		2 Be careful not to create a visualField with the same name as a field and vice versa.	    
+		3 Use a prefix for the field.		
+		4 Add the field to "fields with prefixes." (Do not add fields to "fields without prefixes.")
+		5 Insert the field in alphabetical order.
+	-->
+
+	<!--START fields with prefixes -->
+	
+	<!-- TELLER CH_-->
+	<field id="CH_CH_RTRN" />
+	<field id="CH_KAMUT_CHEQ" />
+	<field id="CH_KOT_SNIF" />
+	<field id="CH_KOTERET" />
+	<field id="CH_MAKRO" />
+	<field id="CH_MAKRO_DETAIL" />
+	<field id="CH_MAKRO_HORAOT_CON" />
+	<field id="CH_MAKRO_KOT1" />
+	<field id="CH_MAKRO_KOT2" />
+	<field id="CH_MAKRO_KOT3" />
+	<field id="CH_MAKRO_KOT3" />
+	<field id="CH_MAKRO_SIGN" />
+	<field id="CH_MONE" />
+	<field id="CH_SACH_SCHUM" />
+	<field id="CH_SCH_RTRN" />
+	<field id="CH_SNIF_RTRN" />
+	<field id="CH_SNIF_S_B" value="" />
+	<field id="CH_SW_ISHUR_MNL" />
+	<field id="CH_TEUR_CH_RTRN" />
+	<field id="CH_YAAD" />
+	
+	<!-- SHARED GKSG_ -->
+		
+	<field id="GKSG_IFYUN" />
+	
+	<!-- GENERAL -->
+	
+	<field id="GL_AMLAT_DANACH" />
+	<field id="GL_ASHRAY" />
+	<field id="GL_ASINC_TIME_OUT" />
+	<field id="GL_BANK" />
+	<field id="GL_BANK_MARECHET" />
+	<field id="GL_BANK_PAKID" />
+	<field id="GL_COLOR" />
+	<field id="GL_DAF" />
+	<field id="GL_DD1" />
+	<field id="GL_EXT_KEY" />
+	<field id="GL_FILLER" value=" " />
+	<field id="GL_FIRST_NAME" />
+	<field id="GL_FIRST_NAME_REV" />
+	<field id="GL_FLAG_HAAVARA_MTH" />
+	<field id="GL_FLAG_PTICHA_CH" />
+	<field id="GL_FLG_PIRTEY_CH" />
+	<field id="GL_FMH" />
+	<field id="GL_GIRSA" />
+	<field id="GL_GVUL_ASHRAY" />
+	<field id="GL_HH" />
+	<field id="GL_HH2" />
+	<field id="GL_HODAA" />
+	<field id="GL_HODAA_1" />
+	<field id="GL_HODAA_MISPAR1" />
+	<field id="GL_HODAA_NOSE1" />
+	<field id="GL_IDLE_CANCEL" />
+	<field id="GL_IDLE_TIME_OUT" />
+	<field id="GL_IND_REMOTE_PRT" />
+	<field id="GL_ISHUR_MENAEL" />
+	<field id="GL_ISHUR_MENAEL_2" />
+	<field id="GL_ISHUR_MENAHEL" value="0" />
+	<field id="GL_ISKA_ME_SHICHZUR" value="0" />
+	<field id="GL_ITRA_ADKANIT" />
+	<field id="GL_ITRA_KLALIT" />
+	<field id="GL_ITRA_MESHICHA" />
+	<field id="GL_ITRA_MEZUMAN" />
+	<field id="GL_ITRA_PACHAK" />
+	<field id="GL_KARTIS_DATA" />
+	<field id="GL_KAV_ASHRAY" />
+	<field id="GL_KOD_BAKA" />
+	<field id="GL_KOD_COLOR" />
+	<field id="GL_KOD_HITMKDUT" />
+	<field id="GL_KOD_HODAA" />
+	<field id="GL_KOD_ISO" />
+	<field id="GL_KOD_MEDINA" />
+	<field id="GL_KOD_MOKED" />
+	<field id="GL_KOD_SGIA" />
+	<field id="GL_KOD_TIPUL" />
+	<field id="GL_KOD_TIPUL_continue" />
+	<field id="GL_KOT1_TZEVA" />
+	<field id="GL_KOT2_TZEVA" />
+	<field id="GL_KOT3_TZEVA" />
+	<field id="GL_KOT4_TZEVA" />
+	<field id="GL_KOT5_TZEVA" />
+	<field id="GL_KOT6_TZEVA" />
+	<field id="GL_KOT7_TZEVA" />
+	<field id="GL_KOT8_TZEVA" />
+	<field id="GL_KOT9_TZEVA" />
+	<field id="GL_KOT10_TZEVA" />
+	<field id="GL_KOTERET" />
+	<field id="GL_KOTERET_A" />
+	<field id="GL_KOTERET_A2" />
+	<field id="GL_KOTERET_A3" />
+	<field id="GL_KOTERET_A4" />
+	<field id="GL_KOTERET_A5" />
+	<field id="GL_KOTERET_A6" />
+	<field id="GL_KOTERET1" />
+	<field id="GL_KOTERET2" />
+	<field id="GL_KOTERET3" />
+	<field id="GL_KOTERET4" />
+	<field id="GL_KOTERET5" />
+	<field id="GL_KOTERET6" />
+	<field id="GL_KOTERET7" />
+	<field id="GL_KOTERET8" />
+	<field id="GL_KOTERET9" />
+	<field id="GL_KOTERET10" />
+	<field id="GL_LAST_NAME" />
+	<field id="GL_LAST_NAME_REV" />
+	<field id="GL_LINE" />
+	<field id="GL_MAARECHET" />
+	<field id="GL_MAHADURA" />
+	<field id="GL_MAKAF1" />
+	<field id="GL_MAKAF2" />
+	<field id="GL_MAKAF3" value="" />
+	<field id="GL_MAKOR_PU" />
+	<field id="GL_MAKOR_TAHANA" />
+	<field id="GL_MARK" /><!-- שדה סימון בטופס -->
+	<field id="GL_MATBEA" />
+	<field id="GL_MATBEA_DESC" />
+	<field id="GL_MAZAV_LAKOACH" />
+	<field id="GL_MAZAV_SNIF" />
+	<field id="GL_MAZAV_TAHANA" />
+	<field id="GL_MEDINA_MELEL" />
+	<field id="GL_MELEL1" />
+	<field id="GL_MELEL2" />
+	<field id="GL_MELEL3" />
+	<field id="GL_MELEL3" />
+	<field id="GL_MELEL4" />
+	<field id="GL_MELEL5" />
+	<field id="GL_MELEL6" />
+	<field id="GL_MIS_BERUR_CZ" />
+	<field id="GL_MIS_TAH_PRN_DEST" />
+	<field id="GL_MISHMERET" />
+	<field id="GL_MISHMERET_TOFES" />
+	<field id="GL_MISHMERET_TOFES_DESC" />
+	<field id="GL_MISPAR_TZEVA" />
+	<field id="GL_MM_DAKOT" />
+	<field id="GL_MM1" />
+	<field id="GL_MM2" />
+	<field id="GL_MOFA_SRIKA" />
+	<field id="GL_MOKED" />
+	<field id="GL_MONE_HODAOT" />
+	<field id="GL_MONE_RESHOMOT" />
+	<field id="GL_MONE_RESHOMOT_total" />
+	<field id="GL_NOSE_SGIA" />
+	<field id="GL_OFI_SHEDER" />
+	<field id="GL_OFI_SHURA_ML" />
+	<field id="GL_ORECH_DATA" />
+	<field id="GL_OTEK" />
+	<field id="GL_PEULA" />
+	<field id="GL_POINT" />
+	<field id="GL_PRATIM_SHIRSHUR" />
+	<field id="GL_PU_ID" />
+	<field id="GL_SAMCHUT" />
+	<field id="GL_SAMCHUT_PAKID" />
+	<field id="GL_SCHUM" />
+	<field id="GL_SESSION" />
+	<field id="GL_SHAA_MARECHET" />
+	<field id="GL_SHAA_MARECHET_MHS" />
+	<field id="GL_SHAA_PTICHA" />
+	<field id="GL_SHAA_SG_MARECHET" />
+	<field id="GL_SHAA_SGIRA" />
+	<field id="GL_SHEM" />
+	<field id="GL_SHEM_BANK" />
+	<field id="GL_SHEM_DISK" />
+	<field id="GL_SHEM_KATZAR" />
+	<field id="GL_SHEM_LK" />
+	<field id="GL_SHEM_MAHOZ" />
+	<field id="GL_SHEM_MATBEA" />
+	<field id="GL_SHEM_MEDINA" />
+	<field id="GL_SHEM_MEDINA_ENG" />
+	<field id="GL_SHEM_SCH" />
+	<field id="GL_SW_SB_CH" />
+	<field id="GL_SHEM_SNIF" />
+	<field id="GL_SHEM_SNIF_PAKID" /> <!-- ILANA 21.05.08 -->
+	<field id="GL_SHOW_IFYUN" />
+	<field id="GL_SHURA_LIST" />
+	<field id="GL_SHURA2_LIST" />
+	<field id="GL_SIDURI_BITUL" value="0000" />
+	<field id="GL_SIDURI_ID" />
+	<field id="GL_SIDURI_TAHANA" />
+	<field id="GL_SIDURI_TAHANA_CZ" />
+	<field id="GL_SIDURI_TAHANA_TL" />
+	<field id="GL_SIDURI_YOMAN" />
+	<field id="GL_SNIF_DESC" />
+	<field id="GL_SNIF_HANHALA_MRKZ" />
+	<field id="GL_SNIF_HANHALA_NE" />
+	<!-- DoronV 5.29.01 Change 2218 -->
+	<field id="GL_FLAG_TOSEFET_4" />
+	<!-- DoronV 5.29.01 Change 2189 -->
+	<field id="GL_MEDINA_DOAR"/>
+	<field id="GL_SW_SHIDUR_INQ"/>
+	<field id="GL_SW_ASM_SEMEL_DIV"/>
+	<field id="GL_SW_SD_035"/>
+	<field id="GL_SW_SD_507"/>
+	<field id="GL_SW_SD_892"/>
+	<field id="GL_SW_SD_973"/>
+	<field id="GL_SW_TD"/>
+	<field id="GL_SUG_CH"/>	
+	<field id="GL_SW_PTICHOT_SCH"/>	
+	<field id="GL_SW_ASMACHTA_HOVA" />
+
+	<!-- 2008-07-28 Eli Lato -->
+	<field id="GL_SNIF_IS_CENTRAL"/>
+	<field id="GL_SNIF_LAKOACH" />
+	<field id="GL_SNIF_MARECHET" />
+	<field id="GL_SNIF_MYUHAD" />
+	<field id="GL_SNIF_NE" />
+	<field id="GL_SNIF_PAKID" />
+	<field id="GL_SNIF_PATUACH" />
+	<field id="GL_SNIF_RASHI" />
+	<field id="GL_SRIKA" />
+	<field id="GL_SRIKA2" value=" " />
+	<field id="GL_SSCP_TIMER" />
+	<field id="GL_SUG_ISHUR_MENAEL" value="0" />
+	<field id="GL_SUG_KIVUTZ" />
+	<field id="GL_SUG_MISHTAMESH" />
+	<field id="GL_SUG_PEULA_MISHNI_1" />
+	<field id="GL_SUG_PEULA_MISHNI_2" />
+	<field id="GL_SUG_SNIF" />
+	<field id="GL_SW_HAFKADA" />
+	<field id="GL_SW_HUSHLEMA" value="0" />
+	<field id="GL_SW_IM_LIMIT" />
+	<field id="GL_SW_ISHUR_HDAR_ISK" />
+	<field id="GL_SW_LVARER" value="0" />
+	<field id="GL_SW_MTAKENET" />
+	<field id="GL_SW_MTUKENET" />
+	<field id="GL_SW_MVATELET" value="0" />
+	<field id="GL_SW_MVUTELET" />
+	<field id="GL_SW_MVUTELET_DESC" />
+	<field id="GL_SW_NETEK" />
+	<field id="GL_TAHANA_PTUCHA" />
+	<field id="GL_TEL_KIDOMET" />
+	<field id="GL_TEUDAT_ZEHUT" />
+	<field id="GL_TOKEF_ASHRAY" />
+	<field id="GL_TR_ASAKIM" />
+	<field id="GL_TR_CICS" />
+	<field id="GL_TR_DD" />
+	<field id="GL_TR_MM" />
+	<field id="GL_TR_NOCHECHI" />
+	<field id="GL_TR_PTICHA" />
+	<field id="GL_TR_SGIRA" />
+	<field id="GL_TR_YYYY" />
+	<field id="GL_TRANS_ID" />
+	<field id="GL_YAAD_PU" />
+	<field id="GL_YAAD_TAHANA" />
+	<field id="GL_YYYY1" />
+	<field id="GL_ZIHUI_MEASHER" />
+	<field id="GL_ZIHUI_MEASHER_DESC" />
+	<field id="GL_ZIHUI_MEASHER_SHEM" />
+	<field id="GL_ZIHUI_PAKID_AD" />
+	<field id="GL_ZIHUI_TAHANA" />
+	<field id="GL_ZIHUY_MENAHEL" />
+	
+	<visualField id="GL_BDIKA_VALIDIT" />
+	<visualField id="GL_CH" />
+	<visualField id="GL_FIBI_SNIF_KFULIM" />
+	<visualField id="GL_SNIF_HANHALA" />
+	<visualField id="GL_SNIF_LAKOCHOT" />
+	<visualField id="GL_SNIF_MYUHAD_MERAKEZ" />
+	<visualField id="GL_KOD" />
+	<visualField id="GL_KOD_HITMAKDUT" />
+	<visualField id="GL_KOD_LBITACHON" />
+	<visualField id="GL_KOD_MEDINA_DESC" />
+	<visualField id="GL_KOD_PEULA" isRequired="true" />
+	<visualField id="GL_LOTUS_NUM" />
+	<visualField id="GL_MAKASH_BITUL" />
+	<visualField id="GL_MAKASH_IDKUN" />
+	<visualField id="GL_MAKASH_ISHUR" />
+	<visualField id="GL_MEDINA" />
+	<visualField id="GL_MEDINA_TEUR" />
+	<visualField id="GL_MISPAR_TAHANA" />
+	<visualField id="GL_MISPAR_ZIHUI" />
+	<visualField id="GL_NOSE_PEULA" />
+	<visualField id="GL_PU_BITUL" />
+	<visualField id="GL_REFERANT"/>
+	<visualField id="GL_SAMCHUT_MEASHERET" />
+	<visualField id="GL_SCH" />
+	<visualField id="GL_SHAA" />
+	<visualField id="GL_SHEM_PAKID" />
+	<visualField id="GL_SHEM_PEULA" />
+	<visualField id="GL_SIDR_MAHOZ" />
+	<visualField id="GL_SNIF" />
+	<visualField id="GL_SNIF_BITUL" />
+	<visualField id="GL_SNIF_EM" />
+	<visualField id="GL_SRIKA_KEY" />
+	<visualField id="GL_SUG_LAKOAH" />
+	<visualField id="GL_SUG_LAKOAH_TEUR" />
+	<visualField id="GL_SUG_PEULA" />
+	<visualField id="GL_SW_CH_HACZARA" />
+	<visualField id="GL_BANK_MEMAZEG" />
+	<visualField id="GL_SHEM_BANK_AROCH" />
+	<visualField id="GL_BANK_URL" />
+	<visualField id="GL_SHEM_CALL_CENTER" />
+	<visualField id="GL_SW_KAYAM_SCH" />
+	<visualField id="GL_SW_KVUTZAT_FIBI" />
+	<visualField id="GL_SW_MISHMERET" />
+	<visualField id="GL_SW_PEULA" />
+	<visualField id="GL_TEXT" />
+	<visualField id="GL_TEUR" />
+	<visualField id="GL_TR_MARECHET" />
+	<visualField id="GL_TRANS_HITMAKDUT" />
+	<visualField id="GL_TZ" />
+	<visualField id="GL_TZEVA_SHURA" />
+	<visualField id="GL_TZEVET" />
+	<visualField id="GL_ZIHUI_MENAHEL" />
+	<visualField id="GL_ZIHUI_PAKID" />
+
+    <!--  GENERAL GLSG_ -->
+    
+	<field id="GLSG_GLBL_GKSG_TR_MARECHET" />
+	
+	<!-- TSELUMEY CHECKIM -->
+	
+	<field id="HT_MAMAR" />
+	<field id="HT_MISPAR_CHEQUE" />
+	
+	<!-- KUPAT GEMEL -->
+	
+	<visualField id="KG_CH_KUPA" />
+	<visualField id="KG_CH_OSH" />
+	<visualField id="KG_SCH_KUPA" />
+	<visualField id="KG_SCH_OSH" />
+	<visualField id="KG_SNIF_KUPA" />
+	<visualField id="KG_SNIF_OSH" />
+
+	<!-- MATACH -->
+
+	<field id="MZ_BANK" />
+	<field id="MZ_BANK_MATBEA" />
+	<field id="MZ_MATBEA_MAKOR" />
+	<field id="MZ_MATBEA_SHEM_MYDAS" />
+	<field id="MZ_MEZ_MIN_YEHIDOT" />
+	<field id="MZ_MISPAR_SIDURI" />
+	<field id="MZ_SHEM_MATBEA_KATZAR" />
+	<field id="MZ_SUG_CH" />
+	<field id="MZ_SW_AMLA" />
+	<field id="MZ_SW_MAT_CONV_URO" />
+	<field id="MZ_SW_CH" />
+	<field id="MZ_SW_CH_NEG" />
+	<field id="MZ_SW_FWD" />
+	<field id="MZ_SW_HAAVAROT" />
+	<field id="MZ_SW_KOD_DIVUACH" />
+	<field id="MZ_SW_PAMAZ" />
+	<field id="MZ_SW_CORSP" />	
+	<field id="MZ_SW_LIMIT" />
+	<field id="MZ_SW_BITACHON" />
+	<field id="MZ_SW_SHR_DO_ZDADI" />
+	<field id="MZ_SW_SHR_HVRA" />
+	<field id="MZ_SW_SHR_MEZ" />
+	<field id="MZ_SW_SHR_YAZIG" />
+	<field id="MZ_SW_BANKAI" />
+	<field id="MZ_SW_SB_CH" />
+	
+	<!-- NIAROT ERECH -->
+
+	<visualField id="NE_KOD_AMLA" />
+	<visualField id="NE_KOD_TZEVA" />
+	<visualField id="NE_TEXT_AMLA" />
+	
+	<!-- PTICHOT CHESHBON -->
+
+	<field id="OP_HOME_APT" />
+	<field id="OP_HOME_CITY" />
+	<field id="OP_HOME_CITY_SEMEL" />
+	<field id="OP_HOME_ST_NUM" />
+	<field id="OP_HOME_ST_SUB_NUM" />
+	<field id="OP_HOME_STREET" />
+	<field id="OP_HOME_ZIP" />
+	<field id="OP_KOD_HAZLAHA" />
+	<field id="OP_KOD_MALAM" />
+	<field id="OP_KOD_TSHUVA" />
+	<field id="OP_NAME_FATHER" />
+	<field id="OP_NAME_FIRST" />
+	<field id="OP_NAME_LAST" />
+	<field id="OP_NAME_MOTHER" />
+	<field id="OP_NAME_PREV" />
+	<field id="OP_SEX_MALAM" />
+	<field id="OP_SHAA" />
+	<field id="OP_STATUS" />
+	<field id="OP_SUG_RESHUMA" />
+	<field id="OP_TR" />
+	<field id="OP_TR_BIRTH_YYYY" />
+	<field id="OP_TR_DD" />
+	<field id="OP_TR_HANPAKA" />
+	<field id="OP_TR_LEIDA_SUG" />
+	<field id="OP_TR_MM" />
+	<field id="OP_TR_YYYY" />
+	<field id="OP_TZ" />
+
+	<visualField id="OP_NEHENE" />
+	<visualField id="OP_NEHENE_DESC" />
+	<visualField id="OP_SEX" />
+	<visualField id="OP_SEX_DESC" />
+	
+	<!-- TIFUL -->
+
+	<field id="TI_MISHMERET_DESC" />
+	
+	<!-- TELLER TL_ -->
+	
+	<field id="TL_AMLA" />
+	<field id="TL_AMLA_DESC" />
+	<field id="TL_AMLOT_PEULA" />
+	<field id="TL_ASMACHTA" />
+	<field id="TL_ASMACHTA_001" />
+	<field id="TL_BANK" value="" />
+	<field id="TL_BANK_DESC" />
+	<field id="TL_CH" value="" />
+	<field id="TL_CODE" />
+	<field id="TL_DAF_HEMSHEH" />
+	<field id="TL_DANACH1" />
+	<field id="TL_DESC" />
+	<field id="TL_FIRST_NAME" />
+	<field id="TL_FONT1" />
+	<field id="TL_FONT2" />
+	<field id="TL_GILUY_NAOT_END" />
+	<field id="TL_GILUY_NAOT_START" />
+	<field id="TL_HALVAA" />
+	<field id="TL_HODAA_BERUR" />
+	<field id="TL_KIDOMET_PHONE" />
+	<field id="TL_KOD_MEDINA" />
+	<field id="TL_KOD_MEDINA_DESC" />
+	<field id="TL_KOD_SAL" />
+	<field id="TL_LAST_NAME" />
+	<!-- 2007-03-12 These next 2 lines are suspicious. Check them. -->
+	<field id="TL_MACRO_DANACH" />
+	<field id="TL_MAKRO_DANACH" />
+	
+	<field id="TL_MAKRO_HALVAA" />
+	<field id="TL_MAKRO_HATIMA" />
+	<field id="TL_MAKRO_PRT_LAKOACH" />
+	<field id="TL_MEDINA" />
+	<field id="TL_MEDINA_MELEL" />
+	<field id="TL_MELEL_HALVAA" />
+	<field id="TL_MELEL_HALVAOT" />
+	<field id="TL_MELEL_NETEK" />
+	<field id="TL_MELEL_ZEHUT" />
+	<field id="TL_MELEL1" />
+	<field id="TL_MELEL2" />
+	<field id="TL_MELEL3" />
+	<field id="TL_MELEL4" />
+	<field id="TL_MISP_AHARON" />
+	<field id="TL_MISP_RISHON" />
+	<field id="TL_MISPAR_CHK" value="" />
+	<field id="TL_MISPAR_DAF" />
+	<field id="TL_MISPAR_HALVAOT" />
+	<field id="TL_MISPAR_HAMCHAOT" />
+	<field id="TL_MISPAR_ZEHUT" />
+	<field id="TL_PHONE" />
+	<field id="TL_PHONE_MELEL" />
+	<field id="TL_PRT_MFK_MELEL" />
+	<field id="TL_SCH" />
+	<field id="TL_SCHUM" value="" />
+	<field id="TL_SHEM_MELEL" />
+	<field id="TL_SNIF" value="" />
+	<field id="TL_SNIF_DESC" />
+	<field id="TL_SW_MILYUN" />
+	<field id="TL_SW_MVTL" />
+	<field id="TL_SW_MVTL_DESC" />
+	<field id="TL_TEUR_ASM_142" />
+	<field id="TL_TEXT_MIS_ZEHUT" />
+	<field id="TL_TEXT1" />
+	<field id="TL_TEXT2" />
+	<field id="TL_TEXT3" />
+	<field id="TL_YAAD" />
+	<field id="TL_ZEHUT_MELEL" />
+	<field id="TL_ZIHUI_PNIMI" />
+
+	<visualField id="TL_AMLA_BMITZBUR" />
+	<visualField id="TL_AMLA_CHEQ" />
+	<visualField id="TL_DANACH" />
+	<visualField id="TL_DIVUACH_HOST" />
+	<visualField id="TL_KG_HALBANAT_HON" />
+	<visualField id="TL_MISPAR_KG" isRequired="true" />
+	<visualField id="TL_SHEM_KG" />
+	<visualField id="TL_SW_KG_LO_MAAVID" />
+	<visualField id="TL_SW_KG_LO_OVED" />
+	<visualField id="TL_SW_KG_LO_PIZUIM" />
+	<visualField id="TL_SW_KG_MHANDSIM" />
+		
+	<!-- END fields with prefixes -->
+
+	<!-- START fields without prefixes -->
+
+	<field id="accessData" />
+	<field id="adUserId" />
+	<field id="AccountNumber" />
+	
+	<visualField id="Asmachta" />
+	
+	<field id="Balance" />
+	<field id="bankKupa" />
+	<field id="BranchId" />
+	<field id="branchStatus" />
+
+	<visualField id="butzaAlyadeyDescIdInput" />
+	<visualField id="butzaAlyadeyIdInput" />
+	
+	<field id="canBeDone" value="true" />
+	<field id="Carbon" />
+	<field id="cashRegisterStatus" />
+	<field id="cashRegisterType" />
+	<field id="cheshbon" />
+	<field id="chosenManagerId" />
+	<field id="chosenManagerName" />
+	<field id="chosenMarechetCode" />
+	<field id="chosenSnifCode" />
+	<field id="chosenSugCheshbonHlCode" />
+	<field id="cicsEnv" />
+	<field id="clientType" />
+	<field id="Codepage" />
+	<field id="commissionAmount" />
+	<field id="commissionType" />
+	<field id="connectionToHost" />
+	<field id="connectionToPrinter" />
+	<field id="contentType" />
+	<field id="contextAsBinary" />
+	<field id="contextName" />
+	<field id="Copies" />
+	<field id="ctxCacheTable" />
+	<field id="ctxData" />
+	<field id="ctxName" />
+	<field id="CustomerId" />
+	<field id="CustomerName" />
+	
+	<field id="danachType" />
+	<field id="debugMode" />
+	<field id="dse_sessionId" />
+	<field id="Duplex" />
+	<field id="dynamicMarketingEnabled" />
+	
+	<visualField id="DepositSource" />
+	
+	<field id="emptyResult" />
+	<field id="entity" />
+	<field id="entityName" />
+	<field id="exclusiveTransaction" />
+
+	<field id="formatId" />
+	<field id="formName" />
+
+	<field id="generation" />
+	<field id="generationNum" />
+	<field id="glPeula" />
+	
+	<field id="HostBuff" />	
+	
+	<field id="isHalbanatHonCommited" value="false" />
+	<field id="isServerTestsSuccessful" value="false" />
+	<field id="isShowDanachMsg"	/>
+	
+	<visualField id="isCicsContinueButtonClicked" />
+	
+	<field id="journalAlias" />
+	<field id="journalServiceName" />
+
+	<field id="kCollName" />
+	<field id="iCollName" />
+	<field id="refKeyName" />
+
+	<field id="lastUsedLUNumber" />
+	<field id="logData" />
+	<field id="longDescription" />
+
+	<field id="managerName" />
+	<field id="marechetCode" />
+	<field id="marechetText" />
+	<field id="MisparHalvaa" value="0" />
+	<field id="misparHl" />
+	<field id="mutavJournalKey" />
+
+	<field id="Name" />
+	
+	<visualField id="NumberOfCheques" />
+		
+	<field id="opDesc" />
+	<field id="operationType" />
+	<field id="opName" />
+	<field id="OpnAmount" />
+	<field id="OpnBalance" />
+	<field id="OpnDate" />
+	
+	<field id="subjectCode" />
+
+	<field id="pmenuList" />
+	<field id="PEULOT_ZCHUT_HOVA" />
+
+	<field id="queryAddBranchId" />
+	<field id="queryAddClerkId" />
+	<field id="queryAddModel" />
+	<field id="queryAddPuId" />
+	<field id="queryAddQueryId" />
+	<field id="queryCondition" />
+	<field id="queryId" />
+	<field id="queryModel" />
+	<field id="queryName" />
+
+	<field id="recStatus" />
+	<field id="replControlTags" />
+	<field id="returnCode" />
+
+	<field id="schum" />
+	<field id="selectedTaskName" />
+	<field id="sessionID" />
+	<field id="SHEM_SHEDER" />
+	<field id="shouldRequestIshurMenahel" value="false" />
+	<field id="subjectChar" />
+	<field id="sugBank" />
+	<field id="sugCheshbonHlCode" />
+	<field id="sugCheshbonHlText" />
+
+	<field id="tasksList" />
+	<field id="taarichMatan" />
+	<field id="TID" />
+
+	<field id="transactionModel" />
+	<field id="transactionType" />
+	<field id="Tray" />
+	<field id="trxEnded" value="false" />
+	<field id="TrxErrorMessage" />
+	<field id="trxId" />
+	<field id="TrxReplyCode" />
+	<field id="Type" />
+
+	<field id="UserId" />
+
+	<field id="Water" />
+	<field id="workstationStatus" />
+
+	<msgField id="BusinessMessage" />
+	
+	<!-- END fields without prefixes -->
+
+	<!-- Eli Lato. 2005-09-27. This is used with code/text 
+		lists like haSugLakoachList and haSibatDivuachList. -->
+	<kColl id="codeTextData">
+		<field id="code" />
+		<field id="text" />
+	</kColl>
+
+	<!-- 2005-08-22 Dov Sherman. These are for Slika. -->
+
+	<kColl id="continueActionData">
+		<field id="GL_KOD" />
+		<field id="GL_KENLO" />
+	</kColl>
+
+	<kColl id="depositSourceData">
+		<field id="TL_MAKOR_HAFKADA" />
+		<field id="TL_SHEM_MAKOR_HFK" />
+	</kColl>
+
+	<kColl id="mahutTashlumData">
+		<field id="TL_MAHOT_TASHLUM" />
+		<field id="GL_TEUR" />
+	</kColl>
+
+	<!-- end 2005-08-22 -->
+
+	<kColl id="taskAttributes">
+		<refData refId="connectionToHost" />
+		<refData refId="branchStatus" />
+		<refData refId="workstationStatus" />
+		<refData refId="cashRegisterStatus" />
+		<refData refId="cashRegisterType" />
+		<refData refId="connectionToPrinter" />
+		<refData refId="transactionType" />
+		<refData refId="operationType" />
+		<refData refId="trxId" />
+		<refData refId="transactionModel" />
+		<refData refId="exclusiveTransaction" />
+		<refData refId="longDescription" />
+		<refData refId="subjectCode" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- GKSI_HDR Keyed Collection                                               -->
+	<!--=========================================================================-->
+	<kColl id="GKSI_HDR">
+		<refData refId="GL_TRANS_ID" />
+		<refData refId="GL_GIRSA" />
+		<refData refId="GL_PEULA" />
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_MATBEA" />
+		<refData refId="GL_SCH" />
+		<refData refId="GL_CH" />
+		<refData refId="GL_EXT_KEY" />
+		<refData refId="GL_YAAD_PU" />
+		<refData refId="GL_YAAD_TAHANA" />
+		<refData refId="GL_MAKOR_PU" />
+		<refData refId="GL_MAKOR_TAHANA" />
+		<refData refId="GL_MAARECHET" />
+		<refData refId="GL_SESSION" />
+		<refData refId="GL_SIDURI_YOMAN" />
+		<refData refId="GL_TR_NOCHECHI" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_SIDURI_ID" />
+		<refData refId="GL_SUG_MISHTAMESH" />
+		<refData refId="GL_BANK_MARECHET" />
+		<refData refId="GL_SNIF_MARECHET" />
+		<refData refId="GL_BANK_PAKID" />
+		<refData refId="GL_SNIF_PAKID" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_SAMCHUT_PAKID" />
+		<refData refId="GL_KARTIS_DATA" />
+		<refData refId="GL_TR_ASAKIM" />
+		<refData refId="GL_MISHMERET" />
+		<refData refId="GL_SNIF_PATUACH" />
+		<refData refId="GL_MAZAV_SNIF" />
+		<refData refId="GL_SHOW_IFYUN" />
+		<refData refId="GL_ORECH_DATA" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- GKSI_HDR_CONT Keyed Collection                                               -->
+	<!--=========================================================================-->
+	<kColl id="GKSI_HDR_CONT">
+		<refData refId="GL_SHEM_DISK" />
+		<refData refId="GL_SIDURI_TAHANA" />
+		<refData refId="GL_SAMCHUT_MEASHERET" />
+		<refData refId="GL_ZIHUI_MEASHER" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- GKSI_HDR_CONT1 Keyed Collection                                               -->
+	<!--=========================================================================-->
+	<kColl id="GKSI_HDR_CONT1">
+		<refData refId="GL_SW_LVARER" />
+		<refData refId="GL_SW_MVATELET" />
+		<refData refId="GL_SIDURI_BITUL" />
+		<refData refId="GL_SUG_ISHUR_MENAEL" />
+		<refData refId="GL_ISKA_ME_SHICHZUR" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- GKSI_HDR_CONT2 Keyed Collection                                               -->
+	<!--=========================================================================-->
+	<kColl id="GKSI_HDR_CONT2">
+		<refData refId="GL_SRIKA2" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- GKSR_HDR Keyed Collection                                               -->
+	<!--=========================================================================-->
+	<kColl id="GKSR_HDR">
+		<refData refId="GL_FMH" />
+		<refData refId="GL_TRANS_ID" />
+		<refData refId="GL_GIRSA" />
+		<refData refId="GL_PEULA" />
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_MATBEA" />
+		<refData refId="GL_SCH" />
+		<refData refId="GL_CH" />
+		<refData refId="GL_EXT_KEY" />
+		<refData refId="GL_YAAD_PU" />
+		<refData refId="GL_YAAD_TAHANA" />
+		<refData refId="GL_MAKOR_PU" />
+		<refData refId="GL_MAKOR_TAHANA" />
+		<refData refId="GL_MAARECHET" />
+		<refData refId="GL_SESSION" />
+		<refData refId="GL_SIDURI_YOMAN" />
+		<refData refId="GL_TR_NOCHECHI" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_SIDURI_ID" />
+		<refData refId="GL_SAMCHUT_PAKID" />
+		<refData refId="GL_KOD_TIPUL" />
+		<refData refId="GL_KOD_TIPUL_continue" />
+		<refData refId="GL_OFI_SHEDER" />
+		<refData refId="GL_NOSE_SGIA" />
+		<refData refId="GL_KOD_SGIA" />
+		<refData refId="GL_SUG_KIVUTZ" />
+		<refData refId="GL_SHOW_IFYUN" />
+		<refData refId="GL_ORECH_DATA" />
+		<refData refId="GL_MONE_RESHOMOT" />
+		<refData refId="GL_MONE_RESHOMOT_total" />
+	</kColl>
+
+	<kColl id="GKSR_HDR_CONT">
+		<refData refId="GL_HODAA" />
+	</kColl>
+	<kColl id="GKSR_HdrHodaaKlali">
+		<refData refId="GL_MONE_HODAOT" />
+		<refData refId="GKSR_HdrHodaaList" />
+	</kColl>
+
+	<iColl id="GKSR_HdrHodaaList">
+		<refData refId="GKSR_HdrHodaaData" />
+	</iColl>
+	<kColl id="GKSR_HdrHodaaData">
+		<refData refId="GL_HODAA_NOSE1" />
+		<refData refId="GL_HODAA_MISPAR1" />
+		<refData refId="GL_HODAA_1" />
+	</kColl>
+
+	<kColl id="rootServerData">
+		<field id="GL_GIRSA_BTT" />
+	</kColl>
+
+	<kColl id="GLDK_BANK_MARECHET">
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SHEM_BANK" />
+		<refData refId="GL_KOD_LBITACHON" />
+		<refData refId="GL_SW_KVUTZAT_FIBI" />
+		<refData refId="GL_FIBI_SNIF_KFULIM" />
+		<refData refId="GL_SW_KAYAM_SCH" />
+		<refData refId="GL_BDIKA_VALIDIT" />
+		<refData refId="GL_SW_CH_HACZARA" />
+		<refData refId="GL_BANK_MEMAZEG" />
+		<refData refId="GL_BANK_URL" />
+		<refData refId="GL_SHEM_BANK_AROCH" />
+		<refData refId="GL_SHEM_CALL_CENTER" />
+	</kColl>
+
+	<kColl id="bankServerData">
+		<kColl id="GLDK_BANK_MARECHET">
+			<field id="GL_BANK" isReadOnly="true" />
+			<field id="GL_SHEM_BANK" isReadOnly="true" />
+			<field id="GL_KOD_LBITACHON" isReadOnly="true" />
+			<field id="GL_SW_KVUTZAT_FIBI" isReadOnly="true" />
+			<field id="GL_FIBI_SNIF_KFULIM" isReadOnly="true" />
+			<field id="GL_SW_KAYAM_SCH" isReadOnly="true" />
+			<field id="GL_BDIKA_VALIDIT" isReadOnly="true" />
+			<field id="GL_SW_CH_HACZARA" isReadOnly="true" />
+			<field id="GL_BANK_MEMAZEG" isReadOnly="true" />
+			<field id="GL_BANK_URL" isReadOnly="true" />
+			<field id="GL_SHEM_BANK_AROCH" isReadOnly="true" />
+			<field id="GL_SHEM_CALL_CENTER" isReadOnly="true" />
+		</kColl>
+	</kColl>
+
+	<kColl id="GLDK_MAHOZ_MARECHET">
+		<refData refId="GL_SIDR_MAHOZ" />
+		<refData refId="GL_SHEM_MAHOZ" />
+	</kColl>
+
+	<kColl id="machozServerData">
+		<kColl id="GLDK_MAHOZ_MARECHET">
+			<field id="GL_SIDR_MAHOZ" isReadOnly="true" />
+			<field id="GL_SHEM_MAHOZ" isReadOnly="true" />
+		</kColl>
+	</kColl>
+
+	<kColl id="GLDK_SNIF_MARECHET">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_SHEM_SNIF" />
+		<refData refId="GL_SNIF_HANHALA" />
+		<refData refId="GL_SNIF_MYUHAD_MERAKEZ" />
+		<refData refId="GL_SNIF_LAKOCHOT" />
+		<refData refId="GL_SIDR_MAHOZ" />
+		<refData refId="GL_SNIF_EM" />
+		<refData refId="GL_LOTUS_NUM" />
+		<refData refId="GL_BANK" />
+	</kColl>
+
+	<kColl id="branchServerData">
+		<kColl id="GLSG_GLBL">
+			<kColl id="GKSG_KEY">
+				<field id="GL_SNIF" isReadOnly="true" />
+			</kColl>
+			<field id="GL_BANK" isReadOnly="true" />
+			<field id="GL_SHEM_SNIF" isReadOnly="true" />
+			<field id="GL_SNIF_HANHALA_MRKZ" isReadOnly="true" />
+			<field id="GL_SNIF_MYUHAD" isReadOnly="true" />
+			<field id="GL_SNIF_RASHI" isReadOnly="true" />
+			<field id="GL_MAHADURA" />
+			<field id="GL_MAZAV_SNIF" />
+			<field id="GL_SNIF_PATUACH" />
+			<field id="GL_TR_CICS" />
+			<field id="GL_TR_ASAKIM" />
+			<field id="GL_TR_MARECHET" />
+			<field id="GL_SHAA_SG_MARECHET" />
+			<field id="GL_MISHMERET" />
+			<field id="GL_ASINC_TIME_OUT" />
+			<field id="GL_SSCP_TIMER" />
+			<field id="GL_IDLE_TIME_OUT" />
+			<field id="GL_IDLE_CANCEL" />
+			<field id="GL_IND_REMOTE_PRT" />
+			<field id="GL_SESSION" />
+			<field id="GL_SHEM_DISK" />
+			<kColl id="GKSG_TR_MARECHET">
+				<field id="GL_TR_DD" />
+				<field id="GL_TR_MM" />
+				<field id="GL_TR_YYYY" />
+			</kColl>
+		</kColl>
+		<kColl id="GLDK_SNIF_MARECHET">
+			<field id="GL_SNIF" isReadOnly="true" />
+			<field id="GL_SHEM_SNIF" isReadOnly="true" />
+			<field id="GL_SNIF_HANHALA" isReadOnly="true" />
+			<field id="GL_SNIF_MYUHAD_MERAKEZ" isReadOnly="true" />
+			<field id="GL_SNIF_LAKOCHOT" isReadOnly="true" />
+			<field id="GL_SIDR_MAHOZ" isReadOnly="true" />
+			<field id="GL_SNIF_EM" isReadOnly="true" />
+			<field id="GL_LOTUS_NUM" isReadOnly="true" />
+			<field id="GL_BANK" isReadOnly="true" />
+		</kColl>
+	</kColl>
+
+	<kColl id="javaSessionData">
+		<refData refId="TID" />
+		<refData refId="GLSE_GLBL" />
+		<refData refId="GLSF_MAZAV" />
+		<refData refId="GLSF_GLBL" />
+		<refData refId="GL_PU_ID" />
+		<refData refId="personalMenuData" />
+		<refData refId="sessionID" />
+		<refData refId="debugMode" />
+		<refData refId="accessData" />
+		<refData refId="ctxCacheTable" />
+	</kColl>
+
+	<kColl id="marechetData">
+		<refData refId="marechetCode" />
+		<refData refId="marechetText" />
+	</kColl>
+
+	<iColl id="marechetList">
+		<refData refId="marechetData" />
+	</iColl>
+
+	<!-- Banks Table Data -->
+
+	<kColl id="GLDK_BANK">
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SHEM_BANK" />
+		<refData refId="GL_KOD_LBITACHON" />
+		<refData refId="GL_SW_KVUTZAT_FIBI" />
+		<refData refId="GL_FIBI_SNIF_KFULIM" />
+		<refData refId="GL_SW_KAYAM_SCH" />
+		<refData refId="GL_BDIKA_VALIDIT" />
+		<refData refId="GL_SW_CH_HACZARA" />
+		<refData refId="GL_BANK_MEMAZEG" />
+		<refData refId="GL_BANK_URL" />
+		<refData refId="GL_SHEM_BANK_AROCH" />
+		<refData refId="GL_SHEM_CALL_CENTER" />	
+	</kColl>
+
+	<iColl id="GLST_BANK">
+		<refData refId="GLDK_BANK" />
+	</iColl>
+
+	<iColl id="GLST_BANK_GROUP" >
+		<refData refId="GLDK_BANK" />
+	</iColl>
+
+	<iColl id="GLST_BANK_GROUP_WITH_NEW" >
+		<refData refId="GLDK_BANK" />
+	</iColl>
+
+	<!-- ILANA START V3.09 - שינוי מבנה בנק מקבל -->
+	<iColl id="GLST_BANK_NEGDI">
+		<refData refId="GLDK_BANK" />
+	</iColl>
+	<!-- ILANA END -->
+	<!-- End banks table data -->
+
+	<!-- Regions Table Data -->
+	<kColl id="GLDK_MAHOZ">
+		<refData refId="GL_SIDR_MAHOZ" />
+		<refData refId="GL_SHEM_MAHOZ" />
+	</kColl>
+	
+	<iColl id="GLST_MAHOZ">
+		<refData refId="GLDK_MAHOZ" />
+	</iColl>
+	<!-- End regions table data -->
+
+	<!-- Branches Table Data -->
+	<kColl id="GLDK_SNIF">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_SHEM_SNIF" />
+		<refData refId="GL_SNIF_HANHALA" />
+		<refData refId="GL_SNIF_MYUHAD_MERAKEZ" />
+		<refData refId="GL_SNIF_LAKOCHOT" />
+		<refData refId="GL_SIDR_MAHOZ" />
+		<refData refId="GL_SNIF_EM" />
+		<refData refId="GL_LOTUS_NUM" />
+		<refData refId="GL_BANK" />
+	</kColl>
+
+	<iColl id="GLST_SNIF">
+		<refData refId="GLDK_SNIF" />
+	</iColl>
+	
+	<iColl id="GLST_SNIF_NEGDI">
+		<refData refId="GLDK_SNIF" />
+	</iColl>
+	<!-- End branches table data -->
+
+	<!-- NEW Account Types Table Data -->
+	<iColl id="GLST_SCH">
+		<refData refId="GLDK_SCH" />
+	</iColl>
+
+	<kColl id="GLDK_SCH">
+		<refData refId="GL_SCH" />
+		<refData refId="GL_SHEM_SCH" />
+		<refData refId="GL_SW_HAFKADA" />
+		<refData refId="GL_SW_SB_CH" />
+		<refData refId="GL_SW_SHIDUR_INQ"/>
+		<refData refId="GL_SW_ASM_SEMEL_DIV"/>
+		<refData refId="GL_SW_SD_035"/>
+		<refData refId="GL_SW_SD_507"/>
+		<refData refId="GL_SW_SD_892"/>
+		<refData refId="GL_SW_SD_973"/>
+		<refData refId="GL_SW_TD"/>	
+		<refData refId="GL_SUG_CH"/>
+		<refData refId="GL_SW_PTICHOT_SCH"/>
+		<refData refId="GL_SW_ASMACHTA_HOVA" />	
+	</kColl>
+
+	<kColl id="sugCheshbonHlData">
+		<refData refId="sugCheshbonHlCode" />
+		<refData refId="sugCheshbonHlText" />
+	</kColl>
+
+	<iColl id="sugCheshbonHlList">
+		<refData refId="sugCheshbonHlData" />
+	</iColl>
+
+	<!-- NEW Countries Table Data -->
+	<iColl id="GLST_MEDINOT">
+		<refData refId="GLDK_MEDINOT" />
+	</iColl>
+	
+	<kColl id="GLDK_MEDINOT">
+		<refData refId="GL_KOD_MEDINA" />
+		<refData refId="GL_KOD_ISO" />
+		<refData refId="GL_SHEM_MEDINA" />
+		<refData refId="GL_SHEM_MEDINA_ENG" />
+		<refData refId="GL_FLAG_HAAVARA_MTH" />
+		<refData refId="GL_FLAG_PTICHA_CH" />
+		<refData refId="GL_FLAG_TOSEFET_4" />
+		<refData refId="GL_MEDINA_DOAR" />
+	</kColl>
+
+	<iColl id="MZST_MATBEA_SHEM">
+		<refData refId="MZDK_MATBEA_SHEM" />
+	</iColl>
+
+	<kColl id="MZDK_MATBEA_SHEM">
+		<refData refId="GL_MATBEA" />
+		<refData refId="MZ_MATBEA_SHEM_MYDAS" />
+		<refData refId="GL_SHEM_MATBEA" />
+		<refData refId="MZ_SHEM_MATBEA_KATZAR" />
+		<refData refId="MZ_MEZ_MIN_YEHIDOT" />
+		<refData refId="MZ_MATBEA_MAKOR" />
+	</kColl>
+
+	<iColl id="MZST_BANK_MATBEA">
+		<refData refId="MZDK_BANK_MATBEA" />
+	</iColl>
+
+	<kColl id="MZDK_BANK_MATBEA">
+		<refData refId="MZ_BANK_MATBEA" />
+		<refData refId="MZ_MISPAR_SIDURI" />
+		<refData refId="MZ_SW_SHR_YAZIG" />
+		<refData refId="MZ_SW_SHR_MEZ" />
+		<refData refId="MZ_SW_SHR_HVRA" />
+		<refData refId="MZ_SW_SHR_DO_ZDADI" />
+		<refData refId="MZ_SW_MAT_CONV_URO" />
+		<refData refId="MZ_SW_CH" />
+		<refData refId="MZ_SW_CH_NEG" />
+		<refData refId="MZ_SW_LIMIT" />
+		<refData refId="MZ_SW_FWD" />
+		<refData refId="MZ_SW_HAAVAROT" />
+		<refData refId="MZ_SW_BITACHON" />
+		<refData refId="MZ_SW_AMLA" />
+		<refData refId="MZ_BANK" />
+		<refData refId="GL_SHEM_MATBEA" />
+	</kColl>
+
+	<iColl id="MZST_SCH">
+		<refData refId="MZDK_SCH" />
+	</iColl>
+
+	<kColl id="MZDK_SCH">
+		<refData refId="GL_SCH" />
+		<refData refId="GL_SHEM_SCH" />
+		<refData refId="MZ_SW_BANKAI" />
+		<refData refId="MZ_SW_SB_CH" />
+		<refData refId="MZ_SUG_CH" />
+		<refData refId="MZ_SW_KOD_DIVUACH" />
+		<refData refId="MZ_SW_PAMAZ" />
+		<refData refId="MZ_SW_CORSP" />	
+	</kColl>
+
+	<iColl id="neheneList">
+		<refData refId="neheneData" />
+	</iColl>
+
+	<kColl id="neheneData">
+		<refData refId="OP_NEHENE" />
+		<refData refId="OP_NEHENE_DESC" />
+	</kColl>
+
+	<!-- Exclusive Transaction Table Data -->
+	<kColl id="mutexTransData">
+		<field id="request" />
+		<field id="lockstat" />
+		<field id="lockuser" />
+		<field id="result" />
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_PU_ID" />
+		<refData refId="GL_TRANS_ID" />
+		<refData refId="GL_MISPAR_TAHANA" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<field id="LAST_ACCESSED" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- Version check Operations Data                                           -->
+	<!--=========================================================================-->
+	<kColl id="versionCheckServerData">
+		<field id="GL_GIRSA_BTT" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- Startup Operations Data                                                  -->
+	<!--=========================================================================-->
+	<kColl id="startupServerData">
+		<refData refId="TID" />
+		<refData refId="UserId" />
+		<refData refId="adUserId" />
+		<field id="WKSContext" />
+		<field id="WKSParentContext" />
+		<refData refId="sessionID" />
+		<field id="permanentConnectionForEvents" />
+		<field id="ipAddress" />
+		<field id="eventsPort" />
+		<kColl id="commonSettings" dynamic="true" />
+	</kColl>
+
+	<kColl id="userLogonServerData">
+		<refData refId="BusinessMessagesList" />
+		<refData refId="tasksList" />
+		<refData refId="pmenuList" />
+	</kColl>
+
+	<kColl id="setUserStatusServerData">
+		<field id="status" />
+	</kColl>
+
+	<kColl id="removeWorkstationServerData">
+		<field id="station" />
+	</kColl>
+
+	<kColl id="endSessionServerData">
+		<field id="sessionID" />
+	</kColl>
+
+	<kColl id="initializeContextServerData">
+		<refData refId="dynamicMarketingEnabled" />
+		<refData refId="cicsEnv" />
+		<refData refId="BusinessMessagesList" />
+		<refData refId="GLST_BANK" />
+		<refData refId="GLST_BANK_GROUP" />
+		<refData refId="GLST_BANK_GROUP_WITH_NEW" />
+		<refData refId="GLST_SNIF" />
+		<refData refId="GLST_MEDINOT" />
+		<refData refId="GLST_SCH" />
+		<refData refId="GLDI_Pakid" />
+		<refData refId="GL_SNIF_IS_CENTRAL" />		
+		<refData refId="GLDK_ADIfyuneyPakid" />
+		<refData refId="MZST_MATBEA_SHEM" />
+		<refData refId="MZST_BANK_MATBEA" />
+		<refData refId="MZST_SCH" />
+		<refData refId="GLST_SAMCHUT" />
+		<refData refId="GLST_TCHUM" />
+	</kColl>
+	
+	<kColl id="testTrxRequestData">
+		<refData refId="GL_TRANS_ID" />
+		<refData refId="GL_PEULA" />
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_SCH" />
+		<refData refId="GL_CH" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_SIDURI_ID" />
+		<refData refId="GL_BANK_MARECHET" />
+		<refData refId="GL_SNIF_MARECHET" />
+		<refData refId="GL_BANK_PAKID" />
+		<refData refId="GL_SNIF_PAKID" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_SAMCHUT_PAKID" />
+		<refData refId="GL_TR_ASAKIM" />
+		<refData refId="GL_MISHMERET" />
+	</kColl>
+
+	<kColl id="testTrxReplyData">
+		<refData refId="GL_TRANS_ID" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_SIDURI_ID" />
+	</kColl>
+
+	<kColl id="testTrxData">
+		<refData refId="testTrxRequestData" />
+		<refData refId="testTrxReplyData" />
+		<refData refId="HostBuff" />
+		<refData refId="myTableModel" />
+		<refData refId="tableColumns" />
+	</kColl>
+
+	<matafIColl id="myTableModel">
+		<refData refId="tableColumns" />
+	</matafIColl>
+
+	<kColl id="tableColumns">
+		<visualField id="data1" />
+		<visualField id="data2" />
+		<visualField id="data3" />
+		<visualField id="data4" />
+		<visualField id="data5" />
+		<visualField id="data6" />
+		<visualField id="data7" />
+	</kColl>
+
+	<!--  for GLCS_initIska -->
+	<kColl id="initIskaData">
+		<refData refId="BusinessMessagesList" />
+		<refData refId="queriesList" />
+		<refData refId="taskAttributes" />
+	</kColl>
+
+	<!-- for referance tables -->
+	<kColl id="refTablesRecord" dynamic="true" />
+
+	<iColl id="refTablesList">
+		<refData refId="refTablesRecord" />
+	</iColl>
+	<kColl id="refTablesSearch">
+		<field id="tableName" />
+		<field id="key" />
+		<field id="value" />
+		<field id="sqlWhereClause" />
+		<field id="maxRows" />
+	</kColl>
+	<kColl id="refTablesSearchReturned">
+		<field id="rc" />
+		<field id="searchResultCount" />
+	</kColl>
+	<kColl id="refTablesData">
+		<field id="error" />
+		<refData refId="refTablesSearch" />
+		<refData refId="refTablesRecord" />
+		<refData refId="refTablesList" />
+		<refData refId="refTablesSearchReturned" />
+	</kColl>
+	
+	<!-- generic CS mechanism data -->
+	
+	<kColl id="genOpData">
+		<refData refId="opName" />
+		<refData refId="opDesc" />
+		<refData refId="ctxName" />
+		<refData refId="ctxData" />
+		<refData refId="logData" />
+	</kColl>
+
+	<!-- a key collection containing all global records -->
+	
+	<kColl id="GKSG_TR_MARECHET">
+		<refData refId="GL_TR_DD" />
+		<refData refId="GL_TR_MM" />
+		<refData refId="GL_TR_YYYY" />
+	</kColl>
+
+	<kColl id="GLOBAL_RECORDS">
+		<refData refId="GLSE_GLBL" />
+		<refData refId="GLSF_GLBL" />
+		<refData refId="GLSF_MAZAV" />
+		<refData refId="GLSG_GLBL" />
+		<refData refId="TCHARS" />
+	</kColl>
+
+	<kColl id="TCHARS">
+		<refData refId="PEULOT_ZCHUT_HOVA" />
+	</kColl>
+
+	<kColl id="GKSE_KEY">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_ZIHUI_PAKID" />
+	</kColl>
+
+	<kColl id="GKSE_KEY2">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_LAST_NAME_REV" />
+		<refData refId="GL_FIRST_NAME_REV" />
+	</kColl>
+
+	<kColl id="GLSE_GLBL">
+		<refData refId="GKSE_KEY" />
+		<refData refId="GKSE_KEY2" />
+		<refData refId="GL_LAST_NAME" />
+		<refData refId="GL_FIRST_NAME" />
+		<refData refId="GL_SHEM_KATZAR" />
+		<refData refId="GL_SAMCHUT" />
+		<refData refId="GL_ZIHUI_TAHANA" />
+		<refData refId="GL_TR_NOCHECHI" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_ZIHUI_MENAHEL" />
+		<refData refId="GL_MONE_HODAOT" />
+		<refData refId="GL_ZIHUI_PAKID_AD" />
+	</kColl>
+
+	<kColl id="GKSF_KEY">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_ZIHUI_TAHANA" />
+	</kColl>
+
+	<kColl id="GLSF_GLBL">
+		<refData refId="GKSF_KEY" />
+		<refData refId="GL_MISPAR_TAHANA" />
+		<refData refId="GL_MAZAV_TAHANA" />
+		<refData refId="GL_TAHANA_PTUCHA" />
+		<refData refId="GL_TR_PTICHA" />
+		<refData refId="GL_SHAA_PTICHA" />
+		<refData refId="GL_TR_NOCHECHI" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_SHEM_KATZAR" />
+		<refData refId="GL_SIDURI_ID" />
+		<refData refId="GL_SIDURI_TAHANA_CZ" />
+		<refData refId="GL_SIDURI_TAHANA_TL" />
+		<refData refId="GL_MIS_BERUR_CZ" />
+	</kColl>
+
+	<kColl id="GKSG_PEULA">
+		<refData refId="GL_NOSE_PEULA" />
+		<refData refId="GL_KOD_PEULA" />
+	</kColl>
+
+	<kColl id="GLSF_MAZAV">
+		<refData refId="GKSG_PEULA" />
+		<refData refId="GL_TR_NOCHECHI" />
+		<refData refId="GL_SHAA" />
+		<refData refId="GL_SHAA_MARECHET_MHS" />
+		<refData refId="GL_SNIF_NE" />
+	</kColl>
+
+	<kColl id="GKSG_KEY">
+		<refData refId="GL_SNIF" />
+	</kColl>
+
+	<kColl id="GLSG_GLBL">
+		<refData refId="GKSG_KEY" />
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SHEM_SNIF" />
+		<refData refId="GL_SNIF_HANHALA_MRKZ" />
+		<refData refId="GL_SNIF_HANHALA_NE" />
+		<refData refId="GL_SNIF_MYUHAD" />
+		<refData refId="GL_SNIF_RASHI" />
+		<refData refId="GL_MAHADURA" />
+		<refData refId="GL_MAZAV_SNIF" />
+		<refData refId="GL_SNIF_PATUACH" />
+		<refData refId="GL_TR_CICS" />
+		<refData refId="GL_TR_ASAKIM" />
+		<refData refId="GL_TR_MARECHET" />
+		<refData refId="GL_SHAA_SG_MARECHET" />
+		<refData refId="GL_MISHMERET" />
+		<refData refId="GL_ASINC_TIME_OUT" />
+		<refData refId="GL_SSCP_TIMER" />
+		<refData refId="GL_IDLE_TIME_OUT" />
+		<refData refId="GL_IDLE_CANCEL" />
+		<refData refId="GL_IND_REMOTE_PRT" />
+		<refData refId="GL_PU_ID" />
+		<refData refId="GL_SESSION" />
+		<refData refId="GL_SHEM_DISK" />
+		<refData refId="GKSG_TR_MARECHET" />
+				
+		<!-- 2008-07-28 Eli Lato -->
+		<refData refId="GL_SNIF_IS_CENTRAL" />		
+	</kColl>
+
+	<kColl id="emptyData" />
+
+	<kColl id="HostHeaderReplyData">
+		<refData refId="GKSR_HDR" />
+		<refData refId="GKSR_HDR_CONT" />
+		<refData refId="lastUsedLUNumber" />
+		<refData refId="GKSR_HdrHodaaKlali" />
+		<!-- Changed by Sarit Lev, date - 29/03/2006,version -23ג, requested by - , relevant doc -
+			add hdr for hodaotList -->
+	</kColl>
+	
+	<kColl id="AccountBalanceHostReplyData">
+		<refData refId="GL_SHEM_LK" />
+		<refData refId="GL_SHEM" />
+		<refData refId="GL_SNIF_LAKOACH" />
+		<refData refId="GL_MAZAV_LAKOACH" />
+		<refData refId="GL_MOKED" />
+		<refData refId="GL_KOD_MOKED" />
+		<refData refId="GKSG_IFYUN" />
+		<refData refId="GL_ITRA_KLALIT" />
+		<refData refId="GL_ITRA_MEZUMAN" />
+		<refData refId="GL_ITRA_ADKANIT" />
+		<refData refId="GL_ITRA_MESHICHA" />
+		<refData refId="GL_ITRA_PACHAK" />
+		<refData refId="GL_KAV_ASHRAY" />
+		<refData refId="GL_ASHRAY" />
+		<refData refId="GL_GVUL_ASHRAY" />
+		<refData refId="GL_TOKEF_ASHRAY" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<kColl id="LoanDetailsReplyData">
+		<refData refId="GKSR_HDR" />
+		<refData refId="GKSR_HDR_CONT" />
+		<refData refId="GL_SHEM" />
+	</kColl>
+
+	<kColl id="GiluyNaotData">
+		<refData refId="isShowDanachMsg" />
+		<refData refId="danachType" />
+		<refData refId="commissionType" />
+		<refData refId="commissionAmount" />
+		<refData refId="GL_MATBEA" />
+		<refData refId="GL_MATBEA_DESC" />
+	</kColl>
+
+	<!--========================================================================-->
+	<!-- User query Data													-->
+	<!--========================================================================-->
+	
+	<iColl id="queriesList" size="0">
+		<refData refId="queryData" />
+	</iColl>
+	
+	<kColl id="queryData">
+		<refData refId="queryId" />
+		<refData refId="queryName" />
+	</kColl>
+
+	<kColl id="queryCsData">
+		<refData refId="queryId" />
+		<refData refId="queryModel" />
+	</kColl>
+
+	<kColl id="subjectData">
+		<refData refId="subjectChar" />
+		<refData refId="GL_SCH" />
+		<refData refId="GL_SHEM_SCH" />
+	</kColl>
+
+	<kColl id="accountData" dynamic="false">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_CH" />
+		<refData refId="GL_SHEM_SNIF" />
+	</kColl>
+
+	<kColl id="TLSS_PERUT_MEZUMAN">
+		<visualField id="CONT_BTN" />
+		<visualField id="QUIT_BTN" />
+		<visualField id="SCHUM_NEGDI" />
+		<visualField id="TL_SCHUM_BILLS" />
+		<visualField id="TL_SCHUM_MAOT" />
+		<visualField id="TL_KAMOT_MAOT" />
+	</kColl>
+
+	<kColl id="TLSX_EZER">
+		<!-- THE NEXT 2 FIELDS DID'NT INITIALIZED -->
+		<refData refId="GL_ZIHUY_MENAHEL" />
+		<refData refId="GL_ISHUR_MENAHEL" />
+		<refData refId="GLSG_GLBL_GKSG_TR_MARECHET" />
+		<refData refId="GL_PEULA" />
+		<refData refId="GL_SAMCHUT" />
+	</kColl>
+
+	<!-- CHANGED BY SARIT 16\10\05 Added Sal Amalot-->
+	<kColl id="sendCheckDetailsTrxReplyData">
+		<refData refId="GL_MONE_HODAOT" />
+		<refData refId="GKSR_HdrHodaaList" />
+		<refData refId="CZSS_T110_LIST" />
+		<refData refId="TL_AMLA_CHEQ" />
+		<refData refId="TL_AMLA_BMITZBUR" />
+		<refData refId="TL_SW_MILYUN" />
+		<refData refId="TL_AMLOT_PEULA" />
+		<refData refId="TL_KOD_SAL" />
+		<refData refId="GL_AMLAT_DANACH" />
+		<refData refId="GL_MATBEA" />
+		<refData refId="GL_KOD_HODAA" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<kColl id="AccountBalance">
+		<visualField id="GL_SHEM_KATZAR" />
+		<visualField id="ItraMeshicha" />
+		<visualField id="ItraMeshichaTitle" />
+		<visualField id="ItraAdkanit" />
+		<visualField id="ItraAdkanitTitle" />
+		<visualField id="ItraKlalit" />
+		<visualField id="ItraKlalitTitle" />
+		<refData refId="Feedbacks" />
+	</kColl>
+
+	<kColl id="CounterAccountBalance">
+		<visualField id="GL_SHEM_KATZAR" />
+		<visualField id="ItraMeshicha" />
+		<visualField id="ItraMeshichaTitle" />
+		<visualField id="ItraAdkanit" />
+		<visualField id="ItraAdkanitTitle" />
+		<visualField id="ItraKlalit" />
+		<visualField id="ItraKlalitTitle" />
+		<refData refId="Feedbacks" />
+	</kColl>
+
+	<kColl id="Feedbacks">
+		<visualField id="Feedback1" />
+		<visualField id="Feedback2" />
+		<visualField id="Feedback3" />
+		<visualField id="Feedback4" />
+		<visualField id="Feedback5" />
+		<visualField id="Feedback6" />
+		<visualField id="Feedback7" />
+	</kColl>
+
+	<iColl id="SemelDivuachList" size="0">
+		<refData refId="SemelDivuachRecord" />
+	</iColl>
+	
+	<kColl id="SemelDivuachRecord">
+		<refData refId="TL_ASMACHTA_001" />
+		<refData refId="TL_TEUR_ASM_142" />
+	</kColl>
+	
+	<iColl id="AccountsToReturnList" size="0">
+		<refData refId="AccountsToReturnRecord" />
+	</iColl>
+	
+	<kColl id="AccountsToReturnRecord">
+		<refData refId="CH_CH_RTRN" />
+		<refData refId="CH_TEUR_CH_RTRN" />
+	</kColl>
+	
+	<matafIColl id="LoansList">
+		<refData refId="LoanRecord" />
+	</matafIColl>
+	
+	<kColl id="LoanRecord">
+		<visualField id="loanNumber" />
+		<visualField id="loanAmount" />
+	</kColl>
+
+	<matafIColl id="CZSS_T110_LIST"><!-- size="50"-->
+		<refData refId="CZSS_T110_LINE" />
+	</matafIColl>
+	
+	<kColl id="CZSS_T110_LINE">
+		<field id="CH_SIGN" />
+		<visualField id="CH_KOD_TKINUT" />
+		<field id="CH_MISPAR_SIDURI" />
+		<visualField id="CH_MISPAR_CHEQ" isRequired="true" />
+		<visualField id="CH_BANK_CHOTEM" />
+		<visualField id="CH_SNIF_CHOTEM" />
+		<visualField id="CH_SNIF_S_B" />
+		<visualField id="CH_CH_CHOTEM" />
+		<visualField id="CH_SCHUM_CHEQ" />
+		<field id="CH_SCHUM" />
+		<field id="CH_TAARICH_NAKUV" />
+		<visualField id="CH_KOD_MSG1" />
+		<visualField id="CH_KOD_MSG2" />
+		<visualField id="CH_MSG1" />
+		<visualField id="CH_MSG2" />
+		<field id="CH_READ_CHEQ" />
+		<field id="GL_FILLER1" />
+		<field id="CH_ZIHUI_CHIZONI" />
+		<field id="CH_SCHUM_NETO" />
+		<field id="CH_CH" />
+		<field id="CH_SCH" />
+		<field id="filler" />
+	</kColl>
+
+	<kColl id="CZSS_T110_LIST_MetaData">
+		<field id="maxRows" />
+		<field id="selectedRowIndex" />
+	</kColl>
+
+	<kColl id="LoansList_MetaData">
+		<field id="maxRows" />
+		<field id="selectedRowIndex" />
+	</kColl>
+
+	<matafIColl id="BusinessMessagesList" size="0">
+		<refData refId="BusinessMessageRecord" />
+	</matafIColl>
+	
+	<kColl id="BusinessMessageRecord">
+		<refData refId="BusinessMessage" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- Sample Kcoll for JDBC Table Sample operation                      -->
+	<!--=========================================================================-->
+	<kColl id="JDBCTableData">
+		<field id="bankId" />
+		<field id="branchId" />
+		<field id="accountType" />
+		<field id="accountNumber" />
+	</kColl>
+
+	<iColl id="managersList" size="0">
+		<refData refId="managerData" />
+	</iColl>
+	
+	<kColl id="managerData">
+		<field id="searchBranch" />
+		<field id="managerBranch" />
+		<field id="managerId" />
+		<field id="shortTID" />
+		<field id="samchutMeasheret" />
+		<field id="telephoneNumber" />
+		<refData refId="managerName" />
+		<refData refId="TID" />
+		<refData refId="adUserId" />
+	</kColl>
+
+	<iColl id="managersComboList" size="0">
+		<refData refId="managerName" />
+	</iColl>
+
+	<iColl id="answerList" size="0" />
+
+	<kColl id="trxORData">
+		<field id="trxUuid" />
+		<field id="viewName" />
+		<field id="trxId" />
+		<field id="trxName" />
+		<field id="ctxName" />
+		<field id="overrideResult" />
+		<field id="overrideInAdvance" />
+		<field id="mgrUserId" />
+		<field id="samchutMeasheret" />
+		<field id="samchutNidreshet" />
+		<field id="answerCode" />
+		<field id="answerTxt" />
+		<field id="mqData" />
+	</kColl>
+
+	<kColl id="overrideData">
+		<field id="overrideType" />
+		<field id="trxMqHeader" />
+		<field id="tellerUserId" value="" />
+		<field id="tellerAdUserId" value="" />
+		<field id="tellerTID" value="" />
+		<field id="mgrUserId" value="" />
+		<field id="mgrAdUserId" value="" />
+		<field id="mgrTID" value="" />
+		<field id="snifPakid" />
+		<field id="snifPakidName" />
+		<field id="snifLakoah" />
+		<field id="snifLakoahName" />
+		<field id="isExternal" />
+		<field id="samchutMeasheret" />
+		<field id="samchutNidreshet" />
+		<field id="inSessionOnly" />
+		<field id="visibleOnly" />
+		<field id="puId" />
+		<field id="trxUuid" />
+		<field id="trxId" />
+		<field id="trxName" />
+		<field id="ctxName" />
+		<field id="ctxData" />
+		<field id="status" />
+		<field id="reason" />
+		<field id="comment" />
+		<field id="viewName" />
+		<field id="requestTs" />
+		<refData refId="managersList" />
+		<refData refId="answerList" />
+		<refData refId="managersComboList" />
+		<refData refId="chosenManagerName" />
+		<refData refId="chosenManagerId" />
+		<field id="valid" />
+		<field id="answerCode" />
+		<field id="answerTxt" />
+		<refData refId="GLSI_ISHR_MENAEL_LOG" />
+		<refData refId="BusinessMessagesList" />
+	</kColl>
+
+	<kColl id="overrideReplyData">
+		<field id="status" />
+		<field id="trxUuid" />
+		<field id="tellerUserId" />
+		<field id="tellerTID" />
+		<field id="mgrUserId" />
+		<field id="mgrTID" />
+		<field id="replyType" />
+		<field id="managerComment" />
+		<field id="managerAnswerCode" />
+		<field id="managerAnswerTxt" />
+		<field id="ishurMeyuchad" />
+	</kColl>
+
+	<kColl id="GLSI_ISHR_MENAEL_LOG">
+		<field id="GL_ISHUR_MENAEL_SUG" />
+		<field id="GL_SW_ISHUR_DCHIYA" />
+		<field id="GL_DCHIYA_KOD_SIBA" value="0" />
+		<field id="GL_ASMACHTA" value="0" />
+		<field id="GL_ISHUR_MNL_K_SIBA1" value="0" />
+		<field id="GL_ISHUR_MNL_K_SIBA2" value="0" />
+		<field id="GL_FILLER"/>		
+		<field id="GL_HEARA"/>
+        <field id="GL_ISHUR_MEUHAD"/>
+        <field id="GL_ISHUR_MENAHEL_BACHIR"/>
+        <field id="GL_SCHUM"/>
+	</kColl>
+
+	<kColl id="overrideAuth">
+		<field id="branch" />
+		<field id="userid" />
+		<field id="paswrd" />
+		<field id="result" />
+	</kColl>
+
+	<kColl id="matafOverrideTableData">
+		<field id="IDNUMBER" />
+		<field id="TRXID" />
+		<field id="STATUS" />
+		<field id="REASON" />
+		<field id="OR_DATE" />
+	</kColl>
+
+	<kColl id="signalData">
+		<field id="destName" />
+		<field id="destData" />
+		<field id="eventName" />
+		<field id="eventData" />
+		<field id="wait" />
+	</kColl>
+
+	<kColl id="journalEntity">
+		<field id="name" />
+	</kColl>
+
+	<iColl id="journalEntityList" size="0">
+		<refData refId="journalEntity" />
+	</iColl>
+
+	<kColl id="journalWrapData">
+		<refData id="journalEntityList" />
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- Journal in slika data                      							 -->
+	<!--=========================================================================-->
+
+	<kColl id="CZSJ_REC_MEKORI">
+		<refData refId="CZSJ_REC" />
+	</kColl>
+
+	<kColl id="CZSJ_REC">
+		<!--refData refId="GKSJ_HDR" />
+			<refData refId="CZSJ_MUTAV" />
+			<refData refId="CZSJ_CHOTEM" />
+			</kColl>
+			
+			<kColl id="GKSJ_HDR"-->
+		<refData refId="GL_MAARECHET" />
+		<field id="GL_MAHADURA" />
+		<field id="GL_SESSION" />
+		<field id="GL_SIDURI_YOMAN" />
+		<refData refId="GL_MISHMERET" />
+		<refData refId="GL_TR_MARECHET" />
+		<refData refId="GL_SHAA_MARECHET" />
+		<refData refId="GL_MISPAR_TAHANA" />
+		<refData refId="GL_SIDURI_TAHANA" />
+		<refData refId="GL_SNIF_MARECHET" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<field id="GL_SUG_RESHUMA" />
+		<refData refId="GL_FILLER" />
+		<refData refId="GL_PEULA" />
+		<field id="GL_ZCHUT_HOVA" />
+		<field id="GL_MISCHAR" />
+		<field id="GL_IFYUN_SUG_PEULA" />
+		<field id="GL_TAT_IFYUN_SUG_PEU" />
+		<field id="GL_SW_ONLINE" />
+		<field id="GL_SW_MTUKENET" />
+		<field id="GL_SW_MTAKENET" />
+		<field id="GL_SW_TO_BSHIDUR" />
+		<refData refId="GL_SW_HUSHLEMA" />
+		<visualField id="GL_SW_MISHMERET" />
+		<field id="GL_SW_HUKRENA_HODAA" />
+		<refData refId="GL_SW_MVATELET" />
+		<refData refId="GL_SW_MVUTELET" />
+		<refData refId="GL_SW_LVARER" value="1" />
+		<refData refId="GL_SW_ISHUR_HDAR_ISK" />
+		<field id="GL_SW_SAMCHUT_MNHL" />
+		<refData refId="GL_SW_IM_LIMIT" />
+		<refData refId="GL_ISHUR_MENAEL" />
+		<refData refId="GL_ZIHUI_MENAHEL" />
+		<refData refId="GL_SIDURI_BITUL" />
+		<field id="GL_MISPAR_RES_MTOCH" />
+		<field id="GL_MISPAR_RES_TOT" />
+		<field id="GL_SUG_KIVUTZ" />
+		<field id="GL_ORECH_SHIDUR" />
+		<field id="GL_PEULA_MISHNIT" />
+		<field id="GL_BANK" />
+		<field id="GL_SNIF" />
+		<refData refId="subjectData" />
+		<field id="GL_CH" />
+		<field id="GL_MATBEA" />
+		<refData refId="GL_SCHUM" />
+		<field id="GL_LIST_FLAG" />
+		<field id="GL_HORAA_TELEFONIT" />
+		<field id="GL_SUG_ISHUR_MENAEL" />
+		<field id="GL_SW_NETEK" />
+		<field id="GL_FILLER1" />
+		<field id="GL_RESTORE_ASSIGNS" />
+		<field id="GL_RESTORE_SCREENS" />
+		<field id="GL_RESTORE_FORMS" />
+		<field id="GL_RESTORE_LIST" />
+		<field id="GL_STORNO_COUNTERS" />
+		<field id="CH_ASMACHTA" />
+		<field id="CH_SIGN" />
+		<field id="CH_SW_TZ" />
+		<field id="CH_HP" />
+		<field id="CH_KOD_TKINUT" />
+		<field id="CH_MISPAR_SIDURI" />
+		<field id="CH_MISPAR_CHEQ" />
+		<field id="CH_BANK_CHOTEM" />
+		<field id="CH_BANK_CHOTEM_DESC" />
+		<field id="CH_SNIF_CHOTEM" />
+		<field id="CH_SNIF_CHOTEM_DESC" />
+		<field id="CH_SNIF_S_B" />
+		<field id="CH_CH_CHOTEM" />
+		<field id="CH_SCHUM_CHEQ" />
+		<field id="CH_TAARICH_HAFKADA" />
+		<field id="CH_TAR_HAFKD_KTZR" />
+		<field id="CH_TAARICH_NAKUV" />
+		<field id="CH_TAR_NAKUV_KTZR" />
+		<field id="CH_TAR_PERAON_KTZR" />
+		<field id="CH_TAARICH_PERAON" />
+		<field id="CH_SUG_HAFKADA" />
+		<field id="CH_SUG_HAFKADA_DESC" />
+		<field id="CH_KOD_HAGBALA" />
+		<field id="CH_KOD_HAGBALA_DESC" />
+		<field id="CH_ZIHUI_CHIZONI" />
+		<field id="CH_TEUR_HAFKADA" />
+		<field id="CH_KOD_MSG1" />
+		<field id="CH_KOD_MSG2" />
+		<field id="CH_MSG1" />
+		<field id="CH_MSG2" />
+		<field id="CH_TEUR_HAGBALA" />
+		<field id="CH_AHUZ_RIBIT" />
+		<field id="CH_YEME_ERECH" />
+		<field id="CH_SCHUM_NETO" />
+		<field id="GL_ISHUR_MENAEL_2" />
+		<field id="CH_TAARICH_IDKUN" />
+		<field id="CH_PAKID" />
+		<field id="CH_MENAHEL" />
+		<field id="CH_AHUZ_AMLA" />
+		<field id="CH_SCHUM_RIBIT" />
+		<field id="CH_TAARICH_ERECH" />
+		<field id="CH_TAARICH_ASAKIM" />
+		<refData refId="CH_SACH_SCHUM" />
+		<field id="CH_SACH_SCHUM_NETO" />
+		<field id="CH_SACH_SCHUM_RIBIT" />
+		<field id="CH_SACH_TAARICH" />
+		<refData refId="CH_KAMUT_CHEQ" />
+		<field id="CH_TAARICH_LIFNEY" />
+		<field id="CH_READ_CHEQ" />
+		<refData refId="TLSS_BSCH" />
+		<field id="MU_ASMACHTA" />
+		<field id="MU_KAMUT_CHEQ" />
+		<field id="MU_SACH_SCHUM" />
+		<field id="MU_YOZEM_PEULA" />
+		<field id="MU_YOZEM_PEULA" />
+		<field id="MU_TAARICH_ERECH" />
+		<field id="MU_TEUR_PEULA" />
+		<field id="MU_KOT_SNIF" />
+		<field id="MU_YAAD" />
+		<field id="MU_MAKRO_KOT2" />
+		<field id="MU_MAKRO_KOT3" />
+		<field id="MU_KOTERET" />
+		<field id="MU_MAKRO_DETAIL" />
+		<field id="MU_MAKRO_KOT1" />
+		<field id="MU_SNIF_MUTAV" />
+		<field id="MU_SNIF_MUTAV_DESC" />
+		<field id="MU_SNIF_KOLET" />
+		<field id="MU_MAKRO_HORAOT_CON" />
+		<field id="MU_MAKRO_SIGN" />
+		<field id="MU_SCH" />
+		<field id="MU_SCH_DESC" />
+		<field id="GL_MELEL1" />
+		<field id="MU_SNIF_RTRN" />
+		<field id="MU_SCH_RTRN" />
+		<field id="MU_CH_RTRN" />
+		<field id="MU_KOD_ICHUD" />
+		<field id="GL_MAKOR_PU" />
+		<field id="GL_TR_ASAKIM" />
+		<field id="MU_SW_ISHUR_MNL" />
+		<field id="TL_MELEL_HALVAA" />
+		<field id="TL_MELEL_ZEHUT" />
+		<field id="TL_MISPAR_HALVAA" />
+		<field id="TL_MISPAR_ZEHUT" />
+		<field id="GL_MELEL2" />
+		<field id="TL_MAKOR_HAFKADA" />
+		<field id="TL_BUTZA_ALYADEY" />
+		<field id="GL_MELEL3" />
+		<field id="GL_MELEL4" />
+		<field id="GL_MELEL5" />
+		<field id="GL_SAMCHUT" />
+		<field id="GL_ZIHUI_MEASHER" />
+		<field id="GL_SHAA" />
+		<field id="GL_SNIF_PAKID" />
+		<field id="TL_MISPAR_HALVAOT" />
+		<field id="TL_MELEL_HALVAOT" />
+		<field id="TL_DIVUACH_HOST" />
+		<refData refId="GL_SHEM_PAKID" />
+
+		<!-- MAHADURA 22 -->
+		<refData refId="TL_AMLA_CHEQ" />
+		<refData refId="TL_AMLA_BMITZBUR" />
+		<refData refId="TL_DANACH" />
+		<!-- ================== -->
+	</kColl>
+
+	<kColl id="TLSS_BSCH">
+		<field id="TL_BANK" />
+		<field id="TL_SNIF" value="" />
+		<field id="TL_SCH" />
+		<field id="TL_CH" />
+	</kColl>
+
+	<!-- Operational Data-->
+	
+	<kColl id="OpData">
+		<field id="opID" />
+		<field id="hostRequest" />
+		<field id="hostResponse" />
+		<field id="requestData" />
+	</kColl>
+	
+	<iColl id="entities">
+		<refData refId="entity" />
+	</iColl>
+	
+	<kColl id="HelpData">
+		<field id="recordInDecisionTable" value="" />
+		<field id="actionNotInTable" value="1" />
+		<field id="checkSucceeded" value="FAIL" />
+		<field id="SW_SCREEN" value="" />
+	</kColl>
+
+	<kColl id="getClerkNameData">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_SHEM_PAKID" />
+	</kColl>
+
+	<!--===========================================================================-->
+	<!-- Transaction Validations Data definition						           -->
+	<!--===========================================================================-->
+	<kColl id="validatorData">
+		<refData refId="returnCode" />
+	</kColl>
+
+	<kColl id="exclusiveTransactionData">
+		<refData refId="selectedTaskName" />
+		<refData refId="TID" />
+		<refData refId="returnCode" />
+	</kColl>
+
+	<kColl id="checkUserAuthServerData">
+		<refData refId="trxId" />
+		<refData refId="returnCode" />
+	</kColl>
+	
+	<kColl id="userAuthServerData">
+		<visualField id="TRX_ID" />
+		<visualField id="SAMHUT" />
+		<visualField id="MEAFIENIM" />
+		<visualField id="PERMIT_ERROR" />
+		<visualField id="AUTHORITY_ERROR" />
+	</kColl>
+	
+	<!--===========================================================================-->
+	<!-- Add to Query List Data definition						           -->
+	<!--===========================================================================-->
+	<kColl id="queryToAddData">
+		<refData refId="queryAddPuId" />
+		<refData refId="queryAddBranchId" />
+		<refData refId="queryAddClerkId" />
+		<refData refId="queryAddModel" />
+		<refData refId="queryAddQueryId" />
+	</kColl>
+
+	<kColl id="personalMenuData">
+		<refData refId="personalMenuTrxList" />
+		<refData refId="selectedTaskName" />
+	</kColl>
+
+	<iColl id="personalMenuTrxList" size="0" >
+		<refData refId="personalMenuTrxRecord" />
+	</iColl>
+	
+	<kColl id="personalMenuTrxRecord">
+		<refData refId="trxId" />
+	</kColl>
+
+	<!--===========================================================================-->
+	<!-- Teller Scaned Operation Window Data definition					           -->
+	<!--===========================================================================-->
+
+	<kColl id="refreshOperationsTableData">
+		<refData refId="GKSI_HDR" />
+		<refData refId="SHSI_HDR" />
+		<field id="SH_COD_SNIF" value="" />
+		<field id="SH_SNIF" value="" />
+		<field id="SH_CH" value="" />
+		<field id="SH_MISPAR_NIYAR" value="" />
+		<field id="SLCT_ME_SHAA" value="" />
+		<field id="SH_SUG_PL" value="" />
+		<field id="SH_PKUDA" value="" />
+		<field id="SH_SEL_PKD" value="" />
+		<field id="SH_STAT_PKUDA" value="" />
+		<field id="SH_TAHANA_RZ" value="" />
+
+		<!-- Used Both in send and recieve data -->
+		<field id="SH_MAFTEAH" value="" />
+
+		<field id="NE_SUG_MISHAR" value="" />
+		<field id="NE_SHITAT_MISHAR" value="" />
+		<field id="NE_ZIHUI_PAKID" value="" />
+		<field id="NE_ISHUR_S" value="" />
+		<field id="NE_ZIHUI_MENAHEL" value="" />
+
+		<!-- Recieve Data -->
+		<refData refId="HostHeaderReplyData" />
+		<refData refId="SHSR_HDR" />
+		<refData refId="NESS_LINE_RZF_IC" />
+		<refData refId="SH_HODAOT_IC" />
+		<field id="SH_LINE3" />
+		<field id="SH_LINE4" />
+		<field id="SH_MONE_SHUROT" />
+		<field id="SH_MONE" />
+
+		<refData refId="HostBuff" />
+
+		<refData refId="BusinessMessagesList" />
+	</kColl>
+
+	<kColl id="SHSI_HDR">
+		<field id="SH_TSHUVA" />
+		<field id="SH_YAAD" />
+		<field id="SH_KODZIUD" />
+		<field id="SH_SRIKA1" />
+		<field id="SH_DIFDUF" />
+	</kColl>
+	<!--================= RECEIVE DATA ELEMENTS =====================-->
+
+	<kColl id="SHSR_HDR">
+		<field id="SH_TSHUVA" />
+		<field id="SH_YAAD" />
+		<field id="SH_KODZIUD" />
+		<field id="SH_SRIKA1" />
+		<field id="SH_KODSHIDUR" />
+		<field id="SH_MISPAR_SHEDER" />
+		<field id="SH_SHRNUM" />
+		<field id="GL_MISGERET" />
+	</kColl>
+
+	<matafIColl id="NESS_LINE_RZF_IC">
+		<refData refId="NESS_LINE_RZF_KC" />
+	</matafIColl>
+
+	<kColl id="NESS_LINE_RZF_KC">
+		<field id="filler" />
+		<visualField id="STATUS" />
+		<visualField id="SERIAL" />
+		<visualField id="STATION" />
+		<visualField id="RATE" />
+		<visualField id="TYPE" />
+		<visualField id="QUANTITY" />
+		<visualField id="BUYORSELL" />
+		<visualField id="STOCK_NAME" />
+		<visualField id="STOCK_NUMBER" />
+		<visualField id="BRANCH" />
+		<visualField id="SEPERATOR" />
+		<visualField id="ACCOUNT" />
+	</kColl>
+
+	<matafIColl id="SH_HODAOT_IC">
+		<refData refId="SH_HODAOT_KC" />
+	</matafIColl>
+
+	<kColl id="SH_HODAOT_KC">
+		<field id="filler" />
+	</kColl>
+
+	<!--========================================================================-->
+	<!-- Cheque Picture Operation Data			 								-->
+	<!--========================================================================-->
+	<kColl id="chequePicData">
+		<refData refId="GKSI_HDR" />
+		<refData refId="SHSR_HDR" />
+		<field id="TL_MS_HAMAA" value="258675" />
+		<!-- joey m. 29.8.05 - change cheque number for cheque picture -->
+		<field id="HZ_PIC_FORMAT" value="BW" />
+		<refData refId="HostBuff" />
+		<refData refId="HostHeaderReplyData" />
+		<field id="filler" />
+		<field id="GL_PIC_FORMAT" />
+		<field id="HZ_PIC_LEN" />
+		<iColl id="frontPic" size="0">
+			<field id="HZ_PIC_PART" />
+		</iColl>
+		<iColl id="rearPic" size="0">
+			<field id="HZ_PIC_PART" />
+		</iColl>
+		<iColl id="pic" size="0">
+			<field id="HZ_PIC_PART" />
+		</iColl>
+	</kColl>
+
+	<!--=========================================================================-->
+	<!-- 495 (Bitul) Data definitions   				                         -->
+	<!--=========================================================================-->
+
+	<iColl id="cztjJournalRecList">
+		<refData refId="CZSJ_REC" />
+	</iColl>
+
+	<!--=========================================================================-->
+	<!-- For the example of word and btt working through BridgeToJava			                         -->
+	<!--=========================================================================-->
+
+	<kColl id="arvutWordDetails">
+		<field id="number" value="12345" />
+		<field id="sug" value="1" />
+		<field id="claimant" value="שרמן דב" />
+		<field id="respondent" value="אליהו בן משה" />
+		<field id="courtName" value="השלום פתח תקווה" />
+		<field id="sach" value="15,000" />
+		<field id="damage" value="מאי עמידה בחוזה" />
+		<field id="damage1" value="ניהול לא תקין של הפרויקט" />
+		<field id="madadYesod" value="מאי" />
+		<field id="madadPoints" value="123" />
+		<field id="address" value="יהודה המכבי 5 תל-אביב" />
+		<field id="mode" value="1" />
+		<field id="instructor" value="עו'ד יהושע בן צבי" />
+	</kColl>
+
+	<kColl id="restoreTest">
+		<refData refId="arvutWordDetails" />
+		<field id="arvutAsBinary" />
+	</kColl>
+
+	<!--===========================================================-->
+	<!-- START OF SHEILTA SUBJECT DATA DEFINITIONS	   -->
+	<!--===========================================================-->
+	<kColl id="sheiltaSubjectData"></kColl>
+
+	<!--===========================================================-->
+	<!-- START OF BEALIM MURSHIM SHEILTA (616) DATA DEFINITIONS	   -->
+	<!--===========================================================-->
+
+	<iColl id="SH_BAAL_SHLITA_LIST" size="0">
+		<refData refId="SH_BAAL_SHLITA_REC" />
+	</iColl>
+	
+	<kColl id="SH_BAAL_SHLITA_REC">
+		<field id="SH_BAALEI_SHLITA" />
+		<field id="SH_BAALEI_SHLITA_TXT" />
+	</kColl>
+
+	<!--===========================================================-->
+	<!-- START OF COUNTERS DATA DEFINITIONS						   -->
+	<!--===========================================================-->
+	<kColl id="counterData">
+		<field id="COUNTER_NAME" />
+		<field id="BRANCH" />
+		<field id="PU" />
+		<field id="GL_ZIHUI_PAKID" />
+		<field id="TID" />
+		<field id="GL_MATBEA" />
+		<field id="GL_SCHUM" />
+		<field id="TOTAL_ACTIONS" />
+		<field id="OFI" />
+	</kColl>
+
+
+	<kColl id="OPSS_TR_LEDA_MALAM">
+		<refData id="OP_TR_YYYY" />
+		<refData id="OP_TR_MM" />
+		<refData id="OP_TR_DD" />
+	</kColl>
+
+	<kColl id="OPSR_MALAM">
+		<refData refId="OP_SUG_RESHUMA" />
+		<refData refId="OP_KOD_TSHUVA" />
+		<refData refId="OP_KOD_MALAM" />
+		<refData refId="OP_TR" />
+		<refData refId="OP_SHAA" />
+		<refData refId="OP_TZ" />
+		<refData refId="OP_KOD_HAZLAHA" />
+		<refData refId="OP_NAME_LAST" />
+		<refData refId="OP_NAME_PREV" />
+		<refData refId="OP_NAME_FIRST" />
+		<refData refId="OP_NAME_FATHER" />
+		<refData refId="OP_NAME_MOTHER" />
+		<refData refId="OP_TR_BIRTH_YYYY" />
+		<refData refId="OP_TR_HANPAKA" />
+		<refData refId="OP_STATUS" />
+		<refData refId="OP_HOME_CITY" />
+		<refData refId="OP_HOME_STREET" />
+		<refData refId="OP_HOME_ST_NUM" />
+		<refData refId="OP_HOME_ST_SUB_NUM" />
+		<refData refId="OP_HOME_APT" />
+		<refData refId="OP_HOME_ZIP" />
+		<refData refId="OP_HOME_CITY_SEMEL" />
+		<refData refId="OP_SEX_MALAM" />
+		<refData refId="OP_TR_LEIDA_SUG" />
+		<refData refId="OPSS_TR_LEDA_MALAM" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<!--===========================================================-->
+	<!-- END OF SHEDER MALAM DATA DEFINITIONS					   -->
+	<!--===========================================================-->
+
+	<kColl id="crmRowData">
+		<field id="crmDate" />
+		<field id="crmTime" />
+		<field id="crmSource" />
+		<field id="crmDesc" />
+		<field id="crmRemarks" />
+	</kColl>
+
+	<matafIColl id="TLST_SG_KG_MURCHAV">
+		<refData refId="TLDK_SG_KG_MURCHAV" />
+	</matafIColl>
+
+	<kColl id="TLDK_SG_KG_MURCHAV">
+		<refData refId="TL_MISPAR_KG" />
+		<refData refId="KG_SNIF_KUPA" />
+		<refData refId="KG_SCH_KUPA" />
+		<refData refId="KG_CH_KUPA" />
+		<refData refId="TL_SHEM_KG" />
+		<refData refId="TL_SW_KG_LO_OVED" />
+		<refData refId="TL_SW_KG_LO_MAAVID" />
+		<refData refId="TL_SW_KG_LO_PIZUIM" />
+		<refData refId="TL_SW_KG_MHANDSIM" />
+		<refData refId="KG_SNIF_OSH" />
+		<refData refId="KG_SCH_OSH" />
+		<refData refId="KG_CH_OSH" />
+		<refData refId="TL_KG_HALBANAT_HON" />
+	</kColl>
+
+	<matafIColl id="TLST_SUG_PEULA_KG">
+		<refData refId="TLDK_SUG_PEULA_KG" />
+	</matafIColl>
+
+	<kColl id="TLDK_SUG_PEULA_KG">
+		<refData refId="GL_KOD_PEULA" />
+		<refData refId="GL_SHEM_PEULA" />
+	</kColl>
+
+	<matafIColl id="KGTZ_BenleumiGroupBanks">
+		<refData refId="KGST_BenleumiGroupBanks" />
+	</matafIColl>
+
+	<kColl id="KGST_BenleumiGroupBanks">
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SHEM_BANK" />
+	</kColl>
+
+	<matafIColl id="KGTZ_PirutSchumSachir">
+		<refData refId="KGSZ_PirutSchumSachir" />
+	</matafIColl>
+
+	<kColl id="KGSZ_PirutSchumSachir">
+		<visualField id="TEUR" />
+		<visualField id="SCHUM" />
+	</kColl>
+
+	<!--===========================================================-->
+	<!-- END OF KUPOT GEMEL (950)DATA DEFINITIONS	   -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- START OF PIRTEY PAKID TACHANA KLALI 	   -->
+	<!-- Add By Sarit  10.01.2006 -->
+	<!--===========================================================-->
+	<kColl id="glfsGlobalBranchThanaPakidData">
+		<refData refId="GLSG_GLBL" />
+		<refData refId="GLSF_GLBL" />
+		<refData refId="GLSF_MAZAV" />
+		<refData refId="GLSE_GLBL" />
+		<refData refId="debugMode" />
+	</kColl>
+
+	<kColl id="GLDK_Sheder">
+		<!-- The data location -->
+		<refData refId="HostBuff" />
+		<!--  The request data (to cics) -->
+		<refData refId="GKSI_HDR" />
+		<refData refId="GKSI_HDR_CONT" />
+		<refData refId="GKSI_HDR_CONT1" />
+		<refData refId="GKSI_HDR_CONT2" />
+		<!-- The reply data (from cics) -->
+		<refData refId="BusinessMessagesList" />
+		<refData refId="HostHeaderReplyData" />
+	</kColl>
+
+	<!-- START NEW HDR -->
+
+	<kColl id="GKSI_HdrBtt">
+		<field id="GL_TRANS_ID" />
+		<field id="MQ_MSGID" />
+		<field id="MQ_CORRELID" />
+		<field id="GL_SHAA" />
+		<field id="GL_TR_NOCHECHI" />
+		<field id="GL_TR_ASAKIM" />
+		<field id="GL_TR_MARECHET" />
+		<field id="SVIVA" />
+		<field id="GL_MISHMERET" />
+		<field id="GL_SIDURI_YOMAN_HOST" />
+		<field id="GL_GIRSA" />
+		<field id="GL_PEULA" />
+		<field id="GL_BANK" />
+		<field id="GL_SNIF" />
+		<field id="GL_CH" />
+		<visualField id="GL_SCH" isRequired="true" />
+		<field id="GL_MATBEA" />
+		<field id="GL_MAKOR_PU" />
+		<field id="GL_MAKOR_TAHANA" />
+		<field id="GL_BANK_MARECHET" />
+		<field id="GL_SNIF_MARECHET" />
+		<field id="GL_SNIF_PAKID" />
+		<field id="GL_ZIHUI_PAKID" />
+		<field id="GL_SAMCHUT_PAKID" />
+		<field id="GL_SNIF_PATUACH" />
+		<field id="YOZEM_PEULA" />
+		<field id="GL_SUG_HORAA" />
+		<visualField id="GL_SHEM_MOSER" />
+		<field id="GL_KOD_MEDINA" />
+		<field id="GL_MISPAR_ZIHUI" />
+		<field id="SAMCHUT_NIDRESHET" />
+		<field id="SAMCHUT_NIDRESHET2" />
+		<field id="KAMUT_ISHURIM" />
+		<field id="GL_SAMCHUT_MEASHERET" />
+		<field id="GL_ZIHUI_MEASHER" />
+		<field id="GL_SUG_ISHUR_MENAEL" />
+		<field id="GL_SW_LVARER" />
+		<field id="GL_SW_MVATELET" />
+		<field id="GL_SIDURI_BITUL" />
+		<field id="KOD_SIBAT_BITUL" />
+		<field id="MELEL_SIBAT_BITUL" />
+		<field id="GL_SRIKA_KEY" />
+		<field id="GL_RECIEVE_SEND_FIELD" />
+		<field id="GL_FILLER" />
+		<!-- IM - 17/01/07 add girsat btt to header -->
+		<field id="GL_GIRSA_BTT" />
+		<!-- Sarit - 18/09/08 add nose iski(subject) to header -->
+		<field id="GL_NOSE_ISKI" />
+		<!-- Sarit 5.25 - 14/04/10 add mispar zihui 16 to header -->
+		<field id="GL_MISPAR_ZIHUI_16" />
+		<!-- Tibi - 6/11/18 add ishur meuhad -->
+		<field id="GL_ISHUR_MEUHAD" />
+		<!-- Tibi - 27/10/20 add ishur menahel bachir -->
+		<field id="GL_ISHUR_MENAHEL_BACHIR" />
+	</kColl>
+
+	<kColl id="GKSR_HdrBtt">
+		<field id="GL_FILLER" />
+		<field id="GL_TRANS_ID" />
+		<field id="MQ_MSGID" />
+		<field id="MQ_CORRELID" />
+		<field id="GL_SHAA" />
+		<field id="GL_TR_NOCHECHI" />
+		<field id="TR_ASAKIM_CICS" />
+		<field id="MISHMERET" />
+		<field id="GL_SIDURI_YOMAN_HOST" />
+		<field id="GL_BANK" />
+		<field id="GL_SNIF" />
+		<field id="GL_CH" />
+		<field id="GL_SCH" />
+		<field id="GL_MATBEA" />
+		<field id="GL_KOD_TIPUL" />
+		<field id="YOZEM_PEULA" />
+		<field id="GL_KOD_MEDINA" />
+		<field id="GL_MISPAR_ZIHUI" />
+		<field id="SAMCHUT_NIDRESHET" />
+		<field id="SAMCHUT_NIDRESHET2" />
+		<field id="KAMUT_ISHURIM" />
+		<field id="GL_SUG_ISHUR_MENAEL" />
+		<field id="SH_KOD_SHIDUR" />
+		<field id="SH_MISPAR_SHEDER" />
+		<field id="GL_SRIKA_KEY" />
+		<field id="GL_RECIEVE_SEND_FIELD" />
+		<field id="GL_MONE_RESHUMOT" />
+		<field id="GL_MONE_RESHUMOT_TOTAL" />
+		<!-- Sarit 5.25- 14/04/10 add mispar zihui 16 to header -->
+		<field id="GL_MISPAR_ZIHUI_16" />
+		<!-- Doron V. Change 1680 23/3/2011 Add ishur merosh flag to the header -->
+		<field id="ISHUR_MEROSH" />
+		<!-- GuyM Fix 3887 08/3/2016 add flag for ishur meuhad -->					
+		<field id="GL_ISHUR_MEUHAD" />
+		<!-- TibiG 30/9/2020 add flag for ishur menahel bachir -->					
+		<field id="GL_ISHUR_MENAHEL_BACHIR" />
+	</kColl>
+
+	<kColl id="GLDK_HdrHodaot">
+		<field id="GL_MONE_HODAOT" />
+		<refData id="GLDI_HdrHodaa" />
+	</kColl>
+
+	<iColl id="GLDI_HdrHodaa">
+		<refData id="GLDK_HdrHodaa" />
+	</iColl>
+
+	<kColl id="GLDK_HdrHodaa">
+		<field id="GL_HODAA_NOSE" />
+		<field id="GL_HODAA_KOD" />
+		<field id="GL_HODAA_TEUR" />
+		<field id="GL_FILLER" />
+	</kColl>
+	<!-- END NEW HDR -->
+
+
+	<iColl id="GLDI_Pakid">
+		<refData id="GLDL_Pakid" />
+	</iColl>
+
+	<kColl id="GLDL_Pakid">
+		<field id="GL_ZIHUI_PAKID" />
+		<field id="GL_SHEM_PAKID" />
+		<refData refId="GL_SAMCHUT_PAKID" />
+		<refData refId="GL_ZIHUI_PAKID_AD" />
+	</kColl>
+
+	<kColl id="GLDK_ADIfyuneyPakid">
+		<!-- cn - full name-->
+		<field id="GL_FULL_NAME" />
+		<!-- lockoutTime - is user locked -->
+		<field id="GL_IS_USER_LOCKED" />
+		<!-- employeeID - pakid id-->
+		<field id="GL_EMPLOYEE_ID" />
+		<!-- employeeType -  -->
+		<field id="GL_EMPLOYEE_TYPE" />
+		<!--last name - sn-->
+		<field id="GL_LAST_NAME" />
+		<!--first name - givenName-->
+		<field id="GL_FIRST_NAME" />
+		<!--extensionAttribute - ID-->
+		<field id="GL_ID" />
+		<!--street address - streetAddress-->
+		<field id="GL_STREET_ADDRESS" />
+		<!-- l -  city -->
+		<field id="GL_CITY" />
+		<!-- postalCode - postalCode-->
+		<field id="GL_POSTAL_CODE" />
+		<!-- fibi-BR-001-AllowedInSnifit -->
+		<field id="GL_ALLOWED" />
+		<!-- fibi-BR-002-SamchutPakid-->
+		<field id="GL_SAMCHUT_PAKID" />
+		<!-- fibi-BR-003-IfyuneyPakid -->
+		<field id="GL_IFYUNEY_PAKID" />
+		<!-- fibi-BR-005-Branch-BranchList -->
+		<field id="GL_SNIFIM" />
+		<!-- fibi-BR-005-Branch-BranchList-RavMutagi -->
+		<field id="GL_SNIFIM_RAV_MUTAGI" />
+		<!-- fibi-BR-010-MenaelMeasher -->
+		<field id="GL_MENAEL_MEASHER" />
+		<!-- fibi-BR-011- zevet-->
+		<field id="GL_ZEVET" />
+		<!-- fibi-BR-060- samchut snif 60-->
+		<field id="GL_SAMCHUT_SNIF60" />
+		<!-- department- department-->
+		<field id="GL_DEPARTMENT" />
+		<!-- fibi-BR-012- referant-->
+		<field id="GL_REFERANT" />
+		<!-- fibi-BR-009- LotusNotes -->
+		<field id="GL_NO_LNUSER" />
+		<!-- telephoneNumber-Work phone number -->
+		<field id="GL_PHONE_WORK" />		
+		<!-- samchut obligo -->		
+		<field id="GL_SAMCHUT_OBLIGO" />
+	    <!-- countryCode - sector ezor -->
+    	<field id="GL_SECTOR_EZOR" />
+		<!-- sAMAccountName - zihuy pakid  -->		
+		<field id="GL_ZIHUI_PAKID_AD" />
+		<!-- fibi-AS-Samhut - yehidat samchut  = yechidat Av-->		
+		<field id="GL_YECHIDAT_SAMCHUT" />
+		<!-- GL_ORG_075  - yehidat Ben -->		
+		<field id="GL_YECHIDAT_PAKID_MEVATZEA" />
+		<!-- samchut yehida -->		
+		<iColl id="GLDI_SAMCHUT_YECHIDA" size="0" >
+			<kColl id="GLDL_SAMCHUT_YECHIDA" >
+				<field id="GL_SAMCHUT" />	
+				<field id="GL_YECHIDA" />	
+			</kColl>	
+		</iColl>
+	</kColl>
+	
+	<kColl id="GLDK_SrikaChatach">
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_MISPAR_TAHANA" />
+	</kColl>
+
+	<kColl id="GLDL_HdrReshima">
+		<refData refId="GL_SRIKA_KEY" />
+		<refData refId="GL_KOD_HITMAKDUT" />
+		<refData refId="GL_TRANS_HITMAKDUT" />
+		<refData refId="GL_TZEVA_SHURA" />
+		<refData refId="GL_BANK" />
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_SCH" />
+		<refData refId="GL_CH" />
+		<refData refId="GL_MATBEA" />
+		<refData refId="GL_MEDINA" />
+		<refData refId="GL_TZ" />
+		<refData refId="GL_FLG_PIRTEY_CH" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+
+	<matafIColl id="GLDI_OneColumn" size="0">
+		<refData refId="GLDL_OneColumn" />
+	</matafIColl>
+
+	<kColl id="GLDL_OneColumn">
+		<refData refId="GL_KOD" />
+		<refData refId="GL_TEXT" />
+		<refData refId="GL_MISPAR_TZEVA" />
+	</kColl>
+
+	<kColl id="GLDK_HdrHitmakdut">
+		<refData refId="GL_NOSE_PEULA" />
+		<refData refId="GL_SUG_PEULA" />
+		<refData refId="GL_TR_MARECHET" />
+		<refData refId="GL_SHAA" />
+		<field   id="GL_MISHMERET" />
+		<!-- Tibi Added business date 24/10/12 5.29-->	
+		<field id="GL_TR_ASAKIM" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_ZIHUI_MENAHEL" />
+		<refData refId="GL_SAMCHUT_MEASHERET" />
+		<refData refId="GL_MISPAR_TAHANA" />
+		<refData refId="GL_SW_PEULA" />
+		<refData refId="GL_SNIF_BITUL" />
+		<refData refId="GL_PU_BITUL" />
+		<refData refId="GL_MAKASH_IDKUN" />
+		<refData refId="GL_MAKASH_BITUL" />
+		<refData refId="GL_MAKASH_ISHUR" />
+		<refData refId="GL_FILLER" />
+		<!-- Added 15/04/07 IM  -->		
+		<field id="KOD_SIBAT_BITUL" />
+		<field id="MELEL_SIBAT_BITUL" />
+		<field id="GL_SHEM_MOSER" />
+		<field id="GL_YOZEM_BITUL" />
+		<!-- Added 14/04/10 Sarit -->
+		<field id="GL_PAKID_BITUL" />
+		<field id="GL_SHAA_BITUL" />
+		<!-- Added 10/08/10 Sarit -->	
+		<field id="GL_MENAHEL_BITUL" />
+		<field id="GL_SIDURI_YOMAN" />
+		<field id="GL_SNIF_PEULA" />
+		<field id="GL_TR_BITUL" />
+		<!-- Sarit Added 12/02/12 5.29-->	
+		<field id="GL_MAKOR_PU" />
+		<field id="GL_MAKOR_PU_BITUL" />
+		<field id="GL_TACHANA_BITUL" />
+		<field id="GL_KOD_SIBA_DCHIA" />
+	</kColl>
+	
+	<!-- GENERAL HDR FOR TOFES [SARIT 17.12.06]-->
+
+	<kColl id="GLDK_HdrTofes">
+		<refData refId="GL_SNIF" />
+		<refData refId="GL_SHEM_SNIF" />
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_SHEM_PAKID" />
+		<refData refId="GL_ZIHUI_MENAHEL" />
+		<refData refId="GL_DAF" />
+		<refData refId="GL_TR_DD" />
+		<refData refId="GL_TR_MM" />
+		<refData refId="GL_TR_YYYY" />
+		<refData id="GL_HH" />
+		<refData id="GL_MM_DAKOT" />
+		<refData refId="GL_MISHMERET_TOFES" />
+		<refData refId="GL_MISHMERET_TOFES_DESC" />
+		<refData refId="GL_SHEM_LK" />
+		<refData refId="GL_ZIHUI_TAHANA" />
+		<refData refId="GL_MISPAR_TAHANA" />
+		<refData refId="GL_PEULA" />
+	</kColl>
+
+	<matafIColl id="NEDI_LINE_AMLA" size="0">
+		<refData refId="NEDK_LINE_AMLA" />
+	</matafIColl>
+
+	<kColl id="NEDK_LINE_AMLA">
+		<refData refId="NE_KOD_AMLA" />
+		<refData refId="NE_TEXT_AMLA" />
+		<refData refId="NE_KOD_TZEVA" />
+	</kColl>
+
+	<!-- use for print X in tofes checkbox of 2 -->
+	<!-- we set 3 indexes because in the tofes the count starts from 1 and not from 0 -->
+	<!-- so we need to set GLDI_MARK.2.GL_MARK -->
+	<!-- if in the future there will be more mark options than 2 then we will increase the size of this list -->
+	<matafIColl id="GLDI_MARK" size="2">
+		<refData refId="GLDK_MARK" />
+	</matafIColl>
+
+	<kColl id="GLDK_MARK">
+		<refData refId="GL_MARK" />
+	</kColl>
+
+
+	<matafIColl id="GLDI_BealimCh" size="2" >
+		<refData refId="GLDL_BealimCh" />
+	</matafIColl>
+	
+	<kColl id="GLDL_BealimCh">
+		<refData refId="GL_SUG_LAKOAH" />
+		<refData refId="GL_SUG_LAKOAH_TEUR" />
+		<refData refId="GL_LAST_NAME" />
+		<refData refId="GL_FIRST_NAME" />
+		<refData refId="GL_MEDINA" />
+		<refData refId="GL_MEDINA_TEUR" />
+		<refData refId="GL_MISPAR_ZIHUI" />
+	</kColl>
+	
+	<matafIColl id="GLDI_GKSG_IFYUN">
+			<refData refId="GLDX_GL_IFYUN" />
+	</matafIColl>
+		
+	<kColl id="GLDX_GL_IFYUN">
+		<field id="GL_IFYUN" />
+	</kColl>
+	<!--===========================================================-->
+	<!-- START OF QUERIES CONVERSION 							   -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- START OF MODEL (GLSHOWLS) DATA DEFINITIONS 			       -->
+	<!--===========================================================-->
+
+	<!-- STRUCTURES -->
+	<!-- structure GLSR_MOFA_ML -->
+	<kColl id="GLSR_MOFA_ML">
+		<refData refId="GL_MOFA_SRIKA" />
+		<refData refId="GL_OFI_SHURA_ML" />
+		<refData refId="GL_KOD_HITMKDUT" />
+		<refData refId="GL_TZEVA_SHURA" />
+		<refData refId="GL_SHURA_LIST" />
+		<refData refId="GL_SHURA2_LIST" />
+		<refData refId="GL_FLG_PIRTEY_CH" />
+		<refData refId="GL_PRATIM_SHIRSHUR" />
+	</kColl>
+	<!-- end structure GLSR_MOFA_ML -->
+
+	<!-- structure GLSR_ML -->
+	<kColl id="GLSR_ML">
+		<refData refId="SHSR_HDR" />
+		<refData refId="GL_KOT1_TZEVA" />
+		<refData refId="GL_KOTERET_A" />
+		<refData refId="GL_KOT2_TZEVA" />
+		<refData refId="GL_KOTERET_A2" />
+		<refData refId="GL_KOT3_TZEVA" />
+		<refData refId="GL_KOTERET_A3" />
+		<refData refId="GL_KOT4_TZEVA" />
+		<refData refId="GL_KOTERET_A4" />
+		<refData refId="GL_KOT5_TZEVA" />
+		<refData refId="GL_KOTERET_A5" />
+		<refData refId="GL_KOT6_TZEVA" />
+		<refData refId="GL_KOTERET_A6" />
+		<refData refId="GL_MONE_RESHOMOT" />
+		<iColl id="GLDI_MOFA_ML" size="0">
+			<refData refId="GLSR_MOFA_ML" />
+		</iColl>
+		<refData refId="GL_SRIKA2" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+	<!-- end structure GLSR_ML -->
+
+	<!--===========================================================-->
+	<!-- DRILLDOWN DATA DEFINITIONS 						   -->
+	<!--===========================================================-->
+	<!-- structure GKSI_HDR_CONT1 -->
+	<kColl id="GKSI_HDR_CONT1">
+		<refData refId="GL_TR_MARECHET" />
+		<refData refId="GL_SW_LVARER" />
+		<refData refId="GL_SW_MVATELET" />
+		<refData refId="GL_SIDURI_BITUL" />
+		<refData refId="GL_SUG_ISHUR_MENAEL" />
+		<refData refId="GL_ISKA_ME_SHICHZUR" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+	<!-- end structure GKSI_HDR_CONT1 -->
+
+	<!-- structure GLSI_MIHG -->
+	<kColl id="GLSI_MIHG">
+		<refData refId="GKSI_HDR" />
+		<refData refId="SHSI_HDR" />
+		<refData refId="GKSI_HDR_CONT1" />
+		<refData refId="GL_KOD_BAKA" />
+		<refData refId="GL_SRIKA" />
+		<refData refId="GL_SAMCHUT_MEASHERET" />
+		<refData refId="GL_ZIHUI_MEASHER" />
+		<refData refId="GL_COLOR" />
+		<refData refId="HT_MISPAR_CHEQUE" />
+		<refData refId="HT_MAMAR" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+	<!-- end structure GLSI_MIHG -->
+
+	<!-- structure GLSR_MOFA -->
+	<kColl id="GLSR_MOFA">
+		<refData refId="GL_KOD_COLOR" />
+		<refData refId="GL_LINE" />
+	</kColl>
+	<!-- end structure GLSR_MOFA -->
+
+	<!-- structure GLSR_GM -->
+	<kColl id="GLSR_GM">
+		<refData refId="SHSR_HDR" />
+		<refData refId="GL_KOT1_TZEVA" />
+		<refData refId="GL_KOTERET1" />
+		<refData refId="GL_KOT2_TZEVA" />
+		<refData refId="GL_KOTERET2" />
+		<refData refId="GL_KOT3_TZEVA" />
+		<refData refId="GL_KOTERET3" />
+		<refData refId="GL_KOT4_TZEVA" />
+		<refData refId="GL_KOTERET4" />
+		<refData refId="GL_KOT5_TZEVA" />
+		<refData refId="GL_KOTERET5" />
+		<refData refId="GL_KOTERET" />
+		<refData refId="GL_MONE_RESHOMOT" />
+		<iColl id="GLDI_MOFA" size="0">
+			<refData refId="GLSR_MOFA" />
+		</iColl>
+		<refData refId="GL_ZIHUI_PAKID" />
+		<refData refId="GL_KOD" />
+		<refData refId="GL_FILLER" />
+	</kColl>
+	<!-- end structure GLSR_GM -->
+
+	<!-- structure SHDK_HitmakdutOldHdr -->
+	<kColl id="SHDK_HitmakdutOldHdr">
+		<refData refId="BusinessMessagesList" />
+		<refData refId="HostBuff" />
+		<refData refId="HostHeaderReplyData" />
+		<refData refId="isCicsContinueButtonClicked" />
+		<refData refId="GKSI_HDR" />
+		<refData refId="GKSI_HDR_CONT1" />
+		<refData refId="SHSI_HDR" />
+		<refData refId="GLSI_MIHG" />
+		<refData refId="SHSR_HDR" />
+		<refData refId="GLSR_GM" />
+	</kColl>
+	<!-- end structure SHDK_HitmakdutOldHdr -->
+	<!--===========================================================-->
+	<!-- END OF MODEL (GLSHOWLS) DATA DEFINITIONS 			       -->
+	<!--===========================================================-->
+
+	<!--===========================================================-->
+	<!-- END OF QUERIES CONVERSION 							   	   -->
+	<!--===========================================================-->
+
+	<!--=========================================== -->
+	<!--  START OF DATA DEFINITIONS FOR SHEDER OL35 -->
+	<!--               SARI M. 08.12.08             -->
+	<!--=========================================== -->
+	
+	<kColl id="GLDK_OL35">
+		<field id="GL_SUG_BDIKA"/>
+		<refData refId="GL_SCHUM"/>
+		<refData refId="GL_FILLER"/>
+	</kColl>
+	
+	<kColl id="GLDS_OL35">
+		<refData refId="BusinessMessagesList"/>
+		<refData refId="HostBuff"/>
+		<refData refId="HostHeaderReplyData"/>
+		<refData refId="isCicsContinueButtonClicked"/>
+		<refData refId="trxORData"/>
+		<refData refId="GLDK_OL35"/>
+		<refData refId="GKSI_HDR"/>
+		<refData refId="GKSI_HDR_CONT1"/>
+		<refData refId="GKSI_HDR_CONT"/>
+		<refData refId="SHSR_HDR"/>	
+		<refData refId="SHSI_HDR"/>			
+	</kColl>
+	
+	<!--==============================================-->
+	<!--            END OF SHEDER OL35		 	      -->
+	<!--==============================================-->
+	
+	<!--=========================================== -->
+	<!--  START OF DATA DEFINITIONS FOR SHEDER OL36 -->
+	<!--               SARI M. 03.03.09             -->
+	<!--=========================================== -->
+	
+	<kColl id="GLDK_OL36">
+		<field id="GL_COMPUTER_NAME"/>
+		<refData refId="GL_TEUDAT_ZEHUT"/>
+		<field id="GL_KOD"/>
+		<refData refId="GL_FILLER"/>
+		<field id="GL_FILLER2"/>
+		<field id="GL_FILLER3"/>
+	</kColl>
+	
+
+	<kColl id="GLDS_OL36">
+		<refData refId="BusinessMessagesList"/>
+		<refData refId="HostBuff"/>
+		<refData refId="HostHeaderReplyData"/>
+		<refData refId="isCicsContinueButtonClicked"/>
+		<refData refId="trxORData"/>
+		<refData refId="GLDK_OL36"/>
+		<refData refId="GKSI_HDR"/>
+		<refData refId="GKSI_HDR_CONT1"/>
+		<refData refId="GKSI_HDR_CONT"/>
+		<refData refId="SHSR_HDR"/>	
+		<refData refId="SHSI_HDR"/>			
+	</kColl>
+	
+	<!--==============================================-->
+	<!--            END OF SHEDER OL36		 	      -->
+	<!--==============================================-->
+	
+	<kColl id="cacheTablesData">
+		<field id="timestamp" />
+		<field id="tableName" />
+		<field id="cacheTableBean" />
+		<!-- optional parameter -->
+    	<field id="commaSeparatedColumns" />
+	</kColl>
+	
+	<!--===========================================================-->
+	<!--MALAM DATA 	 DATA DEFINITION       Guy M. 14.07.10         -->
+	<!--===========================================================-->
+	<kColl id="GLDK_MALAM">     
+		<visualField id="GL_MISPAR_ZIHUY"/>			
+		<visualField id="GL_KOD_STATUS_SUCCESS"/>
+		<visualField id="GL_STATUS_SUCCESS_SW"/>
+		<visualField id="GL_SHEM_MISHPACHA"/>
+		<visualField id="GL_SHEM_PRATI"/>
+		<visualField id="GL_SHEM_MISHPACHA_KODEM"/>		
+		<visualField id="GL_SHEM_MISHPACHA_KODEM_SW"/>
+		<visualField id="GL_SHEM_AV"/>
+		<visualField id="GL_SHEM_AV_SW"/>
+		<visualField id="GL_SHEM_EM"/>
+		<visualField id="GL_SHEM_EM_SW"/>
+		<visualField id="GL_TR_LEIDA_YYYY"/>		
+		<visualField id="GL_TR_LEIDA"/>
+		<visualField id="GL_SUG_TR_LEIDA"/>
+		<visualField id="GL_TR_HANPAKA"/>
+		<visualField id="GL_KOD_STATUS_TEUDA"/>
+		<visualField id="GL_YESHUV"/>
+		<visualField id="GL_YESHUV_SEMEL"/>		
+		<visualField id="GL_RECHOV"/> 		
+		<visualField id="GL_MS_BAYIT"/> 
+		<visualField id="GL_OT_BAYIT"/> 
+		<visualField id="GL_MS_DIRA"/>
+		<visualField id="GL_MIKUD"/>  
+		<visualField id="GL_SEX"/>
+		<visualField id="GL_FILLER"/> 		 	
+	</kColl> 
+	
+	<!--=========================================-->
+	<!-- IM 23/01/2010: Fix #1497 - add support personal menus business message 	-->
+	<!--=========================================-->
+	<kColl id="addRemovePersonalMenuData">
+		<refData refId="BusinessMessagesList" />
+	</kColl>	
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- chatach klali boris 30.03.2011 -->
+	<!-- חתח סריקה כללי מהדורה 5.27 -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<kColl id="BGDK_ChatachSrikaKlali">
+		<field id="GL_BANK_PEULA"/>
+		<field id="GL_SNIF_PEULA"/>
+		<field id="GL_MISPAR_TAHANA"/>
+		<field id="GL_ZIHUI_PAKID"/>
+		<field id="GL_MS_PEULA_ME"/>
+		<field id="GL_MS_PEULA_AD"/>
+		<field id="GL_TAARICH"/>
+		<field id="GL_SHAA_ME"/>
+		<field id="GL_SHAA_AD"/>
+		<field id="GL_KOD_MISHMERET"/>
+		<field id="GL_SUG_PEULA"/>
+		<!-- field id="GL_MATBEA"/-->
+		<field id="GL_SCHUM_ME"/>
+		<field id="GL_SCHUM_AD"/>
+		<field id="GL_STATUS_PEULA"/>
+		<field id="GL_ISHUR_MENAHEL"/>
+		<field id="GL_MENAHEL_MEASHER"/>
+		<field id="GL_OFEN_KABALAT_HORAA_KOD"/>
+		<field id="GL_OFEN_KABALAT_HORAA_TEUR"/>
+		<field id="GL_MAKOR_PEULA"/>
+		<field id="GL_YOZEM_PEULA"/>
+		<field id="GL_FILLER"/>
+	</kColl>
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- chatach klali boris end -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	
+	<!-- BorisG 21/12/2012: QC 1856 - Show AD information for selected menu by right click 	-->
+	<iColl id="GLST_SAMCHUT">
+		<refData refId="GLDK_SAMCHUT_TCHUM" />
+	</iColl>
+	<iColl id="GLST_TCHUM">
+		<refData refId="GLDK_SAMCHUT_TCHUM" />
+	</iColl>
+	<kColl id="GLDK_SAMCHUT_TCHUM">
+		<refData refId="GL_KOD" />
+		<refData refId="GL_TEUR" />
+	</kColl>
+	<!-- BorisG 21/12/2012: QC 1856 - Show AD information for selected menu by right click 	-->
+	
+	<!-- 16/01/2013 - GLDK_YomAsakimArochForVadeKlot  - 5.30.3 - added by Sarit+Talmor-->
+  <kColl id="GLDK_YomAsakimArochForVadeKlot">
+    <visualField id="GL_YOM_ASAKIM" />
+    <visualField id="GL_FLAG_YOM_KODEM" />
+    <visualField id="GL_TR_ASAKIM" />
+    <visualField id="GL_MISHMERET" />
+    <visualField id="GL_FILLER" />
+  </kColl>
+	
+
+    <kColl id="TRX_FULL_ID">
+    	<field id="GL_NOSE" />
+		<field id="GL_SUG_PEULA" />
+		<field id="GL_SNIF_MAARECHET" />
+		<field id="GL_MAKOR_PU" />
+		<field id="GL_MAKOR_TACHANA" />
+		<field id="GL_BANK" />
+		<field id="GL_SNIF" />
+		<field id="GL_MISPAR_CH" />
+		<field id="GL_SUG_CH" />
+		<field id="GL_TR_ASAKIM" />
+		<field id="GL_SIDURI_PEULA" />
+		<field id="GL_FILLER" />
+	</kColl>
+    
+	<kColl id="pdf2wizData">
+		<field id="GL_FILE_DATA_BASE64"/>
+		<field id="GL_TOFES_LE_ISHUR"/>
+		<field id="GL_MAKOR_TOFES"/>
+		<field id="GL_MEDINA"/>
+		<field id="GL_MEZAHE_LAKOACH"/>
+		<field id="GL_SHEM_LAKOACH"/>
+		<field id="GL_TELEPHONE_LAKOACH"/>
+		<field id="GL_BANK"/>
+		<field id="GL_SNIF"/>
+		<field id="GL_CH"/>
+		<field id="GL_TZEVET"/>
+		<field id="GL_TZEVET_SHEM"/>
+		<field id="GL_MISPAR_REFERANT"/>
+		<field id="GL_SHEM_REFERANT"/>
+		<field id="GL_SNIF_PAKID"/>
+		<field id="GL_PAKID_MEVAZEA"/>
+		<field id="GL_ID_TOFES_MAYA"/>
+		<field id="GL_ID_TOFES_MAYA_FF"/>
+		<field id="GL_TRX_SUG_PEULA"/>
+		<refData refId="TRX_FULL_ID" />
+		<field id="GL_ARUTZ"/>
+		<field id="GL_TAARICH_SGIRAT_KISHUR"/>
+		<field id="GL_SHAAT_SGIRAT_KISHUR"/>
+		<field id="GL_SHAAT_SIUM_YOM_ASAKIM"/>
+		<field id="GL_KOD_NOSE_PNIYA"/>
+		<field id="GL_KOD_HODAA_MAKDIMA"/>
+		<field id="GL_KOD_HODAA_KISHUR_TOFES"/>
+		<field id="GL_KOD_HODAA_CHECKBOX"/>
+		<field id="GL_KOD_HODAA_AFTER_ISHUR"/>
+		<field id="GL_KOD_HODAA_PUG_TOKEF"/>
+		<field id="GL_KOD_HODAA_NATUNEI_LAKOACH"/>
+		<field id="GL_KOD_HODAA_FUTURE1"/>
+		<field id="GL_KOD_HODAA_FUTURE2"/>
+		<field id="GL_KOD_HODAA_FUTURE3"/>
+		<field id="GL_XML_STR"/>
+		<field id="GL_ERROR"/>
+	</kColl>
+
+	<!-- TibiG 19/04/2021 - override remote manager from NewSnifit -->
+	<kColl id="NSXDC_SendIshurMenahel">
+		<field id="status" />
+		<field id="mgrUserId" />
+		<field id="mgrAdUserId" />
+		<field id="mgrTID" />
+		<field id="samchutMeasheret"/>
+		<field id="trxName"/>
+		<field id="newSnifitUrl" />
+		<field id="isExternal" />
+		<field id="tellerUserId" />
+		<field id="tellerAdUserId" />
+		<field id="tellerTID" />
+		<field id="tellerUserNameHeb" />
+		<field id="tellerPhoneNumber" />
+		<field id="trxUuid" />
+		<field id="overrideType" />
+		<field id="requestTs" />
+		<field id="ctxName" />
+		<field id="ctxData" />
+	</kColl>
+	<kColl id="NSXDC_CancelIshurMenahel">
+		<field id="status" />
+		<field id="mgrUserId" />
+		<field id="mgrTID" />
+		<field id="trxName" />
+		<field id="trxUuid" />
+		<field id="tellerUserId" />
+		<field id="tellerTID" />
+	</kColl>
+	<!-- BorisG paperless -->
+	<!-- kColl id="paperlessSendPdf">
+		<field id="country" />
+		<field id="customer_id" />
+		<field id="mgrTID" />
+		<field id="bank" />
+		<field id="branch" />
+		<field id="account" />
+		<field id="teller_branch" />
+		<field id="teller_id" />
+		<field id="maya_document_id" />
+		<field id="originating_system_document_name" />
+		<field id="originating_system_action" />
+		<field id="channel" />
+		<field id="TAARICH_SGIRAT_KISHUR" />
+		<field id="SHAAT_SGIRAT_KISHUR" />
+		<field id="SHAAT_SIUM_YOM_ASAKIM" />
+		<field id="primary_subject" />
+		<field id="name" />
+		<field id="phone" />
+		<field id="hard_copy" />
+		<field id="document_data" />
+		<refData refId="message_codes" />
+	</kColl-->
+	
+	<kColl id="paperlessSendPdf">
+		<field id="TOFES_LE_ISHUR" />
+		<field id="MAKOR_TOFES" />
+		<field id="TZEVET" />
+		<field id="TZEVET_SHEM" />
+		<field id="MISPAR_REFERANT" />
+		<field id="SHEM_REFERANT" />
+		<field id="MEDINA" />
+		<field id="MISPAR_ZIHUY" />
+		<field id="BANK" />
+		<field id="SNIF" />
+		<field id="CH" />
+		<field id="SNIF_PAKID" />
+		<field id="PAKID_MEVAZEA" />
+		<field id="ID_TOFES_MAYA" />
+		<field id="ID_TOFES_MAYA_FF" />
+		<field id="TRX_SUG_PEULA" />
+		<field id="ARUZ" />
+		<field id="TAARICH_SGIRAT_KISHUR" />
+		<field id="SHAAT_SGIRAT_KISHUR" />
+		<field id="SHAAT_SIYUM_YOM_ASAKIM" />
+		<field id="PL_NOSE_PNIYA" />
+		<field id="HODAA1" />
+		<field id="HODAA2" />
+		<field id="HODAA3" />
+		<field id="HODAA4" />
+		<field id="HODAA5" />
+		<field id="HODAA6" />
+		<field id="HODAA7" />
+		<field id="HODAA8" />
+		<field id="HODAA9" />
+		<field id="HODAA10" />
+		<field id="SHEM_LAKOACH" />
+		<field id="MOBILE" />
+		<field id="SW_OTEK_ATAR_OR_MUDPAS" />
+		<field id="PDF_DATA" />
+		<field id="PAKID_IP" />
+		<field id="SHEM_PEULA" />
+		<field id="rc" />
+		<field id="message" />
+		<field id="httpCode" />
+		<field id="uuid" />
+	</kColl>
+	
+	<kColl id="message_codes">
+		<field id="HODAA1" />
+		<field id="HODAA2" />
+		<field id="HODAA3" />
+		<field id="HODAA4" />
+		<field id="HODAA5" />
+		<field id="HODAA6" />
+		<field id="HODAA7" />
+		<field id="HODAA8" />
+		<field id="HODAA9" />
+		<field id="HODAA10" />
+	</kColl>
+	
+	<kColl id="GLDK_GlobalAdditionalData">
+		<field id="GL_PAKID_ID" />
+		<field id="GL_PAKID_NAME" />
+		<field id="GL_PAKID_NOTE" />
+		<field id="GL_MANAGER1_ID" />
+		<field id="GL_MANAGER1_NAME" />
+		<field id="GL_MANAGER1_NOTE" />
+		<field id="GL_MANAGER2_ID" />
+		<field id="GL_MANAGER2_NAME" />
+		<field id="GL_MANAGER2_NOTE" />
+		<field id="GL_FILLER" />
+	</kColl>	
+
+	<kColl id="jabber360Data">
+		<field id="urlBase64" />
+		<field id="Content-Type" />
+		<field id="KeyId" />
+		<field id="responseCode" />
+		<field id="response" />
+		<field id="debug" />
+	</kColl>
+</dsedata.xml>
