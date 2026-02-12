@@ -8,14 +8,14 @@ import java.util.Set;
 import mtf.snifitapi.model.SnifitModel;
 import mtf.snifitapi.model.XmlNode;
 
-public class CSharpGenerator {
+public class CsModelGenerator {
 
     private final SnifitModel model;
     private final Map<String, String> generatedFiles = new HashMap<>();
     private final Set<String> processedClasses = new HashSet<>();
     private boolean includeSourceComments = true;
 
-    public CSharpGenerator(SnifitModel model) {
+    public CsModelGenerator(SnifitModel model) {
         this.model = model;
     }
 
@@ -43,6 +43,9 @@ public class CSharpGenerator {
         processedClasses.add(cleanClassName);
 
         StringBuilder classContent = new StringBuilder();
+        classContent.append("using System;\n");
+        classContent.append("using System.Collections.Generic;\n\n");
+
         Set<String> existingFieldNames = new HashSet<>();
 
         if (includeSourceComments && node.getSourceFile() != null) {
@@ -105,7 +108,7 @@ public class CSharpGenerator {
             } else {
                 processChildren(node, classContent, existingFieldNames);
             }
-        } else if ("fCSList".equals(tagName)) {
+        } else if ("fCSList".equals(tagName) || "iCollF".equals(tagName)) {
             if (dataName != null) {
                 XmlNode itemNode = findItemNode(node);
                 String itemType = "string";
